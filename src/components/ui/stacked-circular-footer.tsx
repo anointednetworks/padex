@@ -50,7 +50,7 @@ function StackedCircularFooter() {
           </div>
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              © 2024 Your Company. All rights reserved.
+              © 2024 Padex Benefit Advisors. All rights reserved.
             </p>
           </div>
         </div>
