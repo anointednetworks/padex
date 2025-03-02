@@ -45,7 +45,7 @@ export function BackgroundGradientDemo() {
           Animation toolkit with presets for smooth user interfaces.
         </p>
         <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Get started </span>
+          <span>Read more </span>
           <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
             $49
           </span>
@@ -68,7 +68,7 @@ export function BackgroundGradientDemo() {
           Create stunning gradient effects with our design tool.
         </p>
         <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Try it now </span>
+          <span>Read more </span>
           <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
             Free
           </span>
