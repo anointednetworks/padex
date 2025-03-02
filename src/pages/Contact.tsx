@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -31,7 +32,7 @@ const Contact = () => {
               <textarea 
                 placeholder="Your Message" 
                 className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                rows="4"
+                rows={4}
               />
             </div>
             <button 
