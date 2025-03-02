@@ -1,6 +1,7 @@
 
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
+import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 
 const Index = () => {
   return (
@@ -29,7 +30,11 @@ const Index = () => {
         <BackgroundGradientDemo />
       </div>
       
+      {/* Navbar */}
       <NavBarDemo />
+      
+      {/* Footer */}
+      <StackedCircularFooter />
     </div>
   );
 };
