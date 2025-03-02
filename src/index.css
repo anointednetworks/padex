@@ -113,7 +113,7 @@
 
   .animate-gradient {
     background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
+    animation: gradient 15s ease infinite; /* Changed from 8s to 15s to slow down */
   }
 
   @keyframes gradient {
