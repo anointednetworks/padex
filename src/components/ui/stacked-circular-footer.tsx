@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function StackedCircularFooter() {
   return (
@@ -14,11 +15,11 @@ function StackedCircularFooter() {
           <Icons.logo className="icon-class w-6" />
           </div>
           <nav className="mb-8 flex flex-wrap justify-center gap-6">
-            <a href="#" className="hover:text-primary">Home</a>
-            <a href="#" className="hover:text-primary">About</a>
-            <a href="#" className="hover:text-primary">Services</a>
-            <a href="#" className="hover:text-primary">Products</a>
-            <a href="#" className="hover:text-primary">Contact</a>
+            <Link to="/" className="hover:text-primary">Home</Link>
+            <Link to="/about" className="hover:text-primary">About Us</Link>
+            <Link to="/projects" className="hover:text-primary">Resource Center</Link>
+            <Link to="/resume" className="hover:text-primary">Glossary</Link>
+            <Link to="/contact" className="hover:text-primary">Contact Us</Link>
           </nav>
           <div className="mb-8 flex space-x-4">
             <Button variant="outline" size="icon" className="rounded-full">
