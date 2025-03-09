@@ -17,7 +17,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Smooth Animations</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Your Health Is Your Greatest Wealth</h2>
               <p className="text-gray-600">Refined transitions and micro-interactions that enhance user engagement.</p>
             </div>
           </div>
