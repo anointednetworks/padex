@@ -1,3 +1,4 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
@@ -18,7 +19,15 @@ const Index = () => {
             
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
               <h2 className="text-2xl font-semibold mb-4 text-gray-800">Your Health Is Your Greatest Wealth</h2>
-              <p className="text-gray-600 text-left">Navigating today’s economic landscape comes with challenges, but it also brings opportunities for those who recognize long-term trends.</p>
+              <p className="text-gray-600 text-left mb-4">Navigating today's economic landscape comes with challenges, but it also brings opportunities for those who recognize long-term trends.</p>
+              
+              <p className="text-gray-600 text-left mb-4">Whether you're planning for retirement or seeking clarity on investment strategies that will benefit you immediately and long-term, we are here to help you address your most important financial questions.</p>
+              
+              <p className="text-gray-600 text-left mb-4">Our priority is your overall financial success. We want to learn more about your business and personal situation and identify your dreams and goals.</p>
+              
+              <p className="text-gray-600 text-left mb-4">Long-term relationships that encourage open and honest communication have been the cornerstone of my foundation of success.</p>
+              
+              <p className="text-gray-600 text-left">We look forward to your notes regarding any questions you may have, and how investment concepts or products can be tailored for your unique situation and needs.</p>
             </div>
           </div>
         </div>
