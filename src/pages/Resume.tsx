@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
-import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
+import { Footerdemo } from "@/components/ui/footer-section";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
 
 const Resume = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -29,6 +30,11 @@ const Resume = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      {/* Aurora Background Demo Section */}
+      <div className="w-full h-screen">
+        <AuroraBackgroundDemo />
+      </div>
+      
       <div className="flex-grow py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-6 tracking-tight text-gray-900">Benefits Glossary</h1>
@@ -74,8 +80,11 @@ const Resume = () => {
         </div>
       </div>
       
+      {/* Navbar */}
       <NavBarDemo />
-      <StackedCircularFooter />
+      
+      {/* Footer */}
+      <Footerdemo />
     </div>
   );
 };
