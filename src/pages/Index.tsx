@@ -1,7 +1,9 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
-import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
+import { Footerdemo } from "@/components/ui/footer-section";
+
 const Index = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Aurora Background Demo Section */}
@@ -42,7 +44,7 @@ const Index = () => {
       <NavBarDemo />
       
       {/* Footer */}
-      <StackedCircularFooter />
+      <Footerdemo />
     </div>;
 };
 export default Index;
