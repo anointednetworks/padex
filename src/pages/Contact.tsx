@@ -1,20 +1,15 @@
 
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
-import { Footerdemo } from "@/components/ui/footer-section";
+import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
 
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Aurora Background Demo Section */}
-      <div className="w-full h-screen">
-        <AuroraBackgroundDemo />
-      </div>
-      
+      <NavBarDemo />
       <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20">
         <BackgroundGradient containerClassName="max-w-3xl w-full" className="p-8 rounded-3xl">
           <div className="text-center mb-8">
@@ -60,12 +55,7 @@ const Contact = () => {
           </div>
         </BackgroundGradient>
       </div>
-      
-      {/* Navbar */}
-      <NavBarDemo />
-      
-      {/* Footer */}
-      <Footerdemo />
+      <StackedCircularFooter />
     </div>
   );
 };

@@ -1,17 +1,12 @@
 
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
-import { Footerdemo } from "@/components/ui/footer-section";
-import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
+import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 
 const Glossary = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      {/* Aurora Background Demo Section */}
-      <div className="w-full h-screen">
-        <AuroraBackgroundDemo />
-      </div>
-      
+      <NavBarDemo />
       <div className="flex-grow flex items-center justify-center px-4 py-20">
         <div className="max-w-3xl text-center">
           <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Glossary</h1>
@@ -52,12 +47,7 @@ const Glossary = () => {
           </div>
         </div>
       </div>
-      
-      {/* Navbar */}
-      <NavBarDemo />
-      
-      {/* Footer */}
-      <Footerdemo />
+      <StackedCircularFooter />
     </div>
   );
 };
