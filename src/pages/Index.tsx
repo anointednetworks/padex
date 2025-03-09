@@ -29,7 +29,7 @@ const Index = () => {
       
       {/* Background Gradient Section */}
       <div className="py-20 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Featured Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Services</h2>
         <BackgroundGradientDemo />
       </div>
       
