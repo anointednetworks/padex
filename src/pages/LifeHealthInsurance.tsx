@@ -2,6 +2,7 @@
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
+import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 
 const LifeHealthInsurance = () => {
   return (
@@ -10,6 +11,9 @@ const LifeHealthInsurance = () => {
       <div className="w-full h-96">
         <ServiceHero title="Life & Health Insurance" />
       </div>
+      
+      {/* New Hero Component Section */}
+      <Hero />
       
       {/* Content Section */}
       <div className="flex items-center justify-center py-20">
