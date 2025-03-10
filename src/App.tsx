@@ -11,6 +11,9 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import Glossary from "./pages/Glossary";
 import NotFound from "./pages/NotFound";
+import LifeHealthInsurance from "./pages/LifeHealthInsurance";
+import Annuities from "./pages/Annuities";
+import MedicareSolutions from "./pages/MedicareSolutions";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,9 @@ const App = () => {
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/glossary" element={<Glossary />} />
+            <Route path="/life-health-insurance" element={<LifeHealthInsurance />} />
+            <Route path="/annuities" element={<Annuities />} />
+            <Route path="/medicare-solutions" element={<MedicareSolutions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

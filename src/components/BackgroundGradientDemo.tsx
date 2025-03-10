@@ -2,6 +2,7 @@
 import React from "react";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Image } from "./ui/image";
+import { Link } from "react-router-dom";
 
 export function BackgroundGradientDemo() {
   return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -20,9 +21,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Protect your future and loved ones with comprehensive coverage options.
         </p>
-        <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Read more</span>
-        </button>
+        <Link to="/life-health-insurance">
+          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <span>Read more</span>
+          </button>
+        </Link>
       </BackgroundGradient>
 
       {/* Second Service */}
@@ -42,9 +45,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Secure your retirement with guaranteed income solutions.
         </p>
-        <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Read more</span>
-        </button>
+        <Link to="/annuities">
+          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <span>Read more</span>
+          </button>
+        </Link>
       </BackgroundGradient>
 
       {/* Third Service */}
@@ -62,9 +67,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Navigate Medicare options with expert guidance and support.
         </p>
-        <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Read more</span>
-        </button>
+        <Link to="/medicare-solutions">
+          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <span>Read more</span>
+          </button>
+        </Link>
       </BackgroundGradient>
     </div>;
 }
