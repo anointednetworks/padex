@@ -11,7 +11,7 @@ export function BackgroundGradientDemo() {
         </div>
         <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Life & Health Insurance</p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          Strategic employee benefits planning and administration services.
+          Protect your future and loved ones with comprehensive coverage options.
         </p>
         <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
           <span>Read more</span>
@@ -27,7 +27,7 @@ export function BackgroundGradientDemo() {
           Annuities
         </p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          Comprehensive ACA, ERISA, and HIPAA compliance assistance.
+          Secure your retirement with guaranteed income solutions.
         </p>
         <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
           <span>Read more</span>
@@ -41,7 +41,7 @@ export function BackgroundGradientDemo() {
         </div>
         <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Medicare Solutions</p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          Custom employee wellness initiatives to improve health and productivity.
+          Navigate Medicare options with expert guidance and support.
         </p>
         <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
           <span>Read more</span>
