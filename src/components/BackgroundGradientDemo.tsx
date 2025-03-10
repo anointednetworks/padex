@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Image } from "./ui/image";
@@ -23,7 +24,7 @@ export function BackgroundGradientDemo() {
           <img src="/placeholder.svg" alt="Service image" className="object-contain max-h-[180px]" />
         </div>
         <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">
-          Compliance Support
+          Annuities
         </p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Comprehensive ACA, ERISA, and HIPAA compliance assistance.
