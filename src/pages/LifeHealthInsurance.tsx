@@ -52,4 +52,3 @@ const LifeHealthInsurance = () => {
 };
 
 export default LifeHealthInsurance;
-
