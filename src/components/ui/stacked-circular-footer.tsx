@@ -9,11 +9,11 @@ function StackedCircularFooter() {
     <footer className="bg-background py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center">
-          <div className="mb-8 rounded-full bg-primary/10 p-8">
+          <div className="mb-8">
             <img 
               src="/lovable-uploads/205d5d94-d950-49f6-a520-d2bdb3a39474.png"
               alt="Padex Benefit Advisors Logo"
-              className="h-6 w-auto"
+              className="h-12 w-auto"
             />
           </div>
           <div className="mb-8 flex space-x-4">
