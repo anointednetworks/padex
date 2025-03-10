@@ -38,9 +38,7 @@ export function BackgroundGradientDemo() {
         <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg">
           <img src="/placeholder.svg" alt="Service image" className="object-contain max-h-[180px]" />
         </div>
-        <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">
-          Wellness Programs
-        </p>
+        <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Medicare Solutions</p>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Custom employee wellness initiatives to improve health and productivity.
         </p>
