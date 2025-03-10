@@ -5,6 +5,11 @@ import { Image } from "./ui/image";
 import { Link } from "react-router-dom";
 
 export function BackgroundGradientDemo() {
+  // Function to handle scrolling to top when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {/* First Service */}
       <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900">
@@ -21,7 +26,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Protect your future and loved ones with comprehensive coverage options.
         </p>
-        <Link to="/life-health-insurance" className="block w-max hover:opacity-80">
+        <Link 
+          to="/life-health-insurance" 
+          className="block w-max hover:opacity-80"
+          onClick={handleNavigation}
+        >
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
@@ -45,7 +54,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Secure your retirement with guaranteed income solutions.
         </p>
-        <Link to="/annuities" className="block w-max hover:opacity-80">
+        <Link 
+          to="/annuities" 
+          className="block w-max hover:opacity-80"
+          onClick={handleNavigation}
+        >
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
@@ -67,7 +80,11 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Navigate Medicare options with expert guidance and support.
         </p>
-        <Link to="/medicare-solutions" className="block w-max hover:opacity-80">
+        <Link 
+          to="/medicare-solutions" 
+          className="block w-max hover:opacity-80"
+          onClick={handleNavigation}
+        >
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
