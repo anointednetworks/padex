@@ -13,7 +13,7 @@ function StackedCircularFooter() {
             <img 
               src="/lovable-uploads/205d5d94-d950-49f6-a520-d2bdb3a39474.png"
               alt="Padex Benefit Advisors Logo"
-              className="h-12 w-auto"
+              className="h-36 w-auto"
             />
           </div>
           <div className="mb-8 flex space-x-4">
