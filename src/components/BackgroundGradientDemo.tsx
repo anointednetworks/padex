@@ -21,7 +21,7 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Protect your future and loved ones with comprehensive coverage options.
         </p>
-        <Link to="/life-health-insurance">
+        <Link to="/life-health-insurance" className="block w-max hover:opacity-80">
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
@@ -45,7 +45,7 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Secure your retirement with guaranteed income solutions.
         </p>
-        <Link to="/annuities">
+        <Link to="/annuities" className="block w-max hover:opacity-80">
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
@@ -67,7 +67,7 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Navigate Medicare options with expert guidance and support.
         </p>
-        <Link to="/medicare-solutions">
+        <Link to="/medicare-solutions" className="block w-max hover:opacity-80">
           <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
             <span>Read more</span>
           </button>
