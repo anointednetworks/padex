@@ -7,7 +7,7 @@ const Annuities = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <div className="w-full h-screen">
+      <div className="w-full h-96">
         <ServiceHero title="Annuities" />
       </div>
       

@@ -26,10 +26,10 @@ export function ServiceHero({ title }: ServiceHeroProps) {
           duration: 0.8,
           ease: "easeInOut"
         }} 
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 items-center justify-center px-4 h-full"
       >
-        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">{title}</div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+        <div className="text-3xl md:text-6xl font-bold dark:text-white text-center">{title}</div>
+        <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 py-4">
           Expert guidance for your financial well-being
         </div>
       </motion.div>
