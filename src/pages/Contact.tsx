@@ -77,8 +77,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      console.log('Submitting contact form:', formData);
+      
       // Insert the form data into Supabase
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('contacts')
         .insert([{
           name: formData.name,
@@ -86,6 +88,8 @@ const Contact = () => {
           message: formData.message,
           created_at: new Date().toISOString()
         }]);
+      
+      console.log('Contact form submission response:', { data, error });
       
       if (error) {
         throw error;
@@ -107,7 +111,7 @@ const Contact = () => {
       console.error('Error submitting contact form:', error);
       toast({
         title: "Something went wrong",
-        description: "Please try again later.",
+        description: "Error: " + (error.message || 'Unknown error'),
         variant: "destructive",
       });
     } finally {

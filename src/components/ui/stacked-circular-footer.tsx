@@ -38,11 +38,20 @@ function StackedCircularFooter() {
     
     try {
       // Check if email already exists
-      const { data: existingSubscriber } = await supabase
+      const { data: existingSubscriber, error: checkError } = await supabase
         .from('subscribers')
         .select('*')
         .eq('email', email.toLowerCase())
         .single();
+      
+      // Debug log the response
+      console.log('Checking existing subscriber:', { existingSubscriber, error: checkError });
+      
+      if (checkError && checkError.message !== 'No rows found') {
+        // An error occurred that isn't just "no rows found"
+        console.error('Error checking subscriber:', checkError);
+        throw checkError;
+      }
       
       if (existingSubscriber) {
         toast({
@@ -55,12 +64,15 @@ function StackedCircularFooter() {
       }
       
       // Insert the email into Supabase
-      const { error: insertError } = await supabase
+      const { error: insertError, data: insertData } = await supabase
         .from('subscribers')
         .insert([{
           email: email.toLowerCase(),
           subscribed_at: new Date().toISOString()
         }]);
+      
+      // Debug log the response
+      console.log('Insert subscriber response:', { data: insertData, error: insertError });
         
       if (insertError) {
         throw insertError;
@@ -77,7 +89,7 @@ function StackedCircularFooter() {
       console.error('Error subscribing to newsletter:', error);
       toast({
         title: "Subscription failed",
-        description: "Please try again later.",
+        description: "Please try again later. Error: " + (error.message || 'Unknown error'),
         variant: "destructive",
       });
     } finally {
