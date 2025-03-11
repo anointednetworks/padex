@@ -6,11 +6,11 @@ import { FaqSection } from "@/components/ui/faq-section";
 
 const RESOURCE_FAQS = [
   {
-    question: "What makes your platform unique?",
-    answer: "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
+    question: "Annuities",
+    answer: "What are your retirement goals?  For most people, it’s making sure the money lasts through out their retirement. Do you know the secret about having an income for the rest of your life?  Ask me how.",
   },
   {
-    question: "How does the pricing structure work?",
+    question: "Insurance",
     answer: "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
   },
   {
