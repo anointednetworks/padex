@@ -24,21 +24,16 @@ const LifeHealthInsurance = () => {
             
             
             <ul className="">
-              <li>Term Life Insurance</li>
-              <li>Whole Life Insurance</li>
-              <li>Universal Life Insurance</li>
-              <li>Variable Life Insurance</li>
+              
+              
+              
+              
             </ul>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Our Health Insurance Options:</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
-              <li>Employer-Sponsored Plans</li>
-              <li>Individual Health Insurance</li>
-              <li>Affordable Care Act (ACA) Plans</li>
-              <li>Short-Term Health Insurance</li>
-            </ul>
             
-            <p className="text-gray-600 text-left mt-6">Contact us today for a personalized consultation to determine which life and health insurance options best suit your needs and budget.</p>
+            
+            
+            <p className="text-gray-600 text-left mt-6">Do you want to see how the facts find the story?</p>
           </div>
         </div>
       </div>
