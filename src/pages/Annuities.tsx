@@ -20,27 +20,15 @@ const Annuities = () => {
             
             <p className="text-gray-600 text-left mb-4">What are your retirement goals? For most people, it's making sure the money lasts through their retirement.</p>
             
-            <p className="text-gray-600 text-left mb-4">With various annuity options available, we can help you find the right solution to meet your specific retirement goals and income needs.</p>
+            <p className="text-gray-600 text-left mb-4">Do you know the secret about having an income for the rest of your life? Ask me how.</p>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Types of Annuities We Offer:</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
-              <li>Fixed Annuities - Providing guaranteed interest rates and predictable income</li>
-              <li>Variable Annuities - Offering potential for higher returns through market investments</li>
-              <li>Indexed Annuities - Linking returns to market indices while providing downside protection</li>
-              <li>Immediate Annuities - Beginning payments right away for those already in retirement</li>
-              <li>Deferred Annuities - Allowing your investment to grow before taking income</li>
-            </ul>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Benefits of Annuities:</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
-              <li>Tax-deferred growth potential</li>
-              <li>Guaranteed income for life</li>
-              <li>Protection against market volatility</li>
-              <li>Legacy planning options</li>
-              <li>Various payout options to suit your needs</li>
-            </ul>
             
-            <p className="text-gray-600 text-left mt-6">Schedule a consultation with our annuity specialists to discuss how these powerful retirement tools can be integrated into your comprehensive financial plan.</p>
+            
+            
+            
+            
+            
           </div>
         </div>
       </div>
