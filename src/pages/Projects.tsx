@@ -1,14 +1,12 @@
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
-
 const Projects = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <NavBarDemo />
       <div className="flex-grow flex items-center justify-center px-4 py-20">
         <div className="max-w-3xl text-center">
-          <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Our Projects</h1>
+          <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Resources</h1>
           <p className="text-xl text-gray-600 mb-8">
             Explore our featured projects and see how we bring ideas to life.
           </p>
@@ -47,8 +45,6 @@ const Projects = () => {
         </div>
       </div>
       <StackedCircularFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Projects;
