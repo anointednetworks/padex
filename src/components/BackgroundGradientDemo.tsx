@@ -28,12 +28,10 @@ export function BackgroundGradientDemo() {
         </p>
         <Link 
           to="/life-health-insurance" 
-          className="block w-max hover:opacity-80"
+          className="text-blue-500 hover:underline mt-4 inline-block"
           onClick={handleNavigation}
         >
-          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-            <span>Read more</span>
-          </button>
+          Read more
         </Link>
       </BackgroundGradient>
 
@@ -56,12 +54,10 @@ export function BackgroundGradientDemo() {
         </p>
         <Link 
           to="/annuities" 
-          className="block w-max hover:opacity-80"
+          className="text-blue-500 hover:underline mt-4 inline-block"
           onClick={handleNavigation}
         >
-          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-            <span>Read more</span>
-          </button>
+          Read more
         </Link>
       </BackgroundGradient>
 
@@ -82,12 +78,10 @@ export function BackgroundGradientDemo() {
         </p>
         <Link 
           to="/medicare-solutions" 
-          className="block w-max hover:opacity-80"
+          className="text-blue-500 hover:underline mt-4 inline-block"
           onClick={handleNavigation}
         >
-          <button className="rounded-full px-4 py-1 text-white bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-            <span>Read more</span>
-          </button>
+          Read more
         </Link>
       </BackgroundGradient>
     </div>;
