@@ -24,20 +24,20 @@ const MedicareSolutions = () => {
             
             <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Medicare Advantage</h3>
             <p className="text-gray-600 text-left mb-2">Medicare Advantage Plans are health plan options that are approved by Medicare but run by private companies. They are part of the Medicare Program, and sometimes called &quot;Part C.&quot; When you join a Medicare Advantage Plan, you are still in Medicare.</p>
-            <p className="text-gray-600 text-left mb-2">Medicare Advantage (Part C) plan comparisons</p>
-            <p className="text-gray-600 text-left mb-2">Medicare Supplement (Medigap) policy selection</p>
-            <p className="text-gray-600 text-left mb-2">Prescription Drug (Part D) plan analysis</p>
-            <p className="text-gray-600 text-left mb-2">Annual Medicare review and optimization</p>
-            <p className="text-gray-600 text-left mb-4">Assistance with enrollment and transitions</p>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Why Choose Our Medicare Services:</h3>
-            <p className="text-gray-600 text-left mb-2">Unbiased recommendations based on your specific needs</p>
-            <p className="text-gray-600 text-left mb-2">Clear explanations of complex Medicare concepts</p>
-            <p className="text-gray-600 text-left mb-2">Ongoing support as your health needs change</p>
-            <p className="text-gray-600 text-left mb-2">Access to multiple carriers and plan options</p>
-            <p className="text-gray-600 text-left mb-4">No additional cost for our services</p>
             
-            <p className="text-gray-600 text-left mt-6">Whether you're approaching Medicare eligibility, already enrolled, or helping a loved one, we're here to simplify the process and ensure you have the right coverage for your healthcare journey.</p>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
           </div>
         </div>
       </div>
