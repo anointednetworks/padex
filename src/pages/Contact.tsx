@@ -23,6 +23,7 @@ const Contact = () => {
     message: ''
   });
 
+  // Form validation function
   const validateForm = () => {
     let valid = true;
     const newErrors = {
@@ -59,7 +60,8 @@ const Contact = () => {
     return valid;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  // Handle input changes
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -67,7 +69,8 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {

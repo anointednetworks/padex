@@ -13,11 +13,11 @@ function StackedCircularFooter() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  const validateEmail = (email: string) => {
+  const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubscribe = async (e: React.FormEvent) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
     
     // Reset error
