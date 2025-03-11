@@ -28,8 +28,8 @@ if (!supabaseUrl) {
     });
     console.log('Supabase client initialized successfully with URL:', supabaseUrl);
     
-    // Test connection by making a simple query
-    supabase.from('subscribers').select('count(*)', { count: 'exact' }).limit(0)
+    // Test connection with a more reliable query
+    supabase.from('subscribers').select('*').limit(1)
       .then(response => {
         if (response.error) {
           console.error('Supabase connection test failed:', response.error);
