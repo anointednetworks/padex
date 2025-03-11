@@ -21,24 +21,22 @@ const RESOURCE_FAQS = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen flex flex-col bg-background">
       <NavBarDemo />
-      <div className="flex-grow flex items-center justify-center px-4 py-32">
-        <div className="max-w-3xl text-center">
-          <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Resources</h1>
-          
-          <FaqSection
-            title="Frequently Asked Questions"
-            description="Everything you need to know about our platform"
-            items={RESOURCE_FAQS}
-            contactInfo={{
-              title: "Still have questions?",
-              description: "We're here to help you",
-              buttonText: "Contact Support",
-              onContact: () => console.log("Contact support clicked"),
-            }}
-          />
-        </div>
+      <div className="flex-grow flex flex-col items-center px-4 py-32">
+        <h1 className="text-4xl font-bold mb-8 tracking-tight text-foreground">Resources</h1>
+        
+        <FaqSection
+          title="Frequently Asked Questions"
+          description="Everything you need to know about our platform"
+          items={RESOURCE_FAQS}
+          contactInfo={{
+            title: "Still have questions?",
+            description: "We're here to help you",
+            buttonText: "Contact Support",
+            onContact: () => console.log("Contact support clicked"),
+          }}
+        />
       </div>
       <StackedCircularFooter />
     </div>
