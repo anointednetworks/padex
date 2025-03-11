@@ -2,6 +2,8 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 // Add type definitions for Mailchimp globals
 declare global {
@@ -53,38 +55,42 @@ function StackedCircularFooter() {
   }, []);
 
   return (
-    <footer className="bg-background py-12">
+    <footer className="bg-gray-50 py-10 border-t">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center">
-          <div className="mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Logo and Social Icons */}
+          <div className="flex flex-col items-center md:items-start gap-6">
             <img 
               src="/lovable-uploads/205d5d94-d950-49f6-a520-d2bdb3a39474.png"
               alt="Padex Benefit Advisors Logo"
-              className="h-36 w-auto"
+              className="h-24 w-auto"
             />
-          </div>
-          <div className="mb-8 flex space-x-4">
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Facebook className="h-4 w-4" />
-              <span className="sr-only">Facebook</span>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Twitter className="h-4 w-4" />
-              <span className="sr-only">Twitter</span>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Instagram className="h-4 w-4" />
-              <span className="sr-only">Instagram</span>
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Linkedin className="h-4 w-4" />
-              <span className="sr-only">LinkedIn</span>
-            </Button>
+            <div className="flex space-x-4">
+              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                <Facebook className="h-4 w-4" />
+                <span className="sr-only">Facebook</span>
+              </Button>
+              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                <Twitter className="h-4 w-4" />
+                <span className="sr-only">Twitter</span>
+              </Button>
+              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                <Instagram className="h-4 w-4" />
+                <span className="sr-only">Instagram</span>
+              </Button>
+              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              © 2025 Padex Benefit Advisors. All rights reserved.
+            </p>
           </div>
           
           {/* Mailchimp Form */}
-          <div className="mb-8 w-full max-w-md">
-            <div id="mc_embed_signup" className="bg-white p-4 rounded-lg shadow-sm">
+          <div className="w-full max-w-md mx-auto md:ml-auto md:mr-0">
+            <div id="mc_embed_signup" className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
               <form 
                 action="https://brookhaven-hathaway.us11.list-manage.com/subscribe/post?u=c9566827692b2fb74f389836c&amp;id=dabf4caebb&amp;f_id=000f72e1f0" 
                 method="post" 
@@ -94,51 +100,48 @@ function StackedCircularFooter() {
                 target="_blank"
               >
                 <div id="mc_embed_signup_scroll">
-                  <h2 className="text-lg font-medium mb-2">Subscribe</h2>
+                  <h2 className="text-lg font-medium mb-2">Stay Updated</h2>
                   <div className="indicates-required text-xs mb-2"><span className="asterisk text-red-500">*</span> indicates required</div>
+                  
                   <div className="mc-field-group mb-4">
-                    <label htmlFor="mce-EMAIL" className="block text-sm mb-1">
+                    <Label htmlFor="mce-EMAIL" className="block text-sm mb-1">
                       Email Address <span className="asterisk text-red-500">*</span>
-                    </label>
-                    <input 
+                    </Label>
+                    <Input 
                       type="email" 
                       name="EMAIL" 
-                      className="required email w-full px-3 py-2 border border-gray-300 rounded-md" 
+                      className="required email w-full" 
                       id="mce-EMAIL" 
                       required 
                     />
                   </div>
+                  
                   <div id="mce-responses" className="clear foot">
                     <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
                     <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
                   </div>
+                  
                   <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
                     {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
                     <input type="text" name="b_c9566827692b2fb74f389836c_dabf4caebb" tabIndex={-1} value="" readOnly />
                   </div>
+                  
                   <div className="optionalParent">
-                    <div className="clear foot flex flex-col sm:flex-row items-center justify-between">
-                      <input 
+                    <div className="clear foot">
+                      <Button 
                         type="submit" 
                         name="subscribe" 
                         id="mc-embedded-subscribe" 
-                        className="bg-primary text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary/90 mb-2 sm:mb-0" 
+                        className="w-full mt-2" 
                         value="Subscribe" 
-                      />
-                      <p className="text-xs text-gray-500 mt-2 sm:mt-0">
-                        Powered by Mailchimp
-                      </p>
+                      >
+                        Subscribe
+                      </Button>
                     </div>
                   </div>
                 </div>
               </form>
             </div>
-          </div>
-
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground">
-              © 2025 Padex Benefit Advisors. All rights reserved.
-            </p>
           </div>
         </div>
       </div>
