@@ -20,10 +20,10 @@ const LifeHealthInsurance = () => {
             
             <p className="text-gray-600 text-left mb-4">Why do I need Life Insurance?</p>
             
-            <p className="text-gray-600 text-left mb-4">Health insurance helps cover medical expenses, including preventive care, emergency services, and treatment for illnesses and conditions, protecting you from high healthcare costs.</p>
+            <p className="text-gray-600 text-left mb-4">Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner. An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries.</p>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Our Life Insurance Options:</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
+            
+            <ul className="">
               <li>Term Life Insurance</li>
               <li>Whole Life Insurance</li>
               <li>Universal Life Insurance</li>
