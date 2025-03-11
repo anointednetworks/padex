@@ -8,20 +8,32 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 // Create the Supabase client with error handling
 let supabase;
 
-if (supabaseUrl && supabaseAnonKey) {
-  // Only create the client if both URL and key are available
-  supabase = createClient(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      autoRefreshToken: true,
-      persistSession: true
-    }
-  });
+// Validate that we have both URL and key, and that the URL is valid
+if (supabaseUrl && supabaseAnonKey && supabaseUrl.startsWith('http')) {
+  try {
+    // Validate URL by attempting to construct a URL object
+    new URL(supabaseUrl);
+    
+    // Only create the client if both URL and key are available and URL is valid
+    supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        autoRefreshToken: true,
+        persistSession: true
+      }
+    });
+    console.log('Supabase client initialized successfully');
+  } catch (error) {
+    console.error('Invalid Supabase URL:', error);
+    supabase = createMockClient();
+  }
 } else {
-  // Create a mock client or placeholder when credentials are missing
-  console.warn('Supabase credentials are missing. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY environment variables.');
-  
-  // Create a dummy client that won't throw errors but won't connect to anything
-  supabase = {
+  console.warn('Supabase credentials are missing or invalid. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY environment variables.');
+  supabase = createMockClient();
+}
+
+// Create a mock client for when credentials are missing or invalid
+function createMockClient() {
+  return {
     from: () => ({
       select: () => Promise.resolve({ data: null, error: { message: 'Supabase credentials not configured' } }),
       insert: () => Promise.resolve({ data: null, error: { message: 'Supabase credentials not configured' } }),
