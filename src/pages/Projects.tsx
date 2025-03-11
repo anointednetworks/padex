@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <NavBarDemo />
-      <div className="flex-grow flex items-center justify-center px-4 py-20">
+      <div className="flex-grow flex items-center justify-center px-4 py-32">
         <div className="max-w-3xl text-center">
           <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Resources</h1>
           
