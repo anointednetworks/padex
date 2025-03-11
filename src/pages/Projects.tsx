@@ -7,9 +7,7 @@ const Projects = () => {
       <div className="flex-grow flex items-center justify-center px-4 py-20">
         <div className="max-w-3xl text-center">
           <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Resources</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Explore our featured projects and see how we bring ideas to life.
-          </p>
+          
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
