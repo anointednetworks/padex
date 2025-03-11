@@ -1,8 +1,47 @@
 
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 function StackedCircularFooter() {
+  // Add effect to load Mailchimp script after component mounts
+  useEffect(() => {
+    // Load Mailchimp validation script
+    const script = document.createElement('script');
+    script.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Initialize Mailchimp validation when script is loaded
+    script.onload = () => {
+      // @ts-ignore - jQuery is loaded by Mailchimp script
+      if (window.jQuery) {
+        // @ts-ignore
+        (function($) {
+          window.fnames = new Array();
+          window.ftypes = new Array();
+          fnames[0]='EMAIL';
+          ftypes[0]='email';
+          fnames[1]='FNAME';
+          ftypes[1]='text';
+          fnames[3]='ADDRESS';
+          ftypes[3]='address';
+          fnames[4]='PHONE';
+          ftypes[4]='phone';
+          fnames[6]='COMPANY';
+          ftypes[6]='text';
+        }(window.jQuery));
+        // @ts-ignore
+        var $mcj = window.jQuery.noConflict(true);
+      }
+    };
+
+    return () => {
+      // Clean up script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <footer className="bg-background py-12">
       <div className="container mx-auto px-4 md:px-6">
@@ -33,7 +72,7 @@ function StackedCircularFooter() {
             </Button>
           </div>
           
-          {/* Mailchimp Form - Shortened Version */}
+          {/* Mailchimp Form */}
           <div className="mb-8 w-full max-w-md">
             <div id="mc_embed_signup" className="bg-white p-4 rounded-lg shadow-sm">
               <form 
@@ -45,30 +84,41 @@ function StackedCircularFooter() {
                 target="_blank"
               >
                 <div id="mc_embed_signup_scroll">
-                  <h2 className="text-lg font-medium mb-2">Subscribe to our newsletter</h2>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <div className="flex-grow">
-                      <input 
-                        type="email" 
-                        name="EMAIL" 
-                        className="required email w-full px-3 py-2 border border-gray-300 rounded-md" 
-                        id="mce-EMAIL" 
-                        placeholder="Email Address *" 
-                        required 
-                      />
-                    </div>
-                    <div>
+                  <h2 className="text-lg font-medium mb-2">Subscribe</h2>
+                  <div className="indicates-required text-xs mb-2"><span className="asterisk text-red-500">*</span> indicates required</div>
+                  <div className="mc-field-group mb-4">
+                    <label htmlFor="mce-EMAIL" className="block text-sm mb-1">
+                      Email Address <span className="asterisk text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      name="EMAIL" 
+                      className="required email w-full px-3 py-2 border border-gray-300 rounded-md" 
+                      id="mce-EMAIL" 
+                      required 
+                    />
+                  </div>
+                  <div id="mce-responses" className="clear foot">
+                    <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
+                    <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
+                  </div>
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                    <input type="text" name="b_c9566827692b2fb74f389836c_dabf4caebb" tabIndex={-1} value="" readOnly />
+                  </div>
+                  <div className="optionalParent">
+                    <div className="clear foot flex flex-col sm:flex-row items-center justify-between">
                       <input 
                         type="submit" 
                         name="subscribe" 
                         id="mc-embedded-subscribe" 
-                        className="bg-primary text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary/90" 
+                        className="bg-primary text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary/90 mb-2 sm:mb-0" 
                         value="Subscribe" 
                       />
+                      <p className="text-xs text-gray-500 mt-2 sm:mt-0">
+                        Powered by Mailchimp
+                      </p>
                     </div>
-                  </div>
-                  <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                    <input type="text" name="b_c9566827692b2fb74f389836c_dabf4caebb" tabIndex={-1} value="" />
                   </div>
                 </div>
               </form>
