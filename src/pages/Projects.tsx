@@ -50,12 +50,6 @@ const Projects = () => {
           title="Frequently Asked Questions"
           description="Everything you need to know about our platform"
           items={RESOURCE_FAQS}
-          contactInfo={{
-            title: "Still have questions?",
-            description: "We're here to help you",
-            buttonText: "Contact Support",
-            onContact: () => console.log("Contact support clicked"),
-          }}
         />
       </div>
       <StackedCircularFooter />
