@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabase";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -76,8 +77,19 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call with timeout
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Insert the form data into Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          created_at: new Date().toISOString()
+        }]);
+      
+      if (error) {
+        throw error;
+      }
       
       // Success!
       toast({
@@ -92,6 +104,7 @@ const Contact = () => {
         message: ''
       });
     } catch (error) {
+      console.error('Error submitting contact form:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",

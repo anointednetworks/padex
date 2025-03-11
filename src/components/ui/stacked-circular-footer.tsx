@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabase";
 
 function StackedCircularFooter() {
   const { toast } = useToast();
@@ -36,8 +37,34 @@ function StackedCircularFooter() {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Check if email already exists
+      const { data: existingSubscriber } = await supabase
+        .from('subscribers')
+        .select('*')
+        .eq('email', email.toLowerCase())
+        .single();
+      
+      if (existingSubscriber) {
+        toast({
+          title: "Already subscribed",
+          description: "This email is already subscribed to our newsletter.",
+        });
+        setEmail("");
+        setIsSubmitting(false);
+        return;
+      }
+      
+      // Insert the email into Supabase
+      const { error: insertError } = await supabase
+        .from('subscribers')
+        .insert([{
+          email: email.toLowerCase(),
+          subscribed_at: new Date().toISOString()
+        }]);
+        
+      if (insertError) {
+        throw insertError;
+      }
       
       toast({
         title: "Successfully subscribed!",
@@ -47,6 +74,7 @@ function StackedCircularFooter() {
       // Reset form
       setEmail("");
     } catch (error) {
+      console.error('Error subscribing to newsletter:', error);
       toast({
         title: "Subscription failed",
         description: "Please try again later.",
