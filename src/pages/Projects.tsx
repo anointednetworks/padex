@@ -17,6 +17,26 @@ const RESOURCE_FAQS = [
     question: "What kind of support do you offer?",
     answer: "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
   },
+  {
+    question: "Can I integrate your platform with my existing tools?",
+    answer: "Absolutely! Our platform is designed with flexibility in mind, offering seamless integration with most popular business tools and software. We provide robust APIs and pre-built connectors for common applications like CRM systems, accounting software, and project management tools.",
+  },
+  {
+    question: "Is my data secure on your platform?",
+    answer: "Security is our top priority. We implement industry-leading encryption, regular security audits, and compliance with major regulations like GDPR and HIPAA. All customer data is stored in SOC 2 compliant data centers, and we maintain a comprehensive disaster recovery plan.",
+  },
+  {
+    question: "Do you offer customization options?",
+    answer: "Yes, we offer extensive customization options to meet your specific business needs. From white-labeling to workflow customization, our platform can be tailored to align with your brand identity and operational requirements. Enterprise clients also have access to our professional services team for advanced customization.",
+  },
+  {
+    question: "What training resources are available?",
+    answer: "We provide a comprehensive suite of training resources, including detailed documentation, video tutorials, regular webinars, and a knowledge base. New users receive access to our onboarding program, and enterprise plans include personalized training sessions with our product specialists.",
+  },
+  {
+    question: "How often do you release updates?",
+    answer: "We follow a continuous improvement model with major feature releases quarterly and smaller updates monthly. All updates are automatically deployed with zero downtime. We communicate upcoming changes through our product newsletter, and all new features include comprehensive documentation and tutorials.",
+  },
 ];
 
 const Projects = () => {
