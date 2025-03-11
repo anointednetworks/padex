@@ -1,12 +1,107 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = {
+      name: '',
+      email: '',
+      message: ''
+    };
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+      valid = false;
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      valid = false;
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      valid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call with timeout
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // Success!
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <NavBarDemo />
@@ -21,34 +116,70 @@ const Contact = () => {
             </p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
-            <form className="space-y-5">
-              <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
-                <Input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white"
-                />
+            <form className="space-y-5" onSubmit={handleSubmit}>
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-base font-medium">Your Name</Label>
+                <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+                  <Input 
+                    id="name"
+                    name="name"
+                    type="text" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your Name" 
+                    className={`w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
+                  />
+                </div>
+                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
-              <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
-                <Input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  className="w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white"
-                />
+              
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-base font-medium">Your Email</Label>
+                <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+                  <Input 
+                    id="email"
+                    name="email"
+                    type="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Your Email" 
+                    className={`w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
+                  />
+                </div>
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
-              <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
-                <textarea 
-                  placeholder="Your Message" 
-                  className="w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white"
-                  rows={4}
-                />
+              
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-base font-medium">Your Message</Label>
+                <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+                  <textarea 
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your Message" 
+                    className={`w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
+                    rows={4}
+                  />
+                </div>
+                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
+              
               <div className="relative rounded-lg overflow-hidden rainbow-button-container">
                 <Button 
                   type="submit" 
                   className="w-full bg-black text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </div>
+                  ) : "Send Message"}
                 </Button>
               </div>
             </form>
