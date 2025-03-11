@@ -1,3 +1,4 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -23,23 +24,19 @@ const MedicareSolutions = () => {
             <p className="text-gray-600 text-left mb-4">We provide personalized guidance on all aspects of Medicare to ensure you have the right coverage while maximizing your benefits and minimizing your costs.</p>
             
             <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Medicare Advantage</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
-              <li>Medicare Part A & B (Original Medicare) guidance</li>
-              <li>Medicare Advantage (Part C) plan comparisons</li>
-              <li>Medicare Supplement (Medigap) policy selection</li>
-              <li>Prescription Drug (Part D) plan analysis</li>
-              <li>Annual Medicare review and optimization</li>
-              <li>Assistance with enrollment and transitions</li>
-            </ul>
+            <p className="text-gray-600 text-left mb-2">Medicare Part A & B (Original Medicare) guidance</p>
+            <p className="text-gray-600 text-left mb-2">Medicare Advantage (Part C) plan comparisons</p>
+            <p className="text-gray-600 text-left mb-2">Medicare Supplement (Medigap) policy selection</p>
+            <p className="text-gray-600 text-left mb-2">Prescription Drug (Part D) plan analysis</p>
+            <p className="text-gray-600 text-left mb-2">Annual Medicare review and optimization</p>
+            <p className="text-gray-600 text-left mb-4">Assistance with enrollment and transitions</p>
             
             <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Why Choose Our Medicare Services:</h3>
-            <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
-              <li>Unbiased recommendations based on your specific needs</li>
-              <li>Clear explanations of complex Medicare concepts</li>
-              <li>Ongoing support as your health needs change</li>
-              <li>Access to multiple carriers and plan options</li>
-              <li>No additional cost for our services</li>
-            </ul>
+            <p className="text-gray-600 text-left mb-2">Unbiased recommendations based on your specific needs</p>
+            <p className="text-gray-600 text-left mb-2">Clear explanations of complex Medicare concepts</p>
+            <p className="text-gray-600 text-left mb-2">Ongoing support as your health needs change</p>
+            <p className="text-gray-600 text-left mb-2">Access to multiple carriers and plan options</p>
+            <p className="text-gray-600 text-left mb-4">No additional cost for our services</p>
             
             <p className="text-gray-600 text-left mt-6">Whether you're approaching Medicare eligibility, already enrolled, or helping a loved one, we're here to simplify the process and ensure you have the right coverage for your healthcare journey.</p>
           </div>
