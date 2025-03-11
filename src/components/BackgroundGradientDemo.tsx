@@ -26,17 +26,13 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Protect your future and loved ones with comprehensive coverage options.
         </p>
-        <a 
-          href="/life-health-insurance" 
+        <Link 
+          to="/life-health-insurance" 
           className="text-blue-500 hover:underline mt-4 inline-block"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation();
-            window.location.href = "/life-health-insurance";
-          }}
+          onClick={handleNavigation}
         >
           Read more
-        </a>
+        </Link>
       </BackgroundGradient>
 
       {/* Second Service */}
@@ -56,17 +52,13 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Secure your retirement with guaranteed income solutions.
         </p>
-        <a 
-          href="/annuities" 
+        <Link 
+          to="/annuities" 
           className="text-blue-500 hover:underline mt-4 inline-block"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation();
-            window.location.href = "/annuities";
-          }}
+          onClick={handleNavigation}
         >
           Read more
-        </a>
+        </Link>
       </BackgroundGradient>
 
       {/* Third Service */}
@@ -84,17 +76,13 @@ export function BackgroundGradientDemo() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Navigate Medicare options with expert guidance and support.
         </p>
-        <a 
-          href="/medicare-solutions" 
+        <Link 
+          to="/medicare-solutions" 
           className="text-blue-500 hover:underline mt-4 inline-block"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavigation();
-            window.location.href = "/medicare-solutions";
-          }}
+          onClick={handleNavigation}
         >
           Read more
-        </a>
+        </Link>
       </BackgroundGradient>
     </div>;
 }
