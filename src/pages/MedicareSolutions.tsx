@@ -22,7 +22,7 @@ const MedicareSolutions = () => {
             
             <p className="text-gray-600 text-left mb-4">We provide personalized guidance on all aspects of Medicare to ensure you have the right coverage while maximizing your benefits and minimizing your costs.</p>
             
-            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Our Medicare Services Include:</h3>
+            <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Medicare Advantage</h3>
             <ul className="list-disc pl-5 mb-4 text-left text-gray-600">
               <li>Medicare Part A & B (Original Medicare) guidance</li>
               <li>Medicare Advantage (Part C) plan comparisons</li>
