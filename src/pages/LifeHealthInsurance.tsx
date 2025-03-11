@@ -1,12 +1,9 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
-
 const LifeHealthInsurance = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
       <div className="w-full h-96">
         <ServiceHero title="Life & Health Insurance" />
@@ -21,7 +18,7 @@ const LifeHealthInsurance = () => {
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Comprehensive Coverage for Your Peace of Mind</h2>
             
-            <p className="text-gray-600 text-left mb-4">Life insurance provides financial protection for your loved ones in the event of your death, ensuring they can maintain their standard of living and meet financial obligations.</p>
+            <p className="text-gray-600 text-left mb-4">Why do I need Life Insurance?</p>
             
             <p className="text-gray-600 text-left mb-4">Health insurance helps cover medical expenses, including preventive care, emergency services, and treatment for illnesses and conditions, protecting you from high healthcare costs.</p>
             
@@ -51,8 +48,6 @@ const LifeHealthInsurance = () => {
       
       {/* Footer */}
       <StackedCircularFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default LifeHealthInsurance;
