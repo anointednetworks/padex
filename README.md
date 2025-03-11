@@ -1,8 +1,20 @@
+
 # Welcome to your Lovable project
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/a5327840-80c2-4214-a41c-5a947b5168af
+
+## Environment Setup
+
+To connect to Supabase, you need to set up environment variables:
+
+1. Rename `.env` to `.env.local` (this prevents it from being committed to Git)
+2. Replace the placeholder values with your actual Supabase credentials:
+   - `VITE_SUPABASE_URL`: Your Supabase project URL
+   - `VITE_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+
+You can find these values in your Supabase dashboard under Project Settings > API.
 
 ## How can I edit this code?
 
