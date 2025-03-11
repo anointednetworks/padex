@@ -160,6 +160,7 @@ const FaqItem = React.forwardRef<
               opacity: 0,
               transition: { duration: 0.2, ease: "easeIn" },
             }}
+            style={{ overflow: "hidden" }}
           >
             <div className="px-6 pb-4 pt-2">
               <motion.p
