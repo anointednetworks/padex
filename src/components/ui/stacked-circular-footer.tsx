@@ -3,6 +3,16 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
+// Add type definitions for Mailchimp globals
+declare global {
+  interface Window {
+    fnames: string[];
+    ftypes: string[];
+    $mcj: any;
+    jQuery: any;
+  }
+}
+
 function StackedCircularFooter() {
   // Add effect to load Mailchimp script after component mounts
   useEffect(() => {
@@ -14,31 +24,31 @@ function StackedCircularFooter() {
 
     // Initialize Mailchimp validation when script is loaded
     script.onload = () => {
-      // @ts-ignore - jQuery is loaded by Mailchimp script
+      // Initialize Mailchimp globals if jQuery is loaded
       if (window.jQuery) {
-        // @ts-ignore
         (function($) {
-          window.fnames = new Array();
-          window.ftypes = new Array();
-          fnames[0]='EMAIL';
-          ftypes[0]='email';
-          fnames[1]='FNAME';
-          ftypes[1]='text';
-          fnames[3]='ADDRESS';
-          ftypes[3]='address';
-          fnames[4]='PHONE';
-          ftypes[4]='phone';
-          fnames[6]='COMPANY';
-          ftypes[6]='text';
+          window.fnames = window.fnames || [];
+          window.ftypes = window.ftypes || [];
+          window.fnames[0]='EMAIL';
+          window.ftypes[0]='email';
+          window.fnames[1]='FNAME';
+          window.ftypes[1]='text';
+          window.fnames[3]='ADDRESS';
+          window.ftypes[3]='address';
+          window.fnames[4]='PHONE';
+          window.ftypes[4]='phone';
+          window.fnames[6]='COMPANY';
+          window.ftypes[6]='text';
         }(window.jQuery));
-        // @ts-ignore
-        var $mcj = window.jQuery.noConflict(true);
+        window.$mcj = window.jQuery.noConflict(true);
       }
     };
 
     return () => {
       // Clean up script when component unmounts
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
