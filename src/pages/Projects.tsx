@@ -15,91 +15,119 @@ import {
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { ArrowRight, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Image } from "@/components/ui/image";
 
-// Sample article data
-const ARTICLES = [
-  {
-    id: 1,
-    title: "Understanding Annuities: A Comprehensive Guide",
-    excerpt: "What are your retirement goals? For most people, it's making sure the money lasts throughout their retirement. Learn the secrets of having a sustainable income for the rest of your life.",
-    author: "Financial Advisor Team",
-    date: "May 15, 2023",
-    readTime: "8 min read",
-    category: "Retirement Planning",
-    imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 2,
-    title: "Life Insurance: Protecting What Matters Most",
-    excerpt: "Life insurance isn't just about planning for the inevitable. It's about ensuring your loved ones are protected financially when you can no longer be there for them. Discover why life insurance is a crucial part of financial planning.",
-    author: "Protection Specialists",
-    date: "June 3, 2023",
-    readTime: "6 min read",
-    category: "Life Insurance",
-    imageUrl: "https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 3,
-    title: "Medicare Solutions: Navigating Healthcare in Retirement",
-    excerpt: "Medicare can be complex and overwhelming. Our comprehensive guide breaks down the different parts of Medicare, eligibility requirements, and how to choose the best plan for your healthcare needs.",
-    author: "Medicare Experts",
-    date: "July 12, 2023",
-    readTime: "10 min read",
-    category: "Medicare",
-    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 4,
-    title: "Health Insurance: Finding the Right Coverage",
-    excerpt: "With so many health insurance options available, how do you know which one is right for you and your family? Our guide helps you understand the different types of health insurance and what to look for in a policy.",
-    author: "Healthcare Advisors",
-    date: "August 9, 2023",
-    readTime: "7 min read",
-    category: "Health Insurance",
-    imageUrl: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-];
+// Single featured article
+const FEATURED_ARTICLE = {
+  id: 1,
+  title: "Understanding Annuities: A Comprehensive Guide",
+  excerpt: "What are your retirement goals? For most people, it's making sure the money lasts throughout their retirement. Learn the secrets of having a sustainable income for the rest of your life.",
+  author: "Financial Advisor Team",
+  date: "May 15, 2023",
+  readTime: "8 min read",
+  category: "Retirement Planning",
+  imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  content: `
+    <p>Retirement planning is one of the most important financial tasks you'll undertake. At its core, the goal is simple: ensure you have enough money to live comfortably after you stop working. But the path to get there can be complex.</p>
+    
+    <p>Annuities are financial products designed specifically to provide guaranteed income during retirement. Unlike other retirement vehicles, annuities are insurance products that can offer protection against outliving your savings.</p>
+    
+    <h3>What is an Annuity?</h3>
+    
+    <p>An annuity is a contract between you and an insurance company. You make a lump-sum payment or series of payments, and in return, the insurer agrees to make periodic payments to you beginning immediately or at some point in the future.</p>
+    
+    <p>Annuities are primarily used as a means of securing steady cash flow during retirement. They can also be used to create a source of regular income from a lump sum of money, which can be useful in estate planning.</p>
+    
+    <h3>Types of Annuities</h3>
+    
+    <p>There are several types of annuities, each with its own set of features:</p>
+    
+    <ul>
+      <li><strong>Fixed Annuities:</strong> Offer a guaranteed payment amount for the duration of the annuity.</li>
+      <li><strong>Variable Annuities:</strong> Payments vary based on the performance of the investment portfolio.</li>
+      <li><strong>Indexed Annuities:</strong> Payments are tied to the performance of a market index like the S&P 500.</li>
+      <li><strong>Immediate Annuities:</strong> Begin payments shortly after the initial investment.</li>
+      <li><strong>Deferred Annuities:</strong> Payments begin at a future date, allowing time for the investment to grow.</li>
+    </ul>
+    
+    <h3>Who Should Consider Annuities?</h3>
+    
+    <p>Annuities can be a good fit for individuals who:</p>
+    
+    <ul>
+      <li>Are nearing retirement or already retired</li>
+      <li>Want guaranteed income for life</li>
+      <li>Have maxed out other retirement accounts</li>
+      <li>Are concerned about outliving their savings</li>
+      <li>Want to complement Social Security and pension benefits</li>
+    </ul>
+    
+    <h3>Factors to Consider</h3>
+    
+    <p>Before investing in an annuity, consider:</p>
+    
+    <ul>
+      <li>Fees and expenses</li>
+      <li>Surrender charges for early withdrawal</li>
+      <li>The financial strength of the insurance company</li>
+      <li>How the annuity fits into your overall retirement plan</li>
+      <li>Tax implications</li>
+    </ul>
+    
+    <h3>Getting Started</h3>
+    
+    <p>If you're considering an annuity as part of your retirement strategy, it's important to work with a qualified financial advisor who can help you understand the complexities and determine if an annuity is right for you.</p>
+    
+    <p>At Illuminated Links, we can guide you through the process and help you make informed decisions about your retirement planning.</p>
+  `
+};
 
-const ArticleCard = ({ article }) => {
+const FeatureArticle = ({ article }) => {
   return (
-    <BackgroundGradient className="rounded-xl">
-      <Card className="w-full border-none bg-card/80 backdrop-blur-sm">
-        <img 
-          src={article.imageUrl}
-          alt={article.title} 
-          className="w-full h-48 object-cover rounded-t-xl"
-        />
-        <CardHeader>
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
-              {article.category}
-            </span>
-          </div>
-          <CardTitle className="text-xl font-bold">{article.title}</CardTitle>
-          <CardDescription className="text-sm text-muted-foreground mt-2">
-            {article.excerpt}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <User className="h-4 w-4" />
-              <span>{article.author}</span>
+    <div className="max-w-4xl mx-auto">
+      <BackgroundGradient className="rounded-xl mb-10">
+        <Card className="w-full border-none bg-card/80 backdrop-blur-sm">
+          <img 
+            src={article.imageUrl}
+            alt={article.title} 
+            className="w-full h-64 object-cover rounded-t-xl"
+          />
+          <CardHeader>
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
+                {article.category}
+              </span>
             </div>
-            <div className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
-              <span>{article.readTime}</span>
+            <CardTitle className="text-2xl md:text-3xl font-bold">{article.title}</CardTitle>
+            <CardDescription className="text-base text-muted-foreground mt-2">
+              {article.excerpt}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+              <div className="flex items-center gap-1">
+                <User className="h-4 w-4" />
+                <span>{article.author}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                <span>{article.readTime}</span>
+              </div>
             </div>
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button variant="ghost" className="w-full group">
-            Read Article
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </CardFooter>
-      </Card>
-    </BackgroundGradient>
+            <div 
+              className="prose dark:prose-invert max-w-none" 
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          </CardContent>
+          <CardFooter className="flex justify-center py-6">
+            <Button variant="outline" className="group">
+              Request More Information
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </BackgroundGradient>
+    </div>
   );
 };
 
@@ -116,20 +144,10 @@ const Projects = () => {
       
       <div className="flex-grow container mx-auto px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight text-foreground">
-          Featured Articles
+          Featured Article
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ARTICLES.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-          ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <Button size="lg" className="px-8">
-            View All Articles
-          </Button>
-        </div>
+        <FeatureArticle article={FEATURED_ARTICLE} />
       </div>
       
       <StackedCircularFooter />
