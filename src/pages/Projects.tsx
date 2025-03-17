@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
+
 const Projects = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
@@ -47,8 +49,8 @@ const Projects = () => {
             
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement</h2>
-              <p className="text-gray-700 mb-4">Understanding Medicare options doesn't have to be complicated. We help seniors navigate the complexities of Medicare Parts A, B, C, and D.</p>
-              <p className="text-gray-700">Learn how to maximize your benefits and find the supplemental coverage that best suits your healthcare needs.</p>
+              <p className="text-gray-700 mb-4">Where will your retirement money come from? If you're like most people, qualified-retirement plans, Social Security, personal savings and investments are expected to play a role. Once you have estimated the amount of money you may need for retirement, a sound approach involves taking a close look at your potential retirement-income sources.</p>
+              <p className="text-gray-700">When you retire, how will you treat your next chapter?</p>
             </div>
             
             <div className="mb-12">
@@ -75,4 +77,5 @@ const Projects = () => {
       <StackedCircularFooter />
     </div>;
 };
+
 export default Projects;
