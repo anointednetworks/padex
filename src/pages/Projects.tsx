@@ -60,8 +60,18 @@ const Projects = () => {
             
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Medigap Policies</h2>
-              <p className="text-gray-700 mb-4">Medigap policies are supplemental insurance plans that work alongside Original Medicare to help cover costs that Medicare doesn't pay for.</p>
-              <p className="text-gray-700">These policies can help with expenses like copayments, coinsurance, and deductibles, potentially saving you from significant out-of-pocket healthcare expenses.</p>
+              <p className="text-gray-700 mb-4">Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:</p>
+              <ul className="list-disc pl-8 mb-4 text-gray-700">
+                <li>Copayments</li>
+                <li>Coinsurance</li>
+                <li>Deductibles</li>
+              </ul>
+              <p className="text-gray-700 mb-4">Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens:</p>
+              <ul className="list-disc pl-8 mb-4 text-gray-700">
+                <li>Medicare will pay its share of the Medicare-approved amount for covered health care costs.</li>
+                <li>Then, your Medigap policy pays its share.</li>
+              </ul>
+              <p className="text-gray-700">Let's discuss how to make the decision that best suites you.</p>
             </div>
             
             <div>
