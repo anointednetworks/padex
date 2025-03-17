@@ -4,20 +4,12 @@ import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { ArrowRight, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Image } from "@/components/ui/image";
 
-// Single featured article
+// Featured article data
 const FEATURED_ARTICLE = {
   id: 1,
   title: "Understanding Annuities: A Comprehensive Guide",
@@ -82,58 +74,9 @@ const FEATURED_ARTICLE = {
   `
 };
 
-const FeatureArticle = ({ article }) => {
-  return (
-    <div className="max-w-4xl mx-auto">
-      <BackgroundGradient className="rounded-xl mb-10">
-        <Card className="w-full border-none bg-card/80 backdrop-blur-sm">
-          <img 
-            src={article.imageUrl}
-            alt={article.title} 
-            className="w-full h-64 object-cover rounded-t-xl"
-          />
-          <CardHeader>
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary">
-                {article.category}
-              </span>
-            </div>
-            <CardTitle className="text-2xl md:text-3xl font-bold">{article.title}</CardTitle>
-            <CardDescription className="text-base text-muted-foreground mt-2">
-              {article.excerpt}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-              <div className="flex items-center gap-1">
-                <User className="h-4 w-4" />
-                <span>{article.author}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
-                <span>{article.readTime}</span>
-              </div>
-            </div>
-            <div 
-              className="prose dark:prose-invert max-w-none" 
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
-          </CardContent>
-          <CardFooter className="flex justify-center py-6">
-            <Button variant="outline" className="group">
-              Request More Information
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </CardFooter>
-        </Card>
-      </BackgroundGradient>
-    </div>
-  );
-};
-
 const Projects = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead 
         title="Resource Center | Illuminated Links"
         description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being."
@@ -142,12 +85,57 @@ const Projects = () => {
       
       <ServiceHero title="Resources" />
       
-      <div className="flex-grow container mx-auto px-4 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight text-foreground">
-          Featured Article
-        </h2>
-        
-        <FeatureArticle article={FEATURED_ARTICLE} />
+      <div className="flex-grow flex items-center justify-center px-4 py-20">
+        <div className="max-w-3xl">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold mb-4 tracking-tight text-gray-900">Featured Article</h1>
+            <p className="text-xl text-gray-600">
+              Gain valuable insights into retirement planning and financial security
+            </p>
+          </div>
+          
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <div className="mb-6">
+              <img 
+                src={FEATURED_ARTICLE.imageUrl}
+                alt={FEATURED_ARTICLE.title} 
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
+              
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-800">
+                  {FEATURED_ARTICLE.category}
+                </span>
+              </div>
+              
+              <h2 className="text-2xl font-bold text-gray-800 mb-3">{FEATURED_ARTICLE.title}</h2>
+              <p className="text-gray-600 mb-4">{FEATURED_ARTICLE.excerpt}</p>
+              
+              <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                <div className="flex items-center gap-1">
+                  <User className="h-4 w-4" />
+                  <span>{FEATURED_ARTICLE.author}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Clock className="h-4 w-4" />
+                  <span>{FEATURED_ARTICLE.readTime}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div 
+              className="prose max-w-none mb-6" 
+              dangerouslySetInnerHTML={{ __html: FEATURED_ARTICLE.content }}
+            />
+            
+            <div className="flex justify-center mt-8">
+              <Button className="group">
+                Request More Information
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
       
       <StackedCircularFooter />
