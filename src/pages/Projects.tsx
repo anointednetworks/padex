@@ -46,7 +46,7 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Medicare Coverage</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement</h2>
               <p className="text-gray-700 mb-4">Understanding Medicare options doesn't have to be complicated. We help seniors navigate the complexities of Medicare Parts A, B, C, and D.</p>
               <p className="text-gray-700">Learn how to maximize your benefits and find the supplemental coverage that best suits your healthcare needs.</p>
             </div>
