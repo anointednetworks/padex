@@ -1,11 +1,9 @@
-
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
-
 const Projects = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
@@ -54,7 +52,7 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement Planning</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Tax</h2>
               <p className="text-gray-700 mb-4">Securing a comfortable retirement requires strategic planning and informed decision-making throughout your working years.</p>
               <p className="text-gray-700">Explore retirement savings vehicles, income strategies, and ways to protect your nest egg from market volatility and inflation.</p>
             </div>
@@ -77,5 +75,4 @@ const Projects = () => {
       <StackedCircularFooter />
     </div>;
 };
-
 export default Projects;
