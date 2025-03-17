@@ -11,10 +11,11 @@ const RESOURCE_FAQS = [
   },
   {
     question: "Insurance",
-    answer: "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+    answer: "Why Do You Need Health Insurance?
+Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness?  Let’s discuss insurance you don’t have to die to use.  It allows you to pay your bills while recuperating, without stress.",
   },
   {
-    question: "What kind of support do you offer?",
+    question: "Health Insurance",
     answer: "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
   },
   {
