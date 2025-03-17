@@ -4,75 +4,77 @@ import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { ArrowRight, Clock, User } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Clock, User, Shield, HeartPulse, Umbrella, DollarSign, Heart, Stethoscope, Infinity, AlertCircle, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Featured article data
-const FEATURED_ARTICLE = {
+// Article data
+const ARTICLE_DATA = {
   id: 1,
-  title: "Understanding Annuities: A Comprehensive Guide",
-  excerpt: "What are your retirement goals? For most people, it's making sure the money lasts throughout their retirement. Learn the secrets of having a sustainable income for the rest of your life.",
-  author: "Financial Advisor Team",
-  date: "May 15, 2023",
-  readTime: "8 min read",
-  category: "Retirement Planning",
-  imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  title: "Why Do You Need Health Insurance?",
+  excerpt: "Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness? Let's discuss insurance you don't have to die to use. It allows you to pay your bills while recuperating, without stress.",
+  author: "Insurance Advisory Team",
+  date: "June 2, 2023",
+  readTime: "10 min read",
+  imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   content: `
-    <p>Retirement planning is one of the most important financial tasks you'll undertake. At its core, the goal is simple: ensure you have enough money to live comfortably after you stop working. But the path to get there can be complex.</p>
-    
-    <p>Annuities are financial products designed specifically to provide guaranteed income during retirement. Unlike other retirement vehicles, annuities are insurance products that can offer protection against outliving your savings.</p>
-    
-    <h3>What is an Annuity?</h3>
-    
-    <p>An annuity is a contract between you and an insurance company. You make a lump-sum payment or series of payments, and in return, the insurer agrees to make periodic payments to you beginning immediately or at some point in the future.</p>
-    
-    <p>Annuities are primarily used as a means of securing steady cash flow during retirement. They can also be used to create a source of regular income from a lump sum of money, which can be useful in estate planning.</p>
-    
-    <h3>Types of Annuities</h3>
-    
-    <p>There are several types of annuities, each with its own set of features:</p>
-    
-    <ul>
-      <li><strong>Fixed Annuities:</strong> Offer a guaranteed payment amount for the duration of the annuity.</li>
-      <li><strong>Variable Annuities:</strong> Payments vary based on the performance of the investment portfolio.</li>
-      <li><strong>Indexed Annuities:</strong> Payments are tied to the performance of a market index like the S&P 500.</li>
-      <li><strong>Immediate Annuities:</strong> Begin payments shortly after the initial investment.</li>
-      <li><strong>Deferred Annuities:</strong> Payments begin at a future date, allowing time for the investment to grow.</li>
-    </ul>
-    
-    <h3>Who Should Consider Annuities?</h3>
-    
-    <p>Annuities can be a good fit for individuals who:</p>
-    
-    <ul>
-      <li>Are nearing retirement or already retired</li>
-      <li>Want guaranteed income for life</li>
-      <li>Have maxed out other retirement accounts</li>
-      <li>Are concerned about outliving their savings</li>
-      <li>Want to complement Social Security and pension benefits</li>
-    </ul>
-    
-    <h3>Factors to Consider</h3>
-    
-    <p>Before investing in an annuity, consider:</p>
-    
-    <ul>
-      <li>Fees and expenses</li>
-      <li>Surrender charges for early withdrawal</li>
-      <li>The financial strength of the insurance company</li>
-      <li>How the annuity fits into your overall retirement plan</li>
-      <li>Tax implications</li>
-    </ul>
-    
-    <h3>Getting Started</h3>
-    
-    <p>If you're considering an annuity as part of your retirement strategy, it's important to work with a qualified financial advisor who can help you understand the complexities and determine if an annuity is right for you.</p>
-    
-    <p>At Illuminated Links, we can guide you through the process and help you make informed decisions about your retirement planning.</p>
+    <p>Insurance transfers the financial risk of life's events to an insurance company. A sound insurance strategy can help protect your family from the financial consequences of those events. A strategy can include personal insurance, liability insurance, and life insurance.</p>
   `
 };
+
+// Insurance items
+const INSURANCE_ITEMS = [
+  {
+    title: "Health Insurance Basics",
+    description: "Health insurance helps cover medical expenses and offers financial protection against unexpected healthcare costs. Policies typically cover doctor visits, hospital stays, and prescription medications.",
+    icon: HeartPulse
+  },
+  {
+    title: "Managing Medical Costs",
+    description: "With rising healthcare costs, health insurance provides a financial safety net. Without it, a severe illness or accident could lead to significant debt or even bankruptcy.",
+    icon: DollarSign
+  },
+  {
+    title: "Preventive Care Benefits",
+    description: "Many health insurance plans cover preventive services at no additional cost, including vaccinations, screenings, and annual check-ups, helping you stay healthy and catch issues early.",
+    icon: CheckCircle2
+  },
+  {
+    title: "Family Protection",
+    description: "Health insurance doesn't just protect you—it protects your entire family. Family plans provide coverage for spouses and children, ensuring everyone has access to necessary healthcare.",
+    icon: Heart
+  },
+  {
+    title: "Emergency Coverage",
+    description: "When unexpected medical emergencies occur, health insurance covers emergency room visits and hospital stays, reducing your financial burden during already stressful situations.",
+    icon: AlertCircle
+  },
+  {
+    title: "Long-Term Health Management",
+    description: "For chronic conditions requiring ongoing treatment, health insurance helps manage long-term healthcare costs and ensures consistent access to necessary medications and therapies.",
+    icon: Stethoscope
+  },
+  {
+    title: "Mental Health Support",
+    description: "Many health insurance plans now include coverage for mental health services, including therapy, counseling, and psychiatric care, supporting your complete wellbeing.",
+    icon: Shield
+  },
+  {
+    title: "Maternity and Newborn Care",
+    description: "Health insurance typically covers prenatal care, childbirth, and newborn care, reducing the financial impact of bringing a new life into your family.",
+    icon: Heart
+  },
+  {
+    title: "Specialized Treatment Access",
+    description: "Insurance networks often include specialists and advanced treatment options that might otherwise be financially out of reach, ensuring you have access to quality care.",
+    icon: Umbrella
+  },
+  {
+    title: "Peace of Mind",
+    description: "Perhaps the most valuable benefit: knowing you're protected financially against healthcare costs provides peace of mind and reduces stress during health challenges.",
+    icon: Infinity
+  }
+];
 
 const Projects = () => {
   return (
@@ -85,54 +87,59 @@ const Projects = () => {
       
       <ServiceHero title="Resources" />
       
-      <div className="flex-grow flex items-center justify-center px-4 py-20">
-        <div className="max-w-3xl">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold mb-4 tracking-tight text-gray-900">Featured Article</h1>
-            <p className="text-xl text-gray-600">
-              Gain valuable insights into retirement planning and financial security
-            </p>
-          </div>
-          
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <div className="mb-6">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-8">
               <img 
-                src={FEATURED_ARTICLE.imageUrl}
-                alt={FEATURED_ARTICLE.title} 
+                src={ARTICLE_DATA.imageUrl}
+                alt={ARTICLE_DATA.title} 
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
-              
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-800">
-                  {FEATURED_ARTICLE.category}
-                </span>
-              </div>
-              
-              <h2 className="text-2xl font-bold text-gray-800 mb-3">{FEATURED_ARTICLE.title}</h2>
-              <p className="text-gray-600 mb-4">{FEATURED_ARTICLE.excerpt}</p>
               
               <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
                 <div className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  <span>{FEATURED_ARTICLE.author}</span>
+                  <span>{ARTICLE_DATA.author}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4" />
-                  <span>{FEATURED_ARTICLE.readTime}</span>
+                  <span>{ARTICLE_DATA.readTime}</span>
                 </div>
+              </div>
+              
+              <h2 className="text-3xl font-bold text-gray-800 mb-3">{ARTICLE_DATA.title}</h2>
+              <p className="text-gray-600 mb-8 text-lg">{ARTICLE_DATA.excerpt}</p>
+              
+              <div 
+                className="prose max-w-none mb-8" 
+                dangerouslySetInnerHTML={{ __html: ARTICLE_DATA.content }}
+              />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                {INSURANCE_ITEMS.map((item, index) => (
+                  <Card key={index} className="p-6 hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-blue-50 p-3 rounded-full">
+                        <item.icon className="h-6 w-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-800 mb-2">{item.title}</h3>
+                        <p className="text-gray-600 text-sm">{item.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
               </div>
             </div>
             
-            <div 
-              className="prose max-w-none mb-6" 
-              dangerouslySetInnerHTML={{ __html: FEATURED_ARTICLE.content }}
-            />
-            
-            <div className="flex justify-center mt-8">
-              <Button className="group">
-                Request More Information
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
+            <div className="bg-gray-50 p-8 border-t border-gray-100">
+              <div className="flex justify-center">
+                <Button className="group">
+                  Request More Information
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
