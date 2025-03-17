@@ -125,17 +125,17 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <NavBarDemo />
-      <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20">
-        <BackgroundGradient containerClassName="max-w-3xl w-full" className="p-8 rounded-3xl">
+      <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20 mt-16 sm:mt-20">
+        <BackgroundGradient containerClassName="max-w-2xl w-full" className="p-8 rounded-3xl">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-pink-500 via-red-500 via-orange-500 via-yellow-500 via-green-500 to-blue-600 bg-clip-text text-transparent animate-gradient pb-2">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-pink-500 via-red-500 via-orange-500 via-yellow-500 via-green-500 to-blue-600 bg-clip-text text-transparent animate-gradient pb-2">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 mt-4">
+            <p className="text-lg text-gray-600 mt-4">
               We would love to hear from you! Please reach out with any questions or feedback.
             </p>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
+          <div className="bg-white/80 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-base font-medium">Your Name</Label>
@@ -147,7 +147,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your Name" 
-                    className={`w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
+                    className={`w-full p-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
                   />
                 </div>
                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -163,7 +163,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your Email" 
-                    className={`w-full p-4 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
+                    className={`w-full p-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
                   />
                 </div>
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -178,8 +178,8 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your Message" 
-                    className={`w-full p-4 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
-                    rows={4}
+                    className={`w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
+                    rows={3}
                   />
                 </div>
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
