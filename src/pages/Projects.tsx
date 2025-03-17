@@ -39,8 +39,16 @@ const Projects = () => {
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Life Insurance</h2>
-              <p className="text-gray-700 mb-4">Life insurance isn't just about preparing for the unexpected—it's about protecting your loved ones' financial future.</p>
-              <p className="text-gray-700">Discover how the right life insurance policy can provide peace of mind and security for your family when they need it most.</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Why do I need Life Insurance?</h3>
+              <p className="text-gray-700 mb-4">Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner. An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries. Do you want to see how the facts find the story?</p>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">How much Insurance do I need?</h3>
+              <p className="text-gray-700 mb-4">Before buying life insurance, you should assemble personal financial information and review your family's needs. There are a few factors to consider when determining how much protection you should have.</p>
+              <p className="text-gray-700 mb-4">A rule of thumb used is, buy life insurance that is equal to five to seven times annual gross income. I can assist you with completing a Needs Analysis.</p>
+              
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Choosing a Plan</h3>
+              <p className="text-gray-700 mb-4">Choosing life insurance is an important decision but could be complicated. It is important that you understand your needs and the options available to you.</p>
+              <p className="text-gray-700">Buying life insurance is financial security for your family. Let's discuss life insurance you don't have to die to use. Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources.</p>
             </div>
             
             <div className="mb-12">
