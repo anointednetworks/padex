@@ -11,7 +11,7 @@ const RESOURCE_FAQS = [
   },
   {
     question: "Insurance",
-    answer: "Why Do You Need Health Insurance?
+    answer: "Why Do You Need Health Insurance?",
 Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness?  Let’s discuss insurance you don’t have to die to use.  It allows you to pay your bills while recuperating, without stress.",
   },
   {
