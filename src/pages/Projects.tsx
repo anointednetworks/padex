@@ -1,18 +1,12 @@
-
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
-
 const Projects = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      <SEOHead 
-        title="Resource Center | Illuminated Links"
-        description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being."
-      />
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
       <NavBarDemo />
       
       <ServiceHero title="Resources" />
@@ -48,7 +42,7 @@ const Projects = () => {
               
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Choosing a Plan</h3>
               <p className="text-gray-700 mb-4">Choosing life insurance is an important decision but could be complicated. It is important that you understand your needs and the options available to you.</p>
-              <p className="text-gray-700">Buying life insurance is financial security for your family. Let's discuss life insurance you don't have to die to use. Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources.</p>
+              <p className="text-gray-700">Buying life insurance is financial security for your family. Let's discuss life insurance you don't have to die to use. Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources needed to protect their home, and the income needed to run the household.</p>
             </div>
             
             <div className="mb-12">
@@ -79,8 +73,6 @@ const Projects = () => {
       </div>
       
       <StackedCircularFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Projects;
