@@ -59,9 +59,9 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Long-Term Care</h2>
-              <p className="text-gray-700 mb-4">The rising costs of extended healthcare can quickly deplete your savings. Long-term care insurance helps safeguard your assets.</p>
-              <p className="text-gray-700">Discover options for covering nursing home care, assisted living, and in-home healthcare services that Medicare doesn't fully cover.</p>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Medigap Policies</h2>
+              <p className="text-gray-700 mb-4">Medigap policies are supplemental insurance plans that work alongside Original Medicare to help cover costs that Medicare doesn't pay for.</p>
+              <p className="text-gray-700">These policies can help with expenses like copayments, coinsurance, and deductibles, potentially saving you from significant out-of-pocket healthcare expenses.</p>
             </div>
             
             <div>
