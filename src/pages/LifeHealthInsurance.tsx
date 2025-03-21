@@ -1,17 +1,12 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
-
 const LifeHealthInsurance = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
       <div className="w-full h-96">
-        <ServiceHero 
-          title="Life & Health Insurance" 
-          subheading="Find out about insurance you don't have to die to use"
-        />
+        <ServiceHero title="Life & Health Insurance" subheading="Find out about insurance you don't have to die to use" />
       </div>
       
       {/* New Hero Component Section */}
@@ -38,7 +33,7 @@ const LifeHealthInsurance = () => {
             
             
             
-            <p className="text-gray-600 text-left mt-6">Do you want to see how the facts find the story?</p>
+            <p className="text-gray-600 text-left mt-6">Do you want to know how to benefit from life insurance while living?</p>
           </div>
         </div>
       </div>
