@@ -1,5 +1,5 @@
 
-import { MoveRight, PhoneCall } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -27,8 +27,8 @@ function Hero() {
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <Image 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop" 
-              alt="Medicare specialist answering a phone call" 
+              src="https://images.unsplash.com/photo-1622151834677-70f91ec33878?q=80&w=1600&auto=format&fit=crop" 
+              alt="Insurance specialist consulting with a client" 
               className="w-full h-auto object-cover aspect-video" 
             />
           </div>
@@ -37,3 +37,4 @@ function Hero() {
     </div>;
 }
 export { Hero };
+
