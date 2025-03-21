@@ -4,7 +4,6 @@ import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
-
 const Projects = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
@@ -22,7 +21,7 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Insurance</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Health Insurance</h2>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Why Do You Need Health Insurance?</h3>
               <p className="text-gray-700">Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness? Let's discuss insurance you don't have to die to use. It allows you to pay your bills while recuperating, without stress.</p>
             </div>
@@ -86,5 +85,4 @@ const Projects = () => {
       <StackedCircularFooter />
     </div>;
 };
-
 export default Projects;
