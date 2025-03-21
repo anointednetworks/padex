@@ -7,9 +7,10 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 
 interface ServiceHeroProps {
   title: string;
+  subheading?: string;
 }
 
-export function ServiceHero({ title }: ServiceHeroProps) {
+export function ServiceHero({ title, subheading = "Expert guidance for your financial well-being" }: ServiceHeroProps) {
   return (
     <AuroraBackground>
       <motion.div 
@@ -30,7 +31,7 @@ export function ServiceHero({ title }: ServiceHeroProps) {
       >
         <div className="text-3xl md:text-6xl font-bold dark:text-white text-center">{title}</div>
         <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 py-4">
-          Expert guidance for your financial well-being
+          {subheading}
         </div>
       </motion.div>
     </AuroraBackground>
