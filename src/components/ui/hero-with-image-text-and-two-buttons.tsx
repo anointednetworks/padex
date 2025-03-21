@@ -17,9 +17,7 @@ function Hero() {
               <Button className="bg-blue-600 hover:bg-blue-700">
                 Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-blue-200">
-                <PhoneCall className="mr-2 h-4 w-4" /> Call Us Today
-              </Button>
+              
             </div>
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
