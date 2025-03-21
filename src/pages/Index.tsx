@@ -22,7 +22,7 @@ const Index = () => {
               
               <p className="text-gray-600 text-left mb-4">Whether you're planning for retirement or seeking clarity on investment strategies that will benefit you immediately and long-term, we are here to help you address your most important financial questions.</p>
               
-              <p className="text-gray-600 text-left mb-4">Our priority is your overall financial success. We want to learn more about your business and personal situation and identify your dreams and goals.</p>
+              <p className="text-gray-600 text-left mb-4">Our priority is your overall health and financial success. We want to learn more about your business and personal situation and identify your dreams and goals.</p>
               
               <p className="text-gray-600 text-left mb-4">Long-term relationships that encourage open and honest communication have been the cornerstone of my foundation of success.</p>
               
