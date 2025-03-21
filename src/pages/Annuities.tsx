@@ -1,18 +1,11 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 import { SEOHead } from "@/components/SEOHead";
-
 const Annuities = () => {
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      <SEOHead 
-        title="Annuities" 
-        description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals."
-        canonicalUrl="https://illuminated-links.com/annuities"
-      />
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      <SEOHead title="Annuities" description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals." canonicalUrl="https://illuminated-links.com/annuities" />
       
       {/* Hero Section */}
       <div className="w-full h-96">
@@ -29,7 +22,7 @@ const Annuities = () => {
             
             <p className="text-gray-600 text-left mb-4">What are your retirement goals? For most people, it's making sure the money lasts through their retirement.</p>
             
-            <p className="text-gray-600 text-left mb-4">Do you know the secret about having an income for the rest of your life? Ask me how.</p>
+            <p className="text-gray-600 text-left mb-4">Want to know the secret to having an income you cannot outlive? Find out how.</p>
             
           </div>
         </div>
@@ -40,8 +33,6 @@ const Annuities = () => {
       
       {/* Footer */}
       <StackedCircularFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Annuities;
