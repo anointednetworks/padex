@@ -6,6 +6,9 @@ import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 
 const MedicareSolutions = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      {/* Navbar */}
+      <NavBarDemo />
+      
       {/* Hero Section */}
       <div className="w-full h-96">
         <ServiceHero 
@@ -14,7 +17,10 @@ const MedicareSolutions = () => {
         />
       </div>
       
-      {/* Content Section - Moved up */}
+      {/* Hero Component Section */}
+      <Hero />
+      
+      {/* Content Section with Medigap Policies */}
       <div className="flex items-center justify-center py-20">
         <div className="text-center max-w-4xl px-4">
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
@@ -29,12 +35,6 @@ const MedicareSolutions = () => {
           </div>
         </div>
       </div>
-      
-      {/* New Hero Component Section - Moved down */}
-      <Hero />
-      
-      {/* Navbar */}
-      <NavBarDemo />
       
       {/* Footer */}
       <StackedCircularFooter />

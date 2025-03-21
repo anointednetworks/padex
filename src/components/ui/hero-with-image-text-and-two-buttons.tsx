@@ -14,21 +14,18 @@ function Hero() {
             </div>
             <div className="flex gap-4 flex-col">
               <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
-                This is the start of something!
+                Medicare made simple!
               </h1>
               <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster than
-                ever.
+                Understanding Medicare options shouldn't be complicated. Our Medicare specialists provide personalized guidance to help you navigate your options and find the right coverage for your needs and budget.
               </p>
             </div>
             <div className="flex flex-row gap-4">
               <Button size="lg" className="gap-4" variant="outline">
-                Jump on a call <PhoneCall className="w-4 h-4" />
+                Schedule a consultation <PhoneCall className="w-4 h-4" />
               </Button>
               <Button size="lg" className="gap-4">
-                Sign up here <MoveRight className="w-4 h-4" />
+                Learn about Medicare <MoveRight className="w-4 h-4" />
               </Button>
             </div>
           </div>
