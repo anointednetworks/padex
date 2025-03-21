@@ -27,8 +27,8 @@ function Hero() {
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <Image 
-              src="https://images.unsplash.com/photo-1622151834677-70f91ec33878?q=80&w=1600&auto=format&fit=crop" 
-              alt="Insurance specialist consulting with a client" 
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1600&auto=format&fit=crop" 
+              alt="Insurance professional in a business setting" 
               className="w-full h-auto object-cover aspect-video" 
             />
           </div>
@@ -37,4 +37,3 @@ function Hero() {
     </div>;
 }
 export { Hero };
-
