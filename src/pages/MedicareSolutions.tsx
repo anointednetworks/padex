@@ -14,10 +14,7 @@ const MedicareSolutions = () => {
         />
       </div>
       
-      {/* New Hero Component Section */}
-      <Hero />
-      
-      {/* Content Section */}
+      {/* Content Section - Moved up */}
       <div className="flex items-center justify-center py-20">
         <div className="text-center max-w-4xl px-4">
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
@@ -29,23 +26,12 @@ const MedicareSolutions = () => {
             
             <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Medicare Advantage</h3>
             <p className="text-gray-600 text-left mb-2">Medicare Advantage Plans are health plan options that are approved by Medicare but run by private companies. They are part of the Medicare Program, and sometimes called &quot;Part C.&quot; When you join a Medicare Advantage Plan, you are still in Medicare.</p>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
           </div>
         </div>
       </div>
+      
+      {/* New Hero Component Section - Moved down */}
+      <Hero />
       
       {/* Navbar */}
       <NavBarDemo />
