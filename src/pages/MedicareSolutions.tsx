@@ -2,7 +2,6 @@
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
-import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 
 const MedicareSolutions = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
@@ -16,9 +15,6 @@ const MedicareSolutions = () => {
           subheading="Navigate Medicare options with expert guidance and support" 
         />
       </div>
-      
-      {/* Hero Component Section */}
-      <Hero />
       
       {/* Content Section with Medigap Policies */}
       <div className="flex items-center justify-center py-20">
