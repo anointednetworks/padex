@@ -1,6 +1,9 @@
+
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+
 function Hero() {
   return <div className="w-full py-20">
       <div className="container mx-auto">
@@ -14,10 +17,11 @@ function Hero() {
             </h2>
             <p className="text-gray-600 max-w-prose">Schedule your Medicare Plan Consultation. Request a no cost one-on-one appointment.</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
-              </Button>
-              
+              <Link to="/contact">
+                <Button className="bg-blue-600 hover:bg-blue-700">
+                  Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
