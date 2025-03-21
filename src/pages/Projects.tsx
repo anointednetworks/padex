@@ -21,8 +21,9 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Health Insurance</h2>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Why Do You Need Health Insurance?</h3>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Insurance</h2>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness? Let's discuss insurance you don't have to die to use. It allows you to pay your bills while recuperating, without stress. It is also an option to consider for some Long-
+Term Care.</h3>
               <p className="text-gray-700">Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness? Let's discuss insurance you don't have to die to use. It allows you to pay your bills while recuperating, without stress.</p>
             </div>
             
