@@ -58,13 +58,26 @@ function StackedCircularFooter() {
     <footer className="bg-gray-50 py-10 border-t">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Logo and Social Icons */}
+          {/* Logo and Contact Information */}
           <div className="flex flex-col items-center md:items-start gap-6">
             <img 
               src="/lovable-uploads/205d5d94-d950-49f6-a520-d2bdb3a39474.png"
               alt="Padex Benefit Advisors Logo"
               className="h-24 w-auto"
             />
+            
+            {/* Contact Information */}
+            <div className="text-sm text-gray-600 space-y-1 text-center md:text-left">
+              <p className="font-medium">Padex Benefit Advisors</p>
+              <p>Ste 110 #614</p>
+              <p>3060 Mercer University Dr</p>
+              <p>Atlanta, GA 30341</p>
+              <p>Office: (470) 464-8950</p>
+              <p>Fax: (470) 464-8950</p>
+              <p>Email: <a href="mailto:pwilliams@padexadvisors.com" className="hover:underline">pwilliams@padexadvisors.com</a></p>
+              <p>Website: <a href="https://www.padexadvisors.com" className="hover:underline" target="_blank" rel="noopener noreferrer">www.padexadvisors.com</a></p>
+            </div>
+
             <div className="flex space-x-4">
               <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
                 <Facebook className="h-4 w-4" />
