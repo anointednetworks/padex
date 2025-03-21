@@ -100,7 +100,7 @@ function StackedCircularFooter() {
                 target="_blank"
               >
                 <div id="mc_embed_signup_scroll">
-                  <h2 className="text-lg font-medium mb-2">Stay Updated</h2>
+                  <h2 className="text-lg font-medium mb-2">Subscribe</h2>
                   <div className="indicates-required text-xs mb-2"><span className="asterisk text-red-500">*</span> indicates required</div>
                   
                   <div className="mc-field-group mb-4">
