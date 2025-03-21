@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import { Image } from "@/components/ui/image";
 
 function Hero() {
+  // Add a function to handle scrolling to top when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <div className="w-full py-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
@@ -18,7 +23,7 @@ function Hero() {
             </h2>
             <p className="text-gray-600 max-w-prose">Schedule your Medicare Plan Consultation. Request a no cost one-on-one appointment.</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link to="/contact">
+              <Link to="/contact" onClick={handleNavigation}>
                 <Button className="bg-blue-600 hover:bg-blue-700">
                   Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
                 </Button>
