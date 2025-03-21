@@ -1,12 +1,17 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
+
 const LifeHealthInsurance = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
       <div className="w-full h-96">
-        <ServiceHero title="Life & Health Insurance" />
+        <ServiceHero 
+          title="Life & Health Insurance" 
+          subheading="Find out about insurance you don't have to die to use"
+        />
       </div>
       
       {/* New Hero Component Section */}
