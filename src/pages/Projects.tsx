@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
+
 const Projects = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
@@ -27,7 +29,6 @@ const Projects = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Health Insurance</h2>
               <p className="text-gray-700">Insurance transfers the financial risk of life's events to an insurance company. A sound insurance strategy can help protect your family from the financial consequences of those events. A strategy can include personal insurance, liability insurance, and life insurance.</p>
             </div>
 
