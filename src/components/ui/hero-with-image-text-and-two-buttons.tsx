@@ -25,7 +25,7 @@ function Hero() {
             </div>
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
-            <img src="/lovable-uploads/e8c15049-4d4a-4071-b6b6-280f7e5676ea.png" alt="Senior couple reviewing Medicare options with advisor" className="w-full h-auto object-cover aspect-video" />
+            <img src="/placeholder.svg?height=400&width=600&text=Specialist+Answering+Phone" alt="Medicare specialist answering a phone call" className="w-full h-auto object-cover aspect-video" />
           </div>
         </div>
       </div>
