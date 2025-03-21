@@ -27,8 +27,8 @@ function Hero() {
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <Image 
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1600&auto=format&fit=crop" 
-              alt="Insurance professional in a business setting" 
+              src="/lovable-uploads/dc1fc61b-a39e-4f22-a2ec-efa927562736.png" 
+              alt="Insurance advisor consulting with senior couple" 
               className="w-full h-auto object-cover aspect-video" 
             />
           </div>
