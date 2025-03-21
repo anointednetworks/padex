@@ -12,7 +12,7 @@ function Hero() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
               Understanding Medicare and Your Coverage Options
             </h2>
-            <p className="text-gray-600 max-w-prose">Schedule your Medicare Plan Consultation</p>
+            <p className="text-gray-600 max-w-prose">Schedule your Medicare Plan Consultation. Request a no cost one-on-one appointment.</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button className="bg-blue-600 hover:bg-blue-700">
                 Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
