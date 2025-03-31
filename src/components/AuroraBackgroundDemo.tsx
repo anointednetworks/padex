@@ -2,17 +2,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { useNavigate } from "react-router-dom";
 
 export function AuroraBackgroundDemo() {
-  const navigate = useNavigate();
-
-  const handleConsultation = () => {
-    navigate("/contact");
-    window.scrollTo(0, 0);
+  const handleReadMore = () => {
+    // Scroll down to the welcome section
+    const heroSection = document.querySelector('.py-20');
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Fallback if the hero section can't be found
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return <AuroraBackground>
@@ -32,7 +38,7 @@ export function AuroraBackgroundDemo() {
           and your greatest wealth - your health.
         </div>
         <div className="mt-6">
-          <RainbowButton onClick={handleConsultation}>Schedule a Consultation</RainbowButton>
+          <RainbowButton onClick={handleReadMore}>Read more</RainbowButton>
         </div>
       </motion.div>
     </AuroraBackground>;
