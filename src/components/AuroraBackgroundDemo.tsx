@@ -9,11 +9,11 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 export function AuroraBackgroundDemo() {
   const handleReadMore = () => {
     // Scroll down to the welcome section
-    const heroSection = document.querySelector('.py-20');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
+    const welcomeSection = document.getElementById('welcome-section');
+    if (welcomeSection) {
+      welcomeSection.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Fallback if the hero section can't be found
+      // Fallback if the welcome section can't be found
       window.scrollTo({
         top: window.innerHeight,
         behavior: 'smooth'

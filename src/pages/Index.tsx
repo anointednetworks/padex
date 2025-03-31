@@ -1,3 +1,4 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
@@ -10,7 +11,7 @@ const Index = () => {
       </div>
       
       {/* Hero Section */}
-      <div className="flex items-center justify-center py-20">
+      <div id="welcome-section" className="flex items-center justify-center py-20">
         <div className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Welcome to Padex Benefit Advisors</h1>
           
