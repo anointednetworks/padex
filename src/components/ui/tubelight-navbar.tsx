@@ -46,54 +46,63 @@ export function NavBar({ items, className }: NavBarProps) {
   return (
     <nav
       className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+        "fixed top-0 left-0 w-full z-50 px-4 py-4 md:py-5",
         className,
       )}
     >
-      <div className="flex items-center gap-1 md:gap-2 bg-background/70 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg whitespace-nowrap overflow-x-auto max-w-full no-scrollbar">
-        {items.map((item) => {
-          const Icon = item.icon
-          const isActive = activeTab === item.name
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg rounded-full px-4 py-2">
+          <div className="flex items-center justify-center md:justify-around">
+            {items.map((item) => {
+              const Icon = item.icon
+              const isActive = activeTab === item.name
 
-          return (
-            <Link
-              key={item.name}
-              to={item.url}
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveTab(item.name);
-              }}
-              className={cn(
-                "relative cursor-pointer text-xs md:text-sm font-semibold px-3 md:px-4 py-2 rounded-full transition-colors flex items-center gap-1.5 flex-shrink-0",
-                "text-foreground/80 hover:text-primary",
-                isActive && "bg-muted text-primary",
-              )}
-            >
-              <span className="hidden md:inline">{item.name}</span>
-              <span className={cn("md:hidden", !isActive && "animate-pulse")}>
-                <Icon size={18} strokeWidth={2.5} />
-              </span>
-              {isActive && (
-                <motion.div
-                  layoutId="lamp"
-                  className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
-                  initial={false}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
+              return (
+                <Link
+                  key={item.name}
+                  to={item.url}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveTab(item.name);
                   }}
+                  className={cn(
+                    "relative px-3 py-2 md:px-4 rounded-full transition-all duration-300 flex items-center gap-2 group",
+                    "text-gray-600 dark:text-gray-300 hover:text-primary",
+                    isActive ? "text-primary" : ""
+                  )}
                 >
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
-                    <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
-                    <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1" />
-                    <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
-                  </div>
-                </motion.div>
-              )}
-            </Link>
-          )
-        })}
+                  <span className={cn(
+                    "transform transition-all duration-300",
+                    isActive ? "text-primary scale-110" : "",
+                    "group-hover:scale-110"
+                  )}>
+                    <Icon size={isMobile ? 20 : 18} strokeWidth={isActive ? 2.5 : 2} />
+                  </span>
+                  
+                  <span className={cn(
+                    "hidden md:block font-medium text-sm",
+                    isActive ? "text-primary" : ""
+                  )}>
+                    {item.name}
+                  </span>
+                  
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-full -z-10"
+                      initial={false}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
       </div>
     </nav>
   )
