@@ -7,10 +7,17 @@ import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 
 const Projects = () => {
-  const annuitiesRef = useRef<HTMLDivElement>(null);
+  const resourcesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToAnnuities = () => {
-    annuitiesRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (resourcesContainerRef.current) {
+      // Calculate position to scroll to (top of the container)
+      const yOffset = -20; // Add a small offset to position it nicely
+      const element = resourcesContainerRef.current;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
 
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
@@ -26,8 +33,8 @@ const Projects = () => {
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8">
-            <div ref={annuitiesRef} className="mb-12">
+          <div ref={resourcesContainerRef} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8">
+            <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Annuities</h2>
               <p className="text-gray-700 mb-4">What are your retirement goals? For most people, it's making sure the money lasts through their retirement.</p>
               <p className="text-gray-700">Do you know the secret about having an income for the rest of your life? Ask me how.</p>
