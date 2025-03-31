@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -12,7 +11,7 @@ const Projects = () => {
   const scrollToAnnuities = () => {
     if (resourcesContainerRef.current) {
       // Calculate position to scroll to (top of the container)
-      const yOffset = -20; // Add a small offset to position it nicely
+      const yOffset = -100; // Increased offset to account for navbar height
       const element = resourcesContainerRef.current;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       
@@ -33,7 +32,7 @@ const Projects = () => {
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <div ref={resourcesContainerRef} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8">
+          <div ref={resourcesContainerRef} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8 pt-12">
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Annuities</h2>
               <p className="text-gray-700 mb-4">What are your retirement goals? For most people, it's making sure the money lasts through their retirement.</p>
