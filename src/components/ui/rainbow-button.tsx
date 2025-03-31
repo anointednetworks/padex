@@ -28,6 +28,8 @@ export function RainbowButton({
       )}
       onClick={(e) => {
         console.log("Button clicked");
+        // Stop event propagation to prevent parent elements from receiving it
+        e.stopPropagation();
         if (props.onClick) {
           props.onClick(e);
         }

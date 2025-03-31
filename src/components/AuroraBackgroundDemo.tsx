@@ -7,7 +7,11 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export function AuroraBackgroundDemo() {
-  const handleReadMore = () => {
+  const handleReadMore = (e: React.MouseEvent) => {
+    // Prevent event bubbling and default link behavior
+    e.preventDefault();
+    e.stopPropagation();
+    
     console.log("Read More button clicked");
     // Scroll down to the welcome section
     const welcomeSection = document.getElementById('welcome-section');
