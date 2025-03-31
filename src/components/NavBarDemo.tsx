@@ -11,5 +11,5 @@ export function NavBarDemo() {
     { name: 'Contact Us', url: '/contact', icon: Mail }
   ]
 
-  return <NavBar items={navItems} className="z-50" />
+  return <NavBar items={navItems} />
 }
