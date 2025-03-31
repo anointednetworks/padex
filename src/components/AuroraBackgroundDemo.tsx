@@ -4,7 +4,17 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { useNavigate } from "react-router-dom";
+
 export function AuroraBackgroundDemo() {
+  const navigate = useNavigate();
+
+  const handleConsultation = () => {
+    navigate("/contact");
+    window.scrollTo(0, 0);
+  };
+
   return <AuroraBackground>
       <motion.div initial={{
       opacity: 0.0,
@@ -20,6 +30,9 @@ export function AuroraBackgroundDemo() {
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">Securing your financial future</div>
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
           and your greatest wealth - your health.
+        </div>
+        <div className="mt-6">
+          <RainbowButton onClick={handleConsultation}>Schedule a Consultation</RainbowButton>
         </div>
       </motion.div>
     </AuroraBackground>;
