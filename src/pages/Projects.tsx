@@ -1,22 +1,33 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const Projects = () => {
+  const annuitiesRef = useRef<HTMLDivElement>(null);
+
+  const scrollToAnnuities = () => {
+    annuitiesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
       <NavBarDemo />
       
       <ServiceHero title="Resources" />
       
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex justify-center mb-8">
+          <RainbowButton onClick={scrollToAnnuities}>Read more</RainbowButton>
+        </div>
+        
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8">
-            <div className="mb-12">
+            <div ref={annuitiesRef} className="mb-12">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Annuities</h2>
               <p className="text-gray-700 mb-4">What are your retirement goals? For most people, it's making sure the money lasts through their retirement.</p>
               <p className="text-gray-700">Do you know the secret about having an income for the rest of your life? Ask me how.</p>
