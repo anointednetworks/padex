@@ -4,13 +4,21 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 interface ServiceHeroProps {
   title: string;
   subheading?: string;
+  showReadMoreButton?: boolean;
+  onReadMoreClick?: () => void;
 }
 
-export function ServiceHero({ title, subheading = "Expert guidance for your financial well-being" }: ServiceHeroProps) {
+export function ServiceHero({ 
+  title, 
+  subheading = "Expert guidance for your financial well-being",
+  showReadMoreButton = false,
+  onReadMoreClick
+}: ServiceHeroProps) {
   return (
     <AuroraBackground>
       <motion.div 
@@ -33,6 +41,14 @@ export function ServiceHero({ title, subheading = "Expert guidance for your fina
         <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 py-4">
           {subheading}
         </div>
+        
+        {showReadMoreButton && (
+          <div className="mt-8 mb-4">
+            <RainbowButton onClick={onReadMoreClick}>
+              Read more
+            </RainbowButton>
+          </div>
+        )}
       </motion.div>
     </AuroraBackground>
   );

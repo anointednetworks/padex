@@ -5,7 +5,6 @@ import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const Projects = () => {
   const annuitiesRef = useRef<HTMLDivElement>(null);
@@ -18,13 +17,14 @@ const Projects = () => {
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
       <NavBarDemo />
       
-      <ServiceHero title="Resources" />
+      <ServiceHero 
+        title="Resources" 
+        subheading="Expert guidance for your financial well-being"
+        onReadMoreClick={scrollToAnnuities}
+        showReadMoreButton={true}
+      />
       
       <div className="container mx-auto px-4 py-8">
-        <div className="flex justify-center mb-8">
-          <RainbowButton onClick={scrollToAnnuities}>Read more</RainbowButton>
-        </div>
-        
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden p-8">
             <div ref={annuitiesRef} className="mb-12">
