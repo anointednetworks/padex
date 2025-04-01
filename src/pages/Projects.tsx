@@ -91,11 +91,9 @@ const Projects = () => {
             <div className="flex justify-between items-center mb-6">
               <TabsList>
                 <TabsTrigger value="resources">Resources</TabsTrigger>
-                {adminPassword && (
-                  <TabsTrigger value="admin" className="flex items-center">
-                    <Key className="mr-2 h-4 w-4" /> Admin
-                  </TabsTrigger>
-                )}
+                <TabsTrigger value="admin" className="flex items-center">
+                  <Key className="mr-2 h-4 w-4" /> Admin
+                </TabsTrigger>
               </TabsList>
             </div>
             
