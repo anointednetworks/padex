@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import LifeHealthInsurance from "./pages/LifeHealthInsurance";
 import Annuities from "./pages/Annuities";
 import MedicareSolutions from "./pages/MedicareSolutions";
+import DocumentProcessorPage from "./pages/DocumentProcessor";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => {
               <Route path="/life-health-insurance" element={<LifeHealthInsurance />} />
               <Route path="/annuities" element={<Annuities />} />
               <Route path="/medicare-solutions" element={<MedicareSolutions />} />
+              <Route path="/document-processor" element={<DocumentProcessorPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
