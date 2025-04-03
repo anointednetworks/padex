@@ -225,18 +225,11 @@ Long term care can include a broad range of services, provided in any setting ou
                 
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
-                  <p className="text-gray-700 mb-4">We would love to hear from you! Please reach out with any questions or feedback.</p>
-                  <ul className="list-disc pl-8 mb-4 text-gray-700">
-                    <li>Copayments</li>
-                    <li>Coinsurance</li>
-                    <li>Deductibles</li>
-                  </ul>
-                  <p className="text-gray-700 mb-4">Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens:</p>
-                  <ul className="list-disc pl-8 mb-4 text-gray-700">
-                    <li>Medicare will pay its share of the Medicare-approved amount for covered health care costs.</li>
-                    <li>Then, your Medigap policy pays its share.</li>
-                  </ul>
-                  <p className="text-gray-700">Let's discuss how to make the decision that best suites you.</p>
+                  
+                  
+                  
+                  
+                  <p className="text-gray-700">We would love to hear from you! Please reach out with any questions or feedback.</p>
                 </div>
                 
                 <div>
