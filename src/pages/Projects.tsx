@@ -103,8 +103,13 @@ Today, the cost of insurance is high, and still increasing. Who will pay your bi
 
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Medicare</h2>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Why do I need Life Insurance?</h3>
-                  <p className="text-gray-700 mb-4">Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner. An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries. Do you want to see how the facts find the story?</p>
+                  
+                  <p className="text-gray-700 mb-4">The Medicare Program
+
+Medicare is a health insurance program for:
+•	People 65 and over
+•	People under age 65 with certain disabilities
+•	People with End-Stage Renal Disease (permanent kidney failure requiring dialysis or a kidney transplant)</p>
                   
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">How much Insurance do I need?</h3>
                   <p className="text-gray-700 mb-4">Before buying life insurance, you should assemble personal financial information and review your family's needs. There are a few factors to consider when determining how much protection you should have.</p>
