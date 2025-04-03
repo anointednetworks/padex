@@ -33,33 +33,6 @@ export type Database = {
         }
         Relationships: []
       }
-      resource_sections: {
-        Row: {
-          content: Json
-          created_at: string
-          id: string
-          order_index: number | null
-          title: string
-          updated_at: string
-        }
-        Insert: {
-          content: Json
-          created_at?: string
-          id?: string
-          order_index?: number | null
-          title: string
-          updated_at?: string
-        }
-        Update: {
-          content?: Json
-          created_at?: string
-          id?: string
-          order_index?: number | null
-          title?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
       subscribers: {
         Row: {
           created_at: string
