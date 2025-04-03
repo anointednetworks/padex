@@ -1,4 +1,3 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -11,7 +10,7 @@ import { Key } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/supabase";
 
 interface ResourceSection {
   id: string;
@@ -28,7 +27,6 @@ const Projects = () => {
   const [resourceSections, setResourceSections] = useState<ResourceSection[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   
-  // Fetch resource sections from the database
   useEffect(() => {
     const fetchResourceSections = async () => {
       setIsLoading(true);
@@ -46,7 +44,7 @@ const Projects = () => {
             variant: "destructive"
           });
         } else {
-          setResourceSections(data as ResourceSection[]);
+          setResourceSections(data as unknown as ResourceSection[]);
         }
       } catch (error) {
         console.error('Error in fetchResourceSections:', error);
@@ -114,7 +112,6 @@ const Projects = () => {
     }
   };
 
-  // Render Resource Sections from Database
   const renderDatabaseContent = () => {
     if (isLoading) {
       return (

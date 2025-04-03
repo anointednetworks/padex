@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import mammoth from 'mammoth';
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/supabase"; // Using the non-typed client
 import { 
   Dialog,
   DialogContent,
@@ -77,7 +77,7 @@ export const ResourceDocumentProcessor = () => {
             variant: "destructive"
           });
         } else {
-          setSavedSections(data as StoredResourceSection[]);
+          setSavedSections(data as unknown as StoredResourceSection[]);
         }
       } catch (error) {
         console.error('Error in fetchResourceSections:', error);
