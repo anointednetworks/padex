@@ -204,7 +204,7 @@ Buying life insurance is financial security for your family.  Let’s discuss l
                 </div>
                 
                 <div className="mb-12">
-                  <h2 className="font-bold text-gray-800 mb-4 text-2xl">Retirement</h2>
+                  <h2 className="font-bold text-gray-800 mb-4 text-2xl">Intro to Long Term Care</h2>
                   <p className="text-gray-700 mb-4">What is Long Term Care?
 Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age.
 
