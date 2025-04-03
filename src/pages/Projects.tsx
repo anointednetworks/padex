@@ -104,15 +104,79 @@ Today, the cost of insurance is high, and still increasing. Who will pay your bi
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Medicare</h2>
                   
-                  <p className="text-gray-700 mb-4">The Medicare Program
-
-Medicare is a health insurance program for:
-•	People 65 and over
-•	People under age 65 with certain disabilities
-•	People with End-Stage Renal Disease (permanent kidney failure requiring dialysis or a kidney transplant)</p>
+                  <p className="text-gray-700 mb-4">The Medicare Program Medicare is a health insurance program for:
+• People 65 and over
+• People under age 65 with certain disabilities
+• People with End-Stage Renal Disease (permanent kidney failure requiring dialysis or a kidney transplant)</p>
                   
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">How much Insurance do I need?</h3>
-                  <p className="text-gray-700 mb-4">Before buying life insurance, you should assemble personal financial information and review your family's needs. There are a few factors to consider when determining how much protection you should have.</p>
+                  
+                  <p className="text-gray-700 mb-4">The Original Medicare Has Two Parts
+Part A
+Hospital Insurance. (see Medicare Part A)
+Most people pay for Part A through their payroll taxes when they are working.
+
+Part B
+Medical Insurance. (see Medicare Part B)
+
+Part C Medicare Advantage 
+(see Medicare Advantage)
+NOTE:  A Member can only receive Medicare Part C, if he/she has Part A and is currently enrolled in Part B.
+
+Part D (see Medicare Part D)
+Prescription Drug Coverage
+Medicare Prescription Drug Plans are offered by insurance companies and other private companies approved by Medicare.
+
+Medicare Part A
+Medicare Part A is Hospital Insurance and covers cost associated with confinement in a hospital or skilled nursing facility. (see Medicare Part A)
+
+In general, Part A covers:
+•	Inpatient care in a hospital
+•	Skilled nursing facility care
+•	Nursing home care (inpatient care in a skilled nursing facility that’s not custodial or long-term care)
+•	Hospice care
+•	Home health care
+
+Medicare Part B
+Medicare Part B is Medical Insurance and covers physicians’ services, outpatient care, test, and supplies. (see Medicare Part B)
+
+Part B covers 2 types of services
+•	Medically necessary services: Services or supplies that are needed to diagnose or treat your medical condition and that meet accepted standards of medical practice.
+•	Preventive services: Health care to prevent illness (like the flu) or detect it at an early stage, when treatment is most likely to work best.
+•	Preventative Services are free if the services are rendered from a health care provider who accepts assignment
+Part B covers services such as:
+•	Clinical research
+•	Ambulance services
+•	Durable medical equipment (DME)
+•	Mental health
+o	Inpatient
+o	Outpatient
+o	Partial hospitalization
+•	Limited outpatient prescription drugs
+
+
+Medicare Part D
+Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D)
+
+Important points you need to know:
+•	Medicare prescription drug coverage helps you pay for the prescriptions you need.
+•	Medicare prescription drug coverage is available to all people with Medicare.
+•	There is additional help for those who need it most.
+•	Medicare prescription drug coverage pays for brand name as well as generic drugs.
+
+
+Medigap Policies
+Medicare
+Medigap is Medicare Supplement Insurance that helps fill &quot;gaps&quot; in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:
+•	Copayments
+•	Coinsurance
+•	Deductibles
+
+Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens:
+•	Medicare will pay its share of the Medicare-approved amount for covered health care costs.
+•	Then, your Medigap policy pays its share.
+
+Let’s discuss how to make the decision that best suites you.
+                </p>
                   <p className="text-gray-700 mb-4">A rule of thumb used is, buy life insurance that is equal to five to seven times annual gross income. I can assist you with completing a Needs Analysis.</p>
                   
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Choosing a Plan</h3>
