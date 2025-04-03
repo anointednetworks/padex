@@ -1,4 +1,3 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -161,7 +160,7 @@ Today, the cost of insurance is high, and still increasing. Who will pay your bi
                   <p className="text-gray-700 mb-4">Part B covers 2 types of services:</p>
                   <ul className="list-disc pl-8 mb-4 text-gray-700">
                     <li>Medically necessary services: Services or supplies that are needed to diagnose or treat your medical condition and that meet accepted standards of medical practice.</li>
-                    <li>Preventive services: Health care to prevent illness (like the flu) or detect it at an early stage, when treatment is most likely to work best.</li>
+                    <li>Preventive services: Health care to prevent illness (like the flu) or detect it at an early stage, when treatment is most likely to work.</li>
                     <li>Preventative Services are free if the services are rendered from a health care provider who accepts assignment.</li>
                   </ul>
                   
@@ -238,6 +237,13 @@ Today, the cost of insurance is high, and still increasing. Who will pay your bi
                   
                   <p className="text-gray-700 mb-4">Where will your retirement money come from? If you're like most people, qualified-retirement plans, Social Security, personal savings and investments are expected to play a role. Once you have estimated the amount of money you may need for retirement, a sound approach involves taking a close look at your potential retirement-income sources.</p>
 
+                  <p className="text-gray-700 mb-4 pb-4">When you retire, how will you treat your next chapter?</p>
+                </div>
+                
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement</h2>
+                  <p className="text-gray-700 mb-4">Where will your retirement money come from? If you're like most people, qualified-retirement plans, Social Security, personal savings and investments are expected to play a role. Once you have estimated the amount of money you may need for retirement, a sound approach involves taking a close look at your potential retirement-income sources.</p>
+                  
                   <p className="text-gray-700 mb-4 pb-4">When you retire, how will you treat your next chapter?</p>
                 </div>
                 
