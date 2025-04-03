@@ -10,13 +10,11 @@ import { Key } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
-
 const Projects = () => {
   const resourcesContainerRef = useRef<HTMLDivElement>(null);
   const [showAdminTools, setShowAdminTools] = useState(false);
   const [adminPassword, setAdminPassword] = useState('');
   const [inputPassword, setInputPassword] = useState('');
-  
   const handleAdminAuth = () => {
     if (inputPassword === adminPassword) {
       setShowAdminTools(true);
@@ -32,7 +30,6 @@ const Projects = () => {
       });
     }
   };
-  
   const handleSetPassword = () => {
     if (inputPassword.length >= 4) {
       setAdminPassword(inputPassword);
@@ -50,40 +47,32 @@ const Projects = () => {
       });
     }
   };
-  
   const handleLogout = () => {
     setShowAdminTools(false);
     setInputPassword('');
   };
-
   useEffect(() => {
     const savedPassword = localStorage.getItem('resourceAdminPassword');
     if (savedPassword) {
       setAdminPassword(savedPassword);
     }
   }, []);
-
   const scrollToAnnuities = () => {
     if (resourcesContainerRef.current) {
       const yOffset = -100;
       const element = resourcesContainerRef.current;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Resource Center | Illuminated Links" description="Explore our resource center for insightful articles on insurance, retirement planning, and financial well-being." />
       <NavBarDemo />
       
-      <ServiceHero 
-        title="Resources" 
-        subheading="Expert guidance for your financial well-being"
-        onReadMoreClick={scrollToAnnuities}
-        showReadMoreButton={true}
-      />
+      <ServiceHero title="Resources" subheading="Expert guidance for your financial well-being" onReadMoreClick={scrollToAnnuities} showReadMoreButton={true} />
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -106,7 +95,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Insurance</h2>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Health Insurance</h2>
                   <p className="text-gray-700 mb-4">Today, the cost of insurance is high, and still increasing. Who will pay your bills if you have a serious accident or a major illness? Let's discuss insurance you don't have to die to use. It allows you to pay your bills while recuperating, without stress. It is also an option to consider for some Long-Term Care.</p>
                   <p className="text-gray-700">Insurance transfers the financial risk of life's events to an insurance company. A sound insurance strategy can help protect your family from the financial consequences of those events. A strategy can include personal insurance, liability insurance, and life insurance.</p>
                 </div>
@@ -163,37 +152,22 @@ const Projects = () => {
             
             <TabsContent value="admin">
               <Card className="p-6 mb-6">
-                {!adminPassword ? (
-                  <div className="space-y-4">
+                {!adminPassword ? <div className="space-y-4">
                     <h3 className="text-lg font-medium">Set Admin Password</h3>
                     <p className="text-sm text-gray-500">
                       Create a password to protect the admin tools. This will be stored locally in your browser.
                     </p>
                     <div className="flex gap-2">
-                      <Input 
-                        type="password" 
-                        placeholder="Set a password" 
-                        value={inputPassword}
-                        onChange={(e) => setInputPassword(e.target.value)}
-                      />
+                      <Input type="password" placeholder="Set a password" value={inputPassword} onChange={e => setInputPassword(e.target.value)} />
                       <Button onClick={handleSetPassword}>Set Password</Button>
                     </div>
-                  </div>
-                ) : !showAdminTools ? (
-                  <div className="space-y-4">
+                  </div> : !showAdminTools ? <div className="space-y-4">
                     <h3 className="text-lg font-medium">Admin Login</h3>
                     <div className="flex gap-2">
-                      <Input 
-                        type="password" 
-                        placeholder="Enter admin password" 
-                        value={inputPassword}
-                        onChange={(e) => setInputPassword(e.target.value)}
-                      />
+                      <Input type="password" placeholder="Enter admin password" value={inputPassword} onChange={e => setInputPassword(e.target.value)} />
                       <Button onClick={handleAdminAuth}>Login</Button>
                     </div>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
+                  </div> : <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <h3 className="text-lg font-medium">Admin Tools</h3>
                       <Button variant="outline" size="sm" onClick={handleLogout}>
@@ -204,37 +178,28 @@ const Projects = () => {
                       Use these tools to manage content. When you're done, click "Logout" to hide the admin tools.
                     </p>
                     <div className="flex gap-2">
-                      <Button 
-                        variant="destructive" 
-                        size="sm" 
-                        onClick={() => {
-                          localStorage.removeItem('resourceAdminPassword');
-                          setAdminPassword('');
-                          setShowAdminTools(false);
-                          toast({
-                            title: "Success",
-                            description: "Admin access removed"
-                          });
-                        }}
-                      >
+                      <Button variant="destructive" size="sm" onClick={() => {
+                    localStorage.removeItem('resourceAdminPassword');
+                    setAdminPassword('');
+                    setShowAdminTools(false);
+                    toast({
+                      title: "Success",
+                      description: "Admin access removed"
+                    });
+                  }}>
                         Delete Admin Access
                       </Button>
                     </div>
-                  </div>
-                )}
+                  </div>}
               </Card>
               
-              {showAdminTools && (
-                <ResourceDocumentProcessor />
-              )}
+              {showAdminTools && <ResourceDocumentProcessor />}
             </TabsContent>
           </Tabs>
         </div>
       </div>
       
       <StackedCircularFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Projects;
