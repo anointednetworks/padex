@@ -154,7 +154,27 @@ Part B covers services such as:
 • Mental health o Inpatient o Outpatient o Partial hospitalization
 • Limited outpatient prescription drugs
 
-Medicare Part D Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D) Important points you need to know: • Medicare prescription drug coverage helps you pay for the prescriptions you need. • Medicare prescription drug coverage is available to all people with Medicare. • There is additional help for those who need it most. • Medicare prescription drug coverage pays for brand name as well as generic drugs. Medigap Policies Medicare Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like: • Copayments • Coinsurance • Deductibles Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens: • Medicare will pay its share of the Medicare-approved amount for covered health care costs. • Then, your Medigap policy pays its share. Let’s discuss how to make the decision that best suites you.</p>
+Medicare Part D Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D)
+
+Important points you need to know:
+• Medicare prescription drug coverage helps you pay for the prescriptions you need.
+• Medicare prescription drug coverage is available to all people with Medicare.
+• There is additional help for those who need it most.
+• Medicare prescription drug coverage pays for brand name as well as generic drugs.
+
+Medigap Policies
+
+Medicare Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:
+• Copayments
+• Coinsurance
+• Deductibles
+
+Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens:
+
+• Medicare will pay its share of the Medicare-approved amount for covered health care costs.
+• Then, your Medigap policy pays its share.
+
+Let’s discuss how to make the decision that best suites you.</p>
                   
                   
                   <h3 className="font-bold text-gray-800 mb-4 text-2xl">Life Insurance</h3>
