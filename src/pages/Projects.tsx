@@ -233,8 +233,8 @@ Long term care can include a broad range of services, provided in any setting ou
                 </div>
                 
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Estate Planning</h2>
-                  <p className="text-gray-700 mb-4">Proper estate planning ensures your assets are distributed according to your wishes while minimizing tax implications for your heirs.</p>
+                  
+                  
                   <p className="text-gray-700">Learn about wills, trusts, and other essential documents that form a comprehensive estate plan to protect your legacy.</p>
                 </div>
               </div>
