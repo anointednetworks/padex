@@ -24,8 +24,6 @@ const App = () => {
       <HelmetProvider>
         <TooltipProvider>
           <BrowserRouter>
-            <Toaster />
-            <Sonner />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
@@ -38,6 +36,8 @@ const App = () => {
               <Route path="/medicare-solutions" element={<MedicareSolutions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <Toaster />
+            <Sonner />
           </BrowserRouter>
         </TooltipProvider>
       </HelmetProvider>
