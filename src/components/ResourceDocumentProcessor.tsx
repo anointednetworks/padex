@@ -10,34 +10,7 @@ import { saveAs } from 'file-saver';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-
-// Function to extract text from a DOCX file
-const extractTextFromDocx = async (arrayBuffer: ArrayBuffer): Promise<string> => {
-  try {
-    // This is a workaround since we're using browser APIs
-    // In a real implementation, we would use docx-parser or mammoth.js
-    const text = await new Promise<string>((resolve) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const content = e.target?.result as string || '';
-        // Filter out XML/binary content to get somewhat readable text
-        const extractedText = content
-          .replace(/<[^>]*>/g, '\n')
-          .replace(/[^\x20-\x7E\n]/g, ' ')
-          .split('\n')
-          .filter(line => line.trim().length > 0)
-          .join('\n');
-        resolve(extractedText);
-      };
-      reader.readAsText(new Blob([arrayBuffer]));
-    });
-    
-    return text;
-  } catch (error) {
-    console.error('Error extracting text:', error);
-    throw new Error('Failed to extract text from document');
-  }
-};
+import mammoth from 'mammoth';
 
 interface ResourceSection {
   title: string;
@@ -51,6 +24,17 @@ export const ResourceDocumentProcessor = () => {
   const [resourceSections, setResourceSections] = useState<ResourceSection[]>([]);
   const [outputFormat, setOutputFormat] = useState<'jsx' | 'html'>('jsx');
   const [useAutoFormatting, setUseAutoFormatting] = useState(true);
+
+  const extractTextFromDocx = async (arrayBuffer: ArrayBuffer): Promise<string> => {
+    try {
+      // Use mammoth.js to convert the docx to HTML
+      const result = await mammoth.extractRawText({ arrayBuffer });
+      return result.value;
+    } catch (error) {
+      console.error('Error extracting text:', error);
+      throw new Error('Failed to extract text from document');
+    }
+  };
 
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -101,16 +85,24 @@ export const ResourceDocumentProcessor = () => {
     const sections: ResourceSection[] = [];
     let currentSection: ResourceSection | null = null;
 
-    // Try to detect headings and content
+    // Improved heading detection - look for patterns typical in Word documents
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       
-      // Check if this line looks like a heading
-      // Headings are typically short and often end with a colon
-      const isHeading = line.length < 50 && 
-                       (/[A-Z]/.test(line[0]) || line.endsWith(':')) && 
-                       !line.endsWith('.') &&
-                       !line.match(/^[0-9]+\./);
+      // Check if this line looks like a heading:
+      // 1. Short lines (less than 60 chars)
+      // 2. Lines that end with a colon
+      // 3. Lines that are all uppercase or title case
+      // 4. Lines followed by blank lines
+      // 5. Exclude numbered lists
+      const isHeading = (
+        (line.length < 60 && 
+         (/[A-Z]/.test(line[0]) || line.endsWith(':')) && 
+         !line.endsWith('.') &&
+         !line.match(/^[0-9]+\./)) ||
+        (line.toUpperCase() === line && line.length > 3 && line.length < 30) || // ALL CAPS headings
+        (i < lines.length - 1 && lines[i+1].trim() === '') // Heading followed by blank line
+      );
       
       if (isHeading) {
         // If we were building a section, add it to our list
@@ -124,8 +116,10 @@ export const ResourceDocumentProcessor = () => {
           content: []
         };
       } else if (currentSection) {
-        // Add this line to the current section
-        currentSection.content.push(line);
+        // Add this line to the current section if it's not empty
+        if (line.trim() !== '') {
+          currentSection.content.push(line);
+        }
       } else {
         // No section started yet but we have content
         currentSection = {
@@ -141,6 +135,25 @@ export const ResourceDocumentProcessor = () => {
     }
 
     return sections;
+  };
+
+  // Additional function to manually edit a section
+  const updateSection = (index: number, updatedSection: ResourceSection) => {
+    const updatedSections = [...resourceSections];
+    updatedSections[index] = updatedSection;
+    setResourceSections(updatedSections);
+  };
+
+  // Function to add a new empty section
+  const addNewSection = () => {
+    setResourceSections([...resourceSections, { title: 'New Section', content: ['Add content here'] }]);
+  };
+
+  // Function to remove a section
+  const removeSection = (index: number) => {
+    const updatedSections = [...resourceSections];
+    updatedSections.splice(index, 1);
+    setResourceSections(updatedSections);
   };
 
   const generateResourceJSX = (): string => {
@@ -277,6 +290,13 @@ export const ResourceDocumentProcessor = () => {
                       />
                       <Label htmlFor="auto-format">Auto-format</Label>
                     </div>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      onClick={addNewSection}
+                    >
+                      Add Section
+                    </Button>
                   </div>
                 </div>
                 
@@ -284,12 +304,36 @@ export const ResourceDocumentProcessor = () => {
                   <div className="space-y-4">
                     {resourceSections.map((section, index) => (
                       <Card key={index} className="p-4">
-                        <div className="font-medium mb-2">{section.title}</div>
-                        <div className="text-gray-600 text-sm space-y-2">
-                          {section.content.map((paragraph, i) => (
-                            <p key={i}>{paragraph}</p>
-                          ))}
+                        <div className="flex justify-between items-center mb-2">
+                          <Input 
+                            className="font-medium w-1/3" 
+                            value={section.title}
+                            onChange={(e) => {
+                              const updatedSection = { ...section, title: e.target.value };
+                              updateSection(index, updatedSection);
+                            }}
+                          />
+                          <Button 
+                            variant="destructive" 
+                            size="sm" 
+                            onClick={() => removeSection(index)}
+                          >
+                            Remove
+                          </Button>
                         </div>
+                        <Textarea 
+                          className="text-gray-600 text-sm min-h-[100px] mt-2"
+                          value={section.content.join('\n')}
+                          onChange={(e) => {
+                            const updatedSection = { 
+                              ...section, 
+                              content: e.target.value.split('\n')
+                                .map(line => line.trim())
+                                .filter(line => line.length > 0)
+                            };
+                            updateSection(index, updatedSection);
+                          }}
+                        />
                       </Card>
                     ))}
                   </div>
