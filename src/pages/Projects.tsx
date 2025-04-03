@@ -178,17 +178,23 @@ Let’s discuss how to make the decision that best suites you.</p>
                   
                   
                   <h3 className="font-bold text-gray-800 mb-4 text-2xl">Life Insurance</h3>
-                  <p className="text-gray-700 mb-4">Why do I need Life Insurance? Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner.
-
+                  <p className="text-gray-700 mb-4">Why do I need Life Insurance?
+Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner.
 An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries.  Do you want to see how the facts find the story?
 
-How much Insurance do I need? Before buying life insurance, you should assemble personal financial information and review your family's needs. There are a few factors to consider when determining how much protection you should have.
+
+How much Insurance do I need?
+Before buying life insurance, you should assemble personal financial information and review your family's needs. There are a few factors to consider when determining how much protection you should have.  
+
 
 A rule of thumb used is, buy life insurance that is equal to five to seven times annual gross income.  I can assist you with completing a Needs Analysis.
 
-Choosing a Plan Choosing life insurance is an important decision but could be complicated.  It is important that you understand your needs and the options available to you.
 
-Buying life insurance is financial security for your family.  Let’s discuss life insurance you don’t have to die to use.  Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources needed to protect their home, and the income needed to run the household.</p>
+Choosing a Plan
+Choosing life insurance is an important decision but could be complicated.  It is important that you understand your needs and the options available to you.
+Buying life insurance is financial security for your family.  Let’s discuss life insurance you don’t have to die to use.  Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources needed to protect their home, and the income needed to run the household.
+
+                </p>
                   
                 </div>
                 
@@ -196,9 +202,13 @@ Buying life insurance is financial security for your family.  Let’s discuss l
                   <h2 className="font-bold text-gray-800 mb-4 text-2xl">Intro to Long Term Care</h2>
                   <p className="text-gray-700 mb-4">What is Long Term Care?
 
+
 Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age.
 
-Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.</p>
+
+Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.
+
+                </p>
                   <p className="text-gray-700">When you retire, how will you treat your next chapter?</p>
                 </div>
                 
@@ -220,7 +230,7 @@ Long term care can include a broad range of services, provided in any setting ou
                 <div>
                   
                   
-                  
+                  <p className="text-gray-700">We would love to hear from you! Please reach out with any questions or feedback.</p>
                 </div>
               </div>
             </TabsContent>
