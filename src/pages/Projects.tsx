@@ -218,7 +218,7 @@ Long term care can include a broad range of services, provided in any setting ou
                 </div>
                 
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Tax</h2>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement</h2>
                   <p className="text-gray-700 mb-4">Understanding tax strategies and managing your tax bill should be part of any sound financial approach. Some taxes can be deferred, and others can be managed through tax-efficient investing.</p>
                   <p className="text-gray-700">With careful and consistent preparation, you may be able to manage the impact of taxes on your financial efforts.</p>
                 </div>
