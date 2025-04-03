@@ -33,7 +33,7 @@ export const MedicareSection: React.FC = () => {
         </React.Fragment>,
         <React.Fragment key="part-c">
           <span className="font-medium">Part C Medicare Advantage</span>
-          <p>(see Medicare Advantage)</p>
+          <p>(<a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Advantage</a>)</p>
           <p>NOTE: A Member can only receive Medicare Part C, if he/she has Part A and is currently enrolled in Part B.</p>
         </React.Fragment>,
         <React.Fragment key="part-d">
