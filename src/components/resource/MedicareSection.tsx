@@ -24,7 +24,7 @@ export const MedicareSection: React.FC = () => {
       <ResourceList items={[
         <React.Fragment key="part-a">
           <span className="font-medium">Part A</span>
-          <p>Hospital Insurance (see Medicare Part A).</p>
+          <p>Hospital Insurance (<a href="https://www.medicare.gov/providers-services/original-medicare/part-a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part A</a>).</p>
           <p>Most people pay for Part A through their payroll taxes when they are working.</p>
         </React.Fragment>,
         <React.Fragment key="part-b">
@@ -46,7 +46,7 @@ export const MedicareSection: React.FC = () => {
 
       <h3 className="text-xl font-medium text-gray-800 mt-6 mb-4">Medicare Part A</h3>
       <ResourceParagraph>
-        Medicare Part A is Hospital Insurance and covers cost associated with confinement in a hospital or skilled nursing facility. (see Medicare Part A)
+        Medicare Part A is Hospital Insurance and covers cost associated with confinement in a hospital or skilled nursing facility. (<a href="https://www.medicare.gov/providers-services/original-medicare/part-a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part A</a>)
       </ResourceParagraph>
       
       <ResourceParagraph>
