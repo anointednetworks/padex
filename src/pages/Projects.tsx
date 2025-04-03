@@ -182,7 +182,7 @@ Some Medigap policies also cover services that Original Medicare doesn't cover, 
 Let’s discuss how to make the decision that best suites you.</p>
                   
                   
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Life Insurance</h3>
+                  <h3 className="font-bold text-gray-800 mb-4 text-2xl">Life Insurance</h3>
                   <p className="text-gray-700 mb-4">Why do I need Life Insurance?
 Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner.
 An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries.  Do you want to see how the facts find the story?
@@ -204,7 +204,7 @@ Buying life insurance is financial security for your family.  Let’s discuss l
                 </div>
                 
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Retirement</h2>
+                  <h2 className="font-bold text-gray-800 mb-4 text-2xl">Retirement</h2>
                   <p className="text-gray-700 mb-4">What is Long Term Care?
 Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age.
 
