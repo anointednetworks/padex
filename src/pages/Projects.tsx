@@ -116,8 +116,7 @@ Part A
 Hospital Insurance. (see Medicare Part A)
 Most people pay for Part A through their payroll taxes when they are working.
 
-Part B
-Medical Insurance. (see Medicare Part B)
+Part B Medical Insurance. (see Medicare Part B)
 
 Part C Medicare Advantage (see Medicare Advantage)
 NOTE: A Member can only receive Medicare Part C, if he/she has Part A and is currently enrolled in Part B.
@@ -126,10 +125,11 @@ Part D (see Medicare Part D)
 Prescription Drug Coverage
 Medicare Prescription Drug Plans are offered by insurance companies and other private companies approved by Medicare.
 
-Medicare Part A Medicare Part A is Hospital Insurance and covers cost associated with confinement in a hospital or skilled nursing facility. (see Medicare Part A)
+Medicare Part A
+
+Medicare Part A is Hospital Insurance and covers cost associated with confinement in a hospital or skilled nursing facility. (see Medicare Part A)
 
 In general, Part A covers:
-
 • Inpatient care in a hospital
 • Skilled nursing facility care
 • Nursing home care (inpatient care in a skilled nursing facility that’s not custodial or long-term care)
@@ -145,16 +145,15 @@ Part B covers 2 types of services
 • Preventive services: Health care to prevent illness (like the flu) or detect it at an early stage, when treatment is most likely to work best.
 • Preventative Services are free if the services are rendered from a health care provider who accepts assignment
 
-
 Part B covers services such as:
-
 • Clinical research
 • Ambulance services
-• Durable medical equipment (DME)
-• Mental health o Inpatient o Outpatient o Partial hospitalization
+• Durable medical equipment (DME) • Mental health o Inpatient o Outpatient o Partial hospitalization
 • Limited outpatient prescription drugs
 
-Medicare Part D Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D)
+Medicare Part D
+
+Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D)
 
 Important points you need to know:
 • Medicare prescription drug coverage helps you pay for the prescriptions you need.
@@ -164,7 +163,9 @@ Important points you need to know:
 
 Medigap Policies
 
-Medicare Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:
+Medicare
+
+Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:
 • Copayments
 • Coinsurance
 • Deductibles
@@ -172,9 +173,7 @@ Medicare Medigap is Medicare Supplement Insurance that helps fill "gaps" in Orig
 Some Medigap policies also cover services that Original Medicare doesn't cover, like medical care when you travel outside the U.S. If you have Original Medicare and you buy a Medigap policy, here's what happens:
 
 • Medicare will pay its share of the Medicare-approved amount for covered health care costs.
-• Then, your Medigap policy pays its share.
-
-Let’s discuss how to make the decision that best suites you.</p>
+• Then, your Medigap policy pays its share. Let’s discuss how to make the decision that best suites you.</p>
                   
                   
                   <h3 className="font-bold text-gray-800 mb-4 text-2xl">Life Insurance</h3>
@@ -186,7 +185,9 @@ How much Insurance do I need? Before buying life insurance, you should assemble 
 
 A rule of thumb used is, buy life insurance that is equal to five to seven times annual gross income.  I can assist you with completing a Needs Analysis.
 
-Choosing a Plan Choosing life insurance is an important decision but could be complicated.  It is important that you understand your needs and the options available to you.
+Choosing a Plan
+
+Choosing life insurance is an important decision but could be complicated.  It is important that you understand your needs and the options available to you.
 
 Buying life insurance is financial security for your family.  Let’s discuss life insurance you don’t have to die to use.  Among its many uses, life insurance helps ensure that, when you die, your dependents will have the financial resources needed to protect their home, and the income needed to run the household.</p>
                   
@@ -196,10 +197,10 @@ Buying life insurance is financial security for your family.  Let’s discuss l
                   <h2 className="font-bold text-gray-800 mb-4 text-2xl">Intro to Long Term Care</h2>
                   <p className="text-gray-700 mb-4">What is Long Term Care?
 
-Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age.
+Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age. Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.</p>
+                  <p className="text-gray-700">Where will your retirement money come from? If you’re like most people, qualified-retirement plans, Social Security, personal savings and investments are expected to play a role. Once you have estimated the amount of money you may need for retirement, a sound approach involves taking a close look at your potential retirement-income sources.
 
-Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.</p>
-                  <p className="text-gray-700">When you retire, how will you treat your next chapter?</p>
+When you retire, how will you treat your next chapter?</p>
                 </div>
                 
                 <div className="mb-12">
