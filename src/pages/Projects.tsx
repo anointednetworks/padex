@@ -224,8 +224,8 @@ Long term care can include a broad range of services, provided in any setting ou
                 </div>
                 
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Medigap Policies</h2>
-                  <p className="text-gray-700 mb-4">Medigap is Medicare Supplement Insurance that helps fill "gaps" in Original Medicare and is sold by private companies. Original Medicare pays for much, but not all, of the cost for covered health care services and supplies. A Medicare Supplement Insurance (Medigap) policy can help pay some of the remaining health care costs, like:</p>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                  <p className="text-gray-700 mb-4">We would love to hear from you! Please reach out with any questions or feedback.</p>
                   <ul className="list-disc pl-8 mb-4 text-gray-700">
                     <li>Copayments</li>
                     <li>Coinsurance</li>
