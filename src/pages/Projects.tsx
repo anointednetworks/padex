@@ -219,10 +219,7 @@ Long term care can include a broad range of services, provided in any setting ou
                 
                 <div className="mb-12">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Tax</h2>
-                  <p className="text-gray-700 mb-4">Where will your retirement money come from? If you’re like most people, qualified-retirement plans, Social Security, personal savings and investments are expected to play a role. Once you have estimated the amount of money you may need for retirement, a sound approach involves taking a close look at your potential retirement-income sources.
-
-
-When you retire, how will you treat your next chapter?</p>
+                  <p className="text-gray-700 mb-4">Understanding tax strategies and managing your tax bill should be part of any sound financial approach. Some taxes can be deferred, and others can be managed through tax-efficient investing. With careful and consistent preparation, you may be able to manage the impact of taxes on your financial efforts.</p>
                   
                 </div>
                 
