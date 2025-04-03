@@ -1,20 +1,50 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Upload, FileText, Copy, Download, BookOpen } from "lucide-react";
+import { Upload, FileText, Copy, Download, BookOpen, Save, Trash, RefreshCw } from "lucide-react";
 import { saveAs } from 'file-saver';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import mammoth from 'mammoth';
+import { supabase } from "@/integrations/supabase/client";
+import { 
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose
+} from "@/components/ui/dialog";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+  SheetClose
+} from "@/components/ui/sheet";
 
 interface ResourceSection {
   title: string;
   content: string[];
+}
+
+interface StoredResourceSection {
+  id: string;
+  title: string;
+  content: string[];
+  order_index: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export const ResourceDocumentProcessor = () => {
@@ -24,6 +54,40 @@ export const ResourceDocumentProcessor = () => {
   const [resourceSections, setResourceSections] = useState<ResourceSection[]>([]);
   const [outputFormat, setOutputFormat] = useState<'jsx' | 'html'>('jsx');
   const [useAutoFormatting, setUseAutoFormatting] = useState(true);
+  const [savedSections, setSavedSections] = useState<StoredResourceSection[]>([]);
+  const [isSaving, setIsSaving] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+  // Fetch existing resource sections from Supabase
+  useEffect(() => {
+    const fetchResourceSections = async () => {
+      setIsLoading(true);
+      try {
+        const { data, error } = await supabase
+          .from('resource_sections')
+          .select('*')
+          .order('order_index', { ascending: true });
+        
+        if (error) {
+          console.error('Error fetching resource sections:', error);
+          toast({
+            title: "Error",
+            description: "Failed to load saved resource sections.",
+            variant: "destructive"
+          });
+        } else {
+          setSavedSections(data as StoredResourceSection[]);
+        }
+      } catch (error) {
+        console.error('Error in fetchResourceSections:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchResourceSections();
+  }, [refreshTrigger]);
 
   const extractTextFromDocx = async (arrayBuffer: ArrayBuffer): Promise<string> => {
     try {
@@ -222,6 +286,126 @@ export const ResourceDocumentProcessor = () => {
     saveAs(blob, `${fileName.replace('.docx', '')}_resource.${extension}`);
   };
 
+  // Function to save resource sections to Supabase
+  const saveToDatabase = async (selectedSections: ResourceSection[]) => {
+    setIsSaving(true);
+    
+    try {
+      // Get the current max order_index
+      const { data: existingData, error: fetchError } = await supabase
+        .from('resource_sections')
+        .select('order_index')
+        .order('order_index', { ascending: false })
+        .limit(1);
+        
+      if (fetchError) {
+        throw new Error(fetchError.message);
+      }
+      
+      // Calculate the starting index for new sections
+      const startIndex = existingData && existingData.length > 0 
+        ? (existingData[0].order_index + 1) 
+        : 0;
+      
+      // Prepare the sections for insert
+      const sectionsToInsert = selectedSections.map((section, index) => ({
+        title: section.title,
+        content: section.content,
+        order_index: startIndex + index
+      }));
+      
+      // Insert sections into the database
+      const { error: insertError } = await supabase
+        .from('resource_sections')
+        .insert(sectionsToInsert);
+        
+      if (insertError) {
+        throw new Error(insertError.message);
+      }
+      
+      // Refresh the list of saved sections
+      setRefreshTrigger(prev => prev + 1);
+      
+      toast({
+        title: "Success",
+        description: `${selectedSections.length} section(s) saved to the database!`
+      });
+    } catch (error) {
+      console.error('Error saving to database:', error);
+      toast({
+        title: "Error",
+        description: `Failed to save to database: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        variant: "destructive"
+      });
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  // Function to delete a resource section from the database
+  const deleteResourceSection = async (id: string) => {
+    try {
+      const { error } = await supabase
+        .from('resource_sections')
+        .delete()
+        .eq('id', id);
+        
+      if (error) {
+        throw new Error(error.message);
+      }
+      
+      // Update the local state
+      setSavedSections(prev => prev.filter(section => section.id !== id));
+      
+      toast({
+        title: "Success",
+        description: "Section deleted successfully!"
+      });
+    } catch (error) {
+      console.error('Error deleting section:', error);
+      toast({
+        title: "Error",
+        description: `Failed to delete section: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        variant: "destructive"
+      });
+    }
+  };
+
+  // Function to update a resource section in the database
+  const updateResourceSection = async (section: StoredResourceSection) => {
+    try {
+      const { error } = await supabase
+        .from('resource_sections')
+        .update({
+          title: section.title,
+          content: section.content,
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', section.id);
+        
+      if (error) {
+        throw new Error(error.message);
+      }
+      
+      // Update the local state
+      setSavedSections(prev => prev.map(s => 
+        s.id === section.id ? section : s
+      ));
+      
+      toast({
+        title: "Success",
+        description: "Section updated successfully!"
+      });
+    } catch (error) {
+      console.error('Error updating section:', error);
+      toast({
+        title: "Error",
+        description: `Failed to update section: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        variant: "destructive"
+      });
+    }
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-6">
       <Card className="shadow-md">
@@ -276,6 +460,7 @@ export const ResourceDocumentProcessor = () => {
                 <TabsTrigger value="sections">Resource Sections</TabsTrigger>
                 <TabsTrigger value="raw">Raw Text</TabsTrigger>
                 <TabsTrigger value="output">Output Code</TabsTrigger>
+                <TabsTrigger value="database">Saved Sections</TabsTrigger>
               </TabsList>
               
               <TabsContent value="sections" className="space-y-4">
@@ -297,6 +482,56 @@ export const ResourceDocumentProcessor = () => {
                     >
                       Add Section
                     </Button>
+                    
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="flex items-center">
+                          <Save className="mr-2 h-4 w-4" />
+                          Save to Database
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Save to Resource Center</DialogTitle>
+                          <DialogDescription>
+                            These sections will be added to the Resource Center and displayed on the public page.
+                          </DialogDescription>
+                        </DialogHeader>
+                        
+                        <div className="max-h-[60vh] overflow-y-auto my-4">
+                          {resourceSections.length > 0 ? (
+                            <div className="space-y-4">
+                              {resourceSections.map((section, index) => (
+                                <div key={index} className="p-3 border rounded-md">
+                                  <h4 className="font-medium">{section.title}</h4>
+                                  <p className="text-sm text-gray-500 truncate">
+                                    {section.content.length} paragraph(s)
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="text-center py-8 text-gray-500">
+                              No sections available to save.
+                            </div>
+                          )}
+                        </div>
+                        
+                        <DialogFooter>
+                          <DialogClose asChild>
+                            <Button variant="outline">Cancel</Button>
+                          </DialogClose>
+                          <Button 
+                            onClick={() => {
+                              saveToDatabase(resourceSections);
+                            }}
+                            disabled={resourceSections.length === 0 || isSaving}
+                          >
+                            {isSaving ? 'Saving...' : `Save ${resourceSections.length} Section(s)`}
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
                 
@@ -413,6 +648,150 @@ export const ResourceDocumentProcessor = () => {
                   readOnly
                   className="min-h-[300px] font-mono text-sm"
                 />
+              </TabsContent>
+              
+              <TabsContent value="database">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold">Saved Sections: {savedSections.length}</h3>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => setRefreshTrigger(prev => prev + 1)}
+                    className="flex items-center"
+                    disabled={isLoading}
+                  >
+                    <RefreshCw className={`mr-2 h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
+                    Refresh
+                  </Button>
+                </div>
+                
+                {isLoading ? (
+                  <div className="text-center py-8">
+                    <div className="animate-pulse text-primary">Loading saved sections...</div>
+                  </div>
+                ) : savedSections.length > 0 ? (
+                  <div className="space-y-4">
+                    {savedSections.map((section) => (
+                      <Card key={section.id} className="p-4">
+                        <div className="flex justify-between items-center mb-2">
+                          <h4 className="font-medium">{section.title}</h4>
+                          <div className="flex space-x-2">
+                            <Sheet>
+                              <SheetTrigger asChild>
+                                <Button variant="outline" size="sm">
+                                  Edit
+                                </Button>
+                              </SheetTrigger>
+                              <SheetContent>
+                                <SheetHeader>
+                                  <SheetTitle>Edit Section</SheetTitle>
+                                  <SheetDescription>
+                                    Make changes to the resource section. Click save when you're done.
+                                  </SheetDescription>
+                                </SheetHeader>
+                                
+                                <div className="space-y-4 py-4">
+                                  <div className="space-y-2">
+                                    <Label htmlFor={`title-${section.id}`}>Title</Label>
+                                    <Input 
+                                      id={`title-${section.id}`}
+                                      value={section.title}
+                                      onChange={(e) => {
+                                        setSavedSections(prev => 
+                                          prev.map(s => s.id === section.id 
+                                            ? { ...s, title: e.target.value } 
+                                            : s
+                                          )
+                                        );
+                                      }}
+                                    />
+                                  </div>
+                                  
+                                  <div className="space-y-2">
+                                    <Label htmlFor={`content-${section.id}`}>Content</Label>
+                                    <Textarea 
+                                      id={`content-${section.id}`}
+                                      value={Array.isArray(section.content) ? section.content.join('\n') : ''}
+                                      onChange={(e) => {
+                                        setSavedSections(prev => 
+                                          prev.map(s => s.id === section.id 
+                                            ? { 
+                                                ...s, 
+                                                content: e.target.value.split('\n')
+                                                  .map(line => line.trim())
+                                                  .filter(line => line.length > 0) 
+                                              } 
+                                            : s
+                                          )
+                                        );
+                                      }}
+                                      className="min-h-[200px]"
+                                    />
+                                  </div>
+                                </div>
+                                
+                                <SheetFooter>
+                                  <SheetClose asChild>
+                                    <Button variant="outline">Cancel</Button>
+                                  </SheetClose>
+                                  <Button 
+                                    onClick={() => {
+                                      updateResourceSection(
+                                        savedSections.find(s => s.id === section.id) as StoredResourceSection
+                                      );
+                                    }}
+                                  >
+                                    Save Changes
+                                  </Button>
+                                </SheetFooter>
+                              </SheetContent>
+                            </Sheet>
+                            
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button variant="destructive" size="sm">
+                                  <Trash className="h-4 w-4" />
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent>
+                                <DialogHeader>
+                                  <DialogTitle>Delete Section</DialogTitle>
+                                  <DialogDescription>
+                                    Are you sure you want to delete the section "{section.title}"? This action cannot be undone.
+                                  </DialogDescription>
+                                </DialogHeader>
+                                <DialogFooter>
+                                  <DialogClose asChild>
+                                    <Button variant="outline">Cancel</Button>
+                                  </DialogClose>
+                                  <Button 
+                                    variant="destructive" 
+                                    onClick={() => deleteResourceSection(section.id)}
+                                  >
+                                    Delete
+                                  </Button>
+                                </DialogFooter>
+                              </DialogContent>
+                            </Dialog>
+                          </div>
+                        </div>
+                        <div className="mt-2 text-sm text-gray-600">
+                          {Array.isArray(section.content) ? (
+                            section.content.map((paragraph, idx) => (
+                              <p key={idx} className="mb-2">{paragraph}</p>
+                            ))
+                          ) : (
+                            <p className="text-red-500">Invalid content format</p>
+                          )}
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8 text-gray-500">
+                    No saved sections found. Process a document and save sections to see them here.
+                  </div>
+                )}
               </TabsContent>
             </Tabs>
           )}
