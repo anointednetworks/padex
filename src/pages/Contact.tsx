@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -125,7 +124,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <NavBarDemo />
-      <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20 mt-16 sm:mt-20">
+      <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20 mt-24 sm:mt-28">
         <BackgroundGradient containerClassName="max-w-2xl w-full" className="p-8 rounded-3xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-pink-500 via-red-500 via-orange-500 via-yellow-500 via-green-500 to-blue-600 bg-clip-text text-transparent animate-gradient pb-2">
