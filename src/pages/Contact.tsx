@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
@@ -127,14 +128,14 @@ const Contact = () => {
       <div className="flex-grow flex items-center justify-center px-4 py-12 sm:py-20 mt-24 sm:mt-28">
         <BackgroundGradient containerClassName="max-w-2xl w-full" className="p-8 rounded-3xl">
           <div className="text-center mb-8">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-pink-500 via-red-500 via-orange-500 via-yellow-500 via-green-500 to-blue-600 bg-clip-text text-transparent animate-gradient pb-2">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient pb-2">
               Contact Us
             </h1>
             <p className="text-lg text-gray-600 mt-4">
               We would love to hear from you! Please reach out with any questions or feedback.
             </p>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
+          <div className="bg-gradient-to-b from-white to-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-base font-medium">Your Name</Label>
@@ -187,7 +188,7 @@ const Contact = () => {
               <div className="relative rounded-lg overflow-hidden rainbow-button-container">
                 <Button 
                   type="submit" 
-                  className="w-full bg-black text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
