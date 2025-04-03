@@ -38,7 +38,7 @@ export const MedicareSection: React.FC = () => {
         </React.Fragment>,
         <React.Fragment key="part-d">
           <span className="font-medium">Part D</span>
-          <p>(see Medicare Part D)</p>
+          <p>(<a href="https://www.medicare.gov/health-drug-plans/part-d" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part D</a>)</p>
           <p>Prescription Drug Coverage</p>
           <p>Medicare Prescription Drug Plans are offered by insurance companies and other private companies approved by Medicare.</p>
         </React.Fragment>
@@ -93,7 +93,7 @@ export const MedicareSection: React.FC = () => {
 
       <h3 className="text-xl font-medium text-gray-800 mt-6 mb-4">Medicare Part D</h3>
       <ResourceParagraph>
-        Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (see Medicare Part D)
+        Medicare offers insurance coverage for prescription drugs through Medicare prescriptions drug plans and other health plan options. Medicare's prescription drug coverage will typically pay over half of your drug costs, for a monthly premium. (<a href="https://www.medicare.gov/health-drug-plans/part-d" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part D</a>)
       </ResourceParagraph>
       
       <ResourceParagraph>
