@@ -220,7 +220,7 @@ Long term care can include a broad range of services, provided in any setting ou
                 <div>
                   
                   
-                  <p className="text-gray-700">We would love to hear from you! Please reach out with any questions or feedback.</p>
+                  
                 </div>
               </div>
             </TabsContent>
