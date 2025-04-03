@@ -196,13 +196,9 @@ Buying life insurance is financial security for your family.  Let’s discuss l
                   <h2 className="font-bold text-gray-800 mb-4 text-2xl">Intro to Long Term Care</h2>
                   <p className="text-gray-700 mb-4">What is Long Term Care?
 
-
 Long Term Care is the assistance individuals need when they are unable to care for themselves and need help with Activities of Daily Living (ADLs) - bathing, dressing, transferring, toileting, continence (control of bodily functions), and eating - or they have severe cognitive impairment such as Alzheimer's disease. The need for long term care can result from an accident, chronic illness or short-term disability, or from advance age.
 
-
-Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.
-
-                </p>
+Long term care can include a broad range of services, provided in any setting outside a hospital. It might be help with simple daily tasks like bathing or dressing. It might include skilled care in your own home, an assisted living facility, some other community resources, or a nursing facility.</p>
                   <p className="text-gray-700">When you retire, how will you treat your next chapter?</p>
                 </div>
                 
