@@ -29,7 +29,7 @@ export const MedicareSection: React.FC = () => {
         </React.Fragment>,
         <React.Fragment key="part-b">
           <span className="font-medium">Part B</span>
-          <p>Medical Insurance (see Medicare Part B)</p>
+          <p>Medical Insurance (<a href="https://www.medicare.gov/providers-services/original-medicare/part-b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part B</a>)</p>
         </React.Fragment>,
         <React.Fragment key="part-c">
           <span className="font-medium">Part C Medicare Advantage</span>
@@ -62,7 +62,7 @@ export const MedicareSection: React.FC = () => {
 
       <h3 className="text-xl font-medium text-gray-800 mt-6 mb-4">Medicare Part B</h3>
       <ResourceParagraph>
-        Medicare Part B is Medical Insurance and covers physicians' services, outpatient care, test, and supplies. (see Medicare Part B)
+        Medicare Part B is Medical Insurance and covers physicians' services, outpatient care, test, and supplies. (<a href="https://www.medicare.gov/providers-services/original-medicare/part-b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">see Medicare Part B</a>)
       </ResourceParagraph>
       
       <ResourceParagraph>
