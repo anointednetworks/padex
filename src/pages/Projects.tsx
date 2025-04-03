@@ -102,7 +102,7 @@ Today, the cost of insurance is high, and still increasing. Who will pay your bi
                 </div>
 
                 <div className="mb-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Life Insurance</h2>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Introduction to Medicare</h2>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Why do I need Life Insurance?</h3>
                   <p className="text-gray-700 mb-4">Life insurance is an essential part of financial planning. One reason most people buy life insurance is to replace income that would be lost with the death of a wage earner. An important feature of life insurance is that no income tax is payable on proceeds paid to beneficiaries. Do you want to see how the facts find the story?</p>
                   
