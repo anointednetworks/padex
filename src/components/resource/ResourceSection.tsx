@@ -6,7 +6,7 @@ interface ResourceSectionProps {
   children: React.ReactNode;
 }
 
-export const ResourceSection: React.FC<ResourceSectionProps> = ({ title, children }) => {
+const ResourceSection: React.FC<ResourceSectionProps> = ({ title, children }) => {
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
@@ -14,3 +14,5 @@ export const ResourceSection: React.FC<ResourceSectionProps> = ({ title, childre
     </div>
   );
 };
+
+export default ResourceSection;

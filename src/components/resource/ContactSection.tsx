@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { ResourceSection } from './ResourceSection';
-import { ResourceParagraph } from './ResourceParagraph';
+import ResourceSection from './ResourceSection';
+import ResourceParagraph from './ResourceParagraph';
 
 export const ContactSection: React.FC = () => {
   return (

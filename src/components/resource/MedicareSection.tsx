@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { ResourceSection } from './ResourceSection';
-import { ResourceParagraph } from './ResourceParagraph';
+import ResourceSection from './ResourceSection';
+import ResourceParagraph from './ResourceParagraph';
 import { ResourceList } from './ResourceList';
 
 export const MedicareSection: React.FC = () => {
@@ -55,7 +55,7 @@ export const MedicareSection: React.FC = () => {
       <ResourceList items={[
         'Inpatient care in a hospital',
         'Skilled nursing facility care',
-        'Nursing home care (inpatient care in a skilled nursing facility that's not custodial or long-term care)',
+        'Nursing home care (inpatient care in a skilled nursing facility that\'s not custodial or long-term care)',
         'Hospice care',
         'Home health care'
       ]} />
@@ -121,7 +121,7 @@ export const MedicareSection: React.FC = () => {
       </ResourceParagraph>
       <ResourceList items={[
         'Medicare will pay its share of the Medicare-approved amount for covered health care costs.',
-        'Then, your Medigap policy pays its share. Let's discuss how to make the decision that best suites you.'
+        'Then, your Medigap policy pays its share. Let\'s discuss how to make the decision that best suites you.'
       ]} />
     </ResourceSection>
   );
