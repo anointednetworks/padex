@@ -120,11 +120,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-white to-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 relative rainbow-border-container">
+    <div className="bg-gradient-to-b from-white to-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm border border-blue-100 relative">
       <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="space-y-2">
           <Label htmlFor="name" className="text-base font-medium">Your Name</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
             <Input 
               id="name"
               name="name"
@@ -132,7 +132,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your Name" 
-              className={`w-full p-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
+              className={`w-full p-3 border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
             />
           </div>
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -140,7 +140,7 @@ const ContactForm = () => {
         
         <div className="space-y-2">
           <Label htmlFor="email" className="text-base font-medium">Your Email</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
             <Input 
               id="email"
               name="email"
@@ -148,7 +148,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your Email" 
-              className={`w-full p-3 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
+              className={`w-full p-3 border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
             />
           </div>
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -156,24 +156,24 @@ const ContactForm = () => {
         
         <div className="space-y-2">
           <Label htmlFor="message" className="text-base font-medium">Your Message</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden relative input-rainbow-glow">
+          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
             <textarea 
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               placeholder="Your Message" 
-              className={`w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-300 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
+              className={`w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
               rows={3}
             />
           </div>
           {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
         </div>
         
-        <div className="relative rounded-lg overflow-hidden rainbow-button-container">
+        <div className="relative rounded-lg overflow-hidden">
           <Button 
             type="submit" 
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
+            className="w-full bg-gradient-to-r from-blue-400 to-blue-500 text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
