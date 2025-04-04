@@ -26,7 +26,7 @@ const Annuities = () => {
       
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12">
-        <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible">
+        <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-3xl mx-auto">
           <CardContent className="p-8 md:p-10">
             <h1 className="text-3xl font-bold mb-6">Annuity</h1>
             <p className="text-gray-700 mb-6">
