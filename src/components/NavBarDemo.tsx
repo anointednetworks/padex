@@ -11,5 +11,9 @@ export function NavBarDemo() {
     { name: 'Contact Us', url: '/contact', icon: Mail }
   ]
 
-  return <NavBar items={navItems} />
+  return (
+    <div className="w-full">
+      <NavBar items={navItems} logo="/lovable-uploads/205d5d94-d950-49f6-a520-d2bdb3a39474.png" />
+    </div>
+  )
 }
