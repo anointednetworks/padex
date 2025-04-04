@@ -1,4 +1,3 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -109,6 +108,22 @@ const Annuities = () => {
               </ul>
               
               <p className="mb-4"><strong>Best For:</strong> Individuals who want some market exposure but with downside protection.</p>
+              
+              {/* New section on Choosing the Right Annuity */}
+              <h2 className="text-2xl font-bold mb-4 mt-8">Choosing the Right Annuity</h2>
+              <p className="mb-4">
+                The best type of annuity for you depends on your financial situation and retirement goals:
+              </p>
+              
+              <ul className="list-disc pl-6 mb-4">
+                <li className="mb-2"><strong>Fixed:</strong> Ideal if you prioritize stability and guaranteed income.</li>
+                <li className="mb-2"><strong>Variable:</strong> Suitable if you're willing to take on risk for the chance of higher returns.</li>
+                <li className="mb-2"><strong>Indexed:</strong> A good middle-ground option if you want growth potential with a safety net.</li>
+              </ul>
+              
+              <p className="mb-4">
+                Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity—and which type—fits your retirement plan.
+              </p>
             </article>
             
             <div className="mt-10">
