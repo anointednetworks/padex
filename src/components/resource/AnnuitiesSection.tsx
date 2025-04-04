@@ -16,6 +16,13 @@ export const AnnuitiesSection: React.FC = () => {
       </ResourceParagraph>
       
       <ResourceParagraph>
+        When you withdraw or get payments, that money is taxed as ordinary income. If you pull money out before you
+        are 59½, you might face a 10% federal tax penalty on top of the regular income tax. Annuities have fees and
+        charges associated with the contract, and a surrender charge also may apply if the contract owner elects to give
+        up the annuity before certain time-period conditions are satisfied.
+      </ResourceParagraph>
+      
+      <ResourceParagraph>
         Types of annuities include:
       </ResourceParagraph>
       
