@@ -97,7 +97,7 @@ function StackedCircularFooter() {
             <div id="mc_embed_signup" className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
               <form action="https://brookhaven-hathaway.us11.list-manage.com/subscribe/post?u=c9566827692b2fb74f389836c&amp;id=dabf4caebb&amp;f_id=000f72e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
                 <div id="mc_embed_signup_scroll">
-                  <h2 className="text-lg font-medium mb-2">Subscribe</h2>
+                  <h2 className="text-lg font-medium mb-2">Stay Updated...Subscribe!</h2>
                   <div className="indicates-required text-xs mb-2"><span className="asterisk text-red-500">*</span> indicates required</div>
                   
                   <div className="mc-field-group mb-4">
