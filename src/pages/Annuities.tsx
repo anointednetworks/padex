@@ -52,6 +52,63 @@ const Annuities = () => {
               <p className="mb-4">
                 Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
               </p>
+
+              {/* New section on Types of Annuities */}
+              <h2 className="text-2xl font-bold mb-4 mt-8">Types of Annuities</h2>
+              <p className="mb-4">
+                There are three primary types of annuities—fixed, variable, and indexed—each with distinct features, risks, and benefits. Here's a detailed look at each:
+              </p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3">1. Fixed Annuities</h3>
+              <p className="mb-2"><strong>How It Works:</strong> A fixed annuity guarantees a specific payment amount that doesn't change, regardless of market performance. The insurance company invests your premium and promises a set return.</p>
+              
+              <p className="mb-1"><strong>Pros:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Predictable, stable income.</li>
+                <li>Low risk, as payments are guaranteed.</li>
+              </ul>
+              
+              <p className="mb-1"><strong>Cons:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Returns are typically lower than other annuity types.</li>
+                <li>Inflation may reduce the purchasing power of fixed payments over time.</li>
+              </ul>
+              
+              <p className="mb-4"><strong>Best For:</strong> Conservative retirees who value security and predictable cash flow over higher growth potential.</p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3">2. Variable Annuities</h3>
+              <p className="mb-2"><strong>How It Works:</strong> With a variable annuity, your payments depend on the performance of the investments (called sub-accounts, like mutual funds) you select within the annuity. You have control over how aggressively or conservatively your money is invested.</p>
+              
+              <p className="mb-1"><strong>Pros:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Potential for higher returns if the investments perform well.</li>
+                <li>Flexibility to tailor investments to your goals.</li>
+              </ul>
+              
+              <p className="mb-1"><strong>Cons:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Higher risk—payments can decrease if investments underperform, and you could lose money.</li>
+                <li>Typically comes with higher fees than fixed annuities.</li>
+              </ul>
+              
+              <p className="mb-4"><strong>Best For:</strong> Retirees comfortable with market fluctuations who seek greater growth potential.</p>
+
+              <h3 className="text-xl font-semibold mt-6 mb-3">3. Indexed Annuities</h3>
+              <p className="mb-2"><strong>How It Works:</strong> Indexed annuities offer returns tied to a market index (like the S&P 500), but with protection against market downturns. They provide a guaranteed minimum return plus potential for higher returns based on the index performance.</p>
+              
+              <p className="mb-1"><strong>Pros:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Combines features of both fixed and variable annuities.</li>
+                <li>Protection against market losses while allowing participation in market gains.</li>
+              </ul>
+              
+              <p className="mb-1"><strong>Cons:</strong></p>
+              <ul className="list-disc pl-10 mb-3">
+                <li>Complex fee structures and participation rates may limit upside potential.</li>
+                <li>Returns are typically capped and may not fully match market performance.</li>
+              </ul>
+              
+              <p className="mb-4"><strong>Best For:</strong> Individuals who want some market exposure but with downside protection.</p>
             </article>
             
             <div className="mt-10">
