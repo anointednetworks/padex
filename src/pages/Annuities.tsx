@@ -4,10 +4,17 @@ import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { ResourceList } from "@/components/resource/ResourceList";
+import { Card, CardContent } from "@/components/ui/card";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 const Annuities = () => {
-  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      <SEOHead title="Annuities" description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals." canonicalUrl="https://illuminated-links.com/annuities" />
+  return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      <SEOHead 
+        title="Annuities" 
+        description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals." 
+        canonicalUrl="https://illuminated-links.com/annuities" 
+      />
       
       {/* Hero Section */}
       <div className="w-full h-96">
@@ -18,10 +25,9 @@ const Annuities = () => {
       </div>
       
       {/* Content Section */}
-      <div className="flex items-center justify-center py-12">
-        <div className="text-left max-w-4xl px-4">
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
-            
+      <div className="container mx-auto px-4 py-12">
+        <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible">
+          <CardContent className="p-8 md:p-10">
             <h1 className="text-3xl font-bold mb-6">Annuity</h1>
             <p className="text-gray-700 mb-6">
               An annuity is an agreement where you pay a premium (either a lump sum or multiple payments) to an insurance
@@ -63,80 +69,88 @@ const Annuities = () => {
               benefits. Here's a detailed look at each:
             </p>
 
-            <h3 className="text-xl font-semibold mb-2">1. Fixed Annuities</h3>
-            <ul className="list-disc pl-8 mb-4 space-y-2">
-              <li className="text-gray-700">
-                <span className="font-semibold">How It Works:</span> A fixed annuity guarantees a specific payment amount that doesn't change, regardless of
-                market performance. The insurance company invests your premium and promises a set return.
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Pros:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Predictable, stable income.</li>
-                  <li>Low risk, as payments are guaranteed.</li>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">1. Fixed Annuities</h3>
+                <ul className="list-disc pl-8 mb-4 space-y-2">
+                  <li className="text-gray-700">
+                    <span className="font-semibold">How It Works:</span> A fixed annuity guarantees a specific payment amount that doesn't change, regardless of
+                    market performance. The insurance company invests your premium and promises a set return.
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Pros:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Predictable, stable income.</li>
+                      <li>Low risk, as payments are guaranteed.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Cons:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Returns are typically lower than other annuity types.</li>
+                      <li>Inflation may reduce the purchasing power of fixed payments over time.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Best For:</span> Conservative retirees who value security and predictable cash flow over higher growth potential.
+                  </li>
                 </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Cons:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Returns are typically lower than other annuity types.</li>
-                  <li>Inflation may reduce the purchasing power of fixed payments over time.</li>
-                </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Best For:</span> Conservative retirees who value security and predictable cash flow over higher growth potential.
-              </li>
-            </ul>
+              </div>
 
-            <h3 className="text-xl font-semibold mb-2">2. Variable Annuities</h3>
-            <ul className="list-disc pl-8 mb-4 space-y-2">
-              <li className="text-gray-700">
-                <span className="font-semibold">How It Works:</span> With a variable annuity, your payments depend on the performance of the investments (called sub-accounts, like mutual funds) you select within the annuity. You have control over how aggressively or conservatively your money is invested.
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Pros:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Potential for higher returns if the investments perform well.</li>
-                  <li>Flexibility to tailor investments to your goals.</li>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2. Variable Annuities</h3>
+                <ul className="list-disc pl-8 mb-4 space-y-2">
+                  <li className="text-gray-700">
+                    <span className="font-semibold">How It Works:</span> With a variable annuity, your payments depend on the performance of the investments (called sub-accounts, like mutual funds) you select within the annuity. You have control over how aggressively or conservatively your money is invested.
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Pros:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Potential for higher returns if the investments perform well.</li>
+                      <li>Flexibility to tailor investments to your goals.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Cons:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Higher risk—payments can decrease if investments underperform, and you could lose money.</li>
+                      <li>Typically comes with higher fees than fixed annuities.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Best For:</span> Retirees comfortable with market fluctuations who seek greater growth potential.
+                  </li>
                 </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Cons:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Higher risk—payments can decrease if investments underperform, and you could lose money.</li>
-                  <li>Typically comes with higher fees than fixed annuities.</li>
-                </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Best For:</span> Retirees comfortable with market fluctuations who seek greater growth potential.
-              </li>
-            </ul>
+              </div>
 
-            <h3 className="text-xl font-semibold mb-2">3. Indexed Annuities</h3>
-            <ul className="list-disc pl-8 mb-4 space-y-2">
-              <li className="text-gray-700">
-                <span className="font-semibold">How It Works:</span> Indexed annuities tie your returns to a market index, like the S&P 500, while often providing a guaranteed minimum return. This means you can benefit from market gains (up to a cap) but are protected from major losses.
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Pros:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Offers a balance of growth potential and downside protection.</li>
-                  <li>Less risky than variable annuities due to the minimum return guarantee.</li>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">3. Indexed Annuities</h3>
+                <ul className="list-disc pl-8 mb-4 space-y-2">
+                  <li className="text-gray-700">
+                    <span className="font-semibold">How It Works:</span> Indexed annuities tie your returns to a market index, like the S&P 500, while often providing a guaranteed minimum return. This means you can benefit from market gains (up to a cap) but are protected from major losses.
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Pros:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Offers a balance of growth potential and downside protection.</li>
+                      <li>Less risky than variable annuities due to the minimum return guarantee.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Cons:</span>
+                    <ul className="list-circle pl-8 mt-1">
+                      <li>Returns are often capped, limiting how much you can earn even in a strong market.</li>
+                      <li>Can be complex, with fees and terms that require careful review.</li>
+                    </ul>
+                  </li>
+                  <li className="text-gray-700">
+                    <span className="font-semibold">Best For:</span> Those who want some exposure to market growth without the full risk of a variable annuity.
+                  </li>
                 </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Cons:</span>
-                <ul className="list-circle pl-8 mt-1">
-                  <li>Returns are often capped, limiting how much you can earn even in a strong market.</li>
-                  <li>Can be complex, with fees and terms that require careful review.</li>
-                </ul>
-              </li>
-              <li className="text-gray-700">
-                <span className="font-semibold">Best For:</span> Those who want some exposure to market growth without the full risk of a variable annuity.
-              </li>
-            </ul>
+              </div>
+            </div>
 
-            <h2 className="text-2xl font-semibold mb-4">Choosing the Right Annuity</h2>
+            <h2 className="text-2xl font-semibold mb-4 mt-8">Choosing the Right Annuity</h2>
             <p className="text-gray-700 mb-4">
               The best type of annuity for you depends on your financial situation and retirement goals:
             </p>
@@ -146,12 +160,37 @@ const Annuities = () => {
               <li className="text-gray-700"><span className="font-semibold">Indexed:</span> A good middle-ground option if you want growth potential with a safety net.</li>
             </ul>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700">
               Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity—and which type—fits your retirement plan.
             </p>
             
-          </div>
-        </div>
+            <div className="mt-10">
+              <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
+                  <div className="w-full sm:w-1/3">
+                    <img 
+                      src="/lovable-uploads/9bfbcb25-bb0b-4827-bbed-aaba215a7f54.png" 
+                      alt="Annuities" 
+                      className="w-full h-auto rounded-lg object-cover"
+                    />
+                  </div>
+                  <div className="w-full sm:w-2/3">
+                    <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      Our financial advisors can help you navigate the complex world of annuities and find the solution that's right for your retirement needs.
+                    </p>
+                    <a 
+                      href="/contact" 
+                      className="bg-primary text-white px-6 py-3 rounded-full inline-block hover:bg-opacity-90 transition-colors"
+                    >
+                      Schedule a Consultation
+                    </a>
+                  </div>
+                </div>
+              </BackgroundGradient>
+            </div>
+          </CardContent>
+        </Card>
       </div>
       
       {/* Navbar */}
@@ -159,7 +198,8 @@ const Annuities = () => {
       
       {/* Footer */}
       <StackedCircularFooter />
-    </div>;
+    </div>
+  );
 };
 
 export default Annuities;
