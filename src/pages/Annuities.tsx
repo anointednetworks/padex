@@ -1,3 +1,4 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -120,7 +121,7 @@ const Annuities = () => {
               <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
                   <div className="w-full sm:w-1/3">
-                    <img src="/lovable-uploads/22d461b9-3797-4850-830d-5e5bdeecd9e4.png" alt="Annuities" className="w-full h-auto rounded-lg object-cover" />
+                    <img src="/lovable-uploads/dc1fc61b-a39e-4f22-a2ec-efa927562736.png" alt="Customer Service Agent" className="w-full h-auto rounded-lg object-cover" />
                   </div>
                   <div className="w-full sm:w-2/3">
                     <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
