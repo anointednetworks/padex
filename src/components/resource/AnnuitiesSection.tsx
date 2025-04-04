@@ -8,16 +8,11 @@ export const AnnuitiesSection: React.FC = () => {
   return (
     <ResourceSection title="Annuities">
       <ResourceParagraph>
-        Planning for your financial future? Annuities offer a unique way to secure reliable income during 
-        retirement. Let's explore how these investment vehicles work and how they might fit into your 
-        financial strategy.
-      </ResourceParagraph>
-      
-      <ResourceParagraph>
         An annuity is an agreement where you pay a premium (either a lump sum or multiple payments) to an insurance
         company, and in return, they promise to make payments to you either now or in the future. The interest your
         money earns while it's in the annuity grows tax-deferred, meaning you don't pay taxes on it until you start
-        receiving payouts or take withdrawals.
+        receiving payouts or take withdrawals. These payments can continue for a set period or for the rest of your life,
+        helping ensure you have income even if you live longer than expected.
       </ResourceParagraph>
       
       <ResourceParagraph>

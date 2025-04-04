@@ -1,4 +1,3 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -26,17 +25,10 @@ const Annuities = () => {
       
       {/* Content Section */}
       <div className="container mx-auto px-4 py-12">
-        <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-3xl mx-auto">
+        <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-2xl mx-auto">
           <CardContent className="p-8 md:p-10">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Understanding Annuities</h2>
-            
-            <p className="text-gray-700 mb-6">
-              Planning for your financial future? Annuities offer a unique way to secure reliable income during 
-              retirement. Let's explore how these investment vehicles work and how they might fit into your 
-              financial strategy.
-            </p>
-            
             <h1 className="text-3xl font-bold mb-6">Annuity</h1>
+            
             <p className="text-gray-700 mb-6">
               An annuity is an agreement where you pay a premium (either a lump sum or multiple payments) to an insurance
               company, and in return, they promise to make payments to you either now or in the future. The interest your
