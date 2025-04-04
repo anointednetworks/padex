@@ -47,7 +47,7 @@ export function BackgroundGradientDemo() {
       <Link to="/medicare-solutions" onClick={handleNavigation} className="block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[22px]">
         <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900 h-full">
           <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Medicare Solutions" className="object-cover w-full h-full" width={400} height={200} />
+            <Image src="/lovable-uploads/934875e5-ab27-4deb-aacd-5cbdf5af0fb4.png" alt="Medicare Solutions" className="object-cover w-full h-full" width={400} height={200} />
           </div>
           <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Medicare</p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
