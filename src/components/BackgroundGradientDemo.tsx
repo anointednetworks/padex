@@ -13,7 +13,7 @@ export function BackgroundGradientDemo() {
       <Link to="/annuities" onClick={handleNavigation} className="block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[22px]">
         <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900 h-full">
           <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Annuities" className="object-cover w-full h-full" width={400} height={200} />
+            <Image src="/lovable-uploads/0476e7fb-5957-450d-9bde-68f71737f53b.png" alt="Annuities" className="object-cover w-full h-full" width={400} height={200} />
           </div>
           <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">
             Annuities
