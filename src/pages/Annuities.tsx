@@ -1,3 +1,4 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -161,7 +162,7 @@ const Annuities = () => {
             </ul>
 
             <p className="text-gray-700">
-              Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity���and which type—fits your retirement plan.
+              Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity—and which type—fits your retirement plan.
             </p>
             
             <div className="mt-10">
