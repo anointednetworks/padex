@@ -18,16 +18,17 @@ const Annuities = () => {
       {/* Navbar - moved to top */}
       <NavBarDemo />
       
-      {/* Hero Section - with additional padding to avoid navbar overlap */}
-      <div className="w-full h-96 pt-16">
+      {/* Hero Section - with specific height to avoid overlap */}
+      <div className="w-full pt-16">
         <ServiceHero 
           title="Annuities" 
-          subheading="Secure your peace of mind with income you cannot outlive" 
+          subheading="Secure your peace of mind with income you cannot outlive"
+          height="24rem" 
         />
       </div>
       
       {/* Content Section */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 mt-4">
         <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-2xl mx-auto">
           <CardContent className="p-8 md:p-10">
             {/* New content section */}

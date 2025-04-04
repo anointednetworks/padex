@@ -6,21 +6,24 @@ import React, { ReactNode } from "react";
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
   showRadialGradient?: boolean;
+  height?: string; // Added height prop
 }
 
 export const AuroraBackground = ({
   className,
   children,
   showRadialGradient = true,
+  height = "100vh", // Default to 100vh but can be overridden
   ...props
 }: AuroraBackgroundProps) => {
   return (
     <main>
       <div
         className={cn(
-          "relative flex flex-col h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg",
+          "relative flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg",
           className
         )}
+        style={{ height }} // Apply the height from props
         {...props}
       >
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

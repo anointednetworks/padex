@@ -11,16 +11,18 @@ interface ServiceHeroProps {
   subheading?: string;
   showReadMoreButton?: boolean;
   onReadMoreClick?: () => void;
+  height?: string; // Added height prop
 }
 
 export function ServiceHero({ 
   title, 
   subheading = "Expert guidance for your financial well-being",
   showReadMoreButton = false,
-  onReadMoreClick
+  onReadMoreClick,
+  height = "24rem", // Default height of 96 (h-96) in rem
 }: ServiceHeroProps) {
   return (
-    <AuroraBackground>
+    <AuroraBackground height={height}>
       <motion.div 
         initial={{
           opacity: 0.0,
