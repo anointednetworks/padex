@@ -27,7 +27,38 @@ const Annuities = () => {
       <div className="container mx-auto px-4 py-12">
         <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-2xl mx-auto">
           <CardContent className="p-8 md:p-10">
-            {/* Content cleared - ready for new content */}
+            {/* New content section */}
+            <article className="prose prose-gray max-w-none">
+              <h2 className="text-2xl font-bold mb-4">Annuity</h2>
+              
+              <p className="mb-4">
+                An annuity is an agreement where you pay a premium (either a lump sum or multiple payments) to an insurance company, and in return, they promise to make payments to you either now or in the future. The interest your money earns while it's in the annuity grows tax-deferred, meaning you don't pay taxes on it until you start receiving payouts or take withdrawals. These payments can continue for a set period or for the rest of your life, helping ensure you have income even if you live longer than expected.
+              </p>
+              
+              <p className="mb-4">
+                When you withdraw or get payments, that money is taxed as ordinary income. If you pull money out before you are 59½, you might face a 10% federal tax penalty on top of the regular income tax. Annuities have fees and charges associated with the contract, and a surrender charge also may apply if the contract owner elects to give up the annuity before certain time-period conditions are satisfied.
+              </p>
+              
+              <p className="mb-2">Here's how the process breaks down:</p>
+              <ul className="list-disc pl-6 mb-4">
+                <li className="mb-2">Accumulation Phase: During this phase, you contribute money to the annuity, and your investment grows tax-deferred, meaning you don't pay taxes on any earnings until you start receiving payments.</li>
+                <li className="mb-2">Distribution Phase: This is when the insurance company begins paying you back. You can choose to receive a lump sum or regular payments (e.g., monthly or annually), which are taxed as ordinary income.</li>
+              </ul>
+              
+              <p className="mb-4">
+                Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
+              </p>
+              
+              <p className="mb-2">Here's the process:</p>
+              <ul className="list-disc pl-6 mb-4">
+                <li className="mb-2">Accumulation Phase: During this phase, you contribute money to the annuity, and your investment grows tax-deferred, meaning you don't pay taxes on any earnings until you start receiving payments.</li>
+                <li className="mb-2">Distribution Phase: This is when the insurance company begins paying you back. You can choose to receive a lump sum or regular payments (e.g., monthly or annually), which are taxed as ordinary income.</li>
+              </ul>
+              
+              <p className="mb-4">
+                Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
+              </p>
+            </article>
             
             <div className="mt-10">
               <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
