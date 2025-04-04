@@ -3,7 +3,6 @@ import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
-import { ResourceList } from "@/components/resource/ResourceList";
 import { Card, CardContent } from "@/components/ui/card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
@@ -58,6 +57,25 @@ const Annuities = () => {
               </li>
             </ul>
             
+            <p className="text-gray-700 mb-8">
+              Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer
+              receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with
+              fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
+            </p>
+
+            <h2 className="text-2xl font-semibold mb-4">Here's the process:</h2>
+            <ul className="list-disc pl-8 mb-6 space-y-2">
+              <li className="text-gray-700">
+                <span className="font-semibold">Accumulation Phase:</span> During this phase, you contribute money to the annuity, and your investment
+                grows tax-deferred, meaning you don't pay taxes on any earnings until you start receiving payments.
+              </li>
+              <li className="text-gray-700">
+                <span className="font-semibold">Distribution Phase:</span> This is when the insurance company begins paying you back. You can choose to
+                receive a lump sum or regular payments (e.g., monthly or annually), which are taxed as ordinary
+                income.
+              </li>
+            </ul>
+
             <p className="text-gray-700 mb-8">
               Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer
               receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with
@@ -161,7 +179,7 @@ const Annuities = () => {
               <li className="text-gray-700"><span className="font-semibold">Indexed:</span> A good middle-ground option if you want growth potential with a safety net.</li>
             </ul>
 
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-8">
               Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity—and which type—fits your retirement plan.
             </p>
             
@@ -170,7 +188,7 @@ const Annuities = () => {
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
                   <div className="w-full sm:w-1/3">
                     <img 
-                      src="/lovable-uploads/9bfbcb25-bb0b-4827-bbed-aaba215a7f54.png" 
+                      src="/lovable-uploads/22d461b9-3797-4850-830d-5e5bdeecd9e4.png" 
                       alt="Annuities" 
                       className="w-full h-auto rounded-lg object-cover"
                     />
