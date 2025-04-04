@@ -15,8 +15,11 @@ const Annuities = () => {
         canonicalUrl="https://illuminated-links.com/annuities" 
       />
       
-      {/* Hero Section */}
-      <div className="w-full h-96">
+      {/* Navbar - moved to top */}
+      <NavBarDemo />
+      
+      {/* Hero Section - with additional padding to avoid navbar overlap */}
+      <div className="w-full h-96 pt-16">
         <ServiceHero 
           title="Annuities" 
           subheading="Secure your peace of mind with income you cannot outlive" 
@@ -40,16 +43,6 @@ const Annuities = () => {
               </p>
               
               <p className="mb-2">Here's how the process breaks down:</p>
-              <ul className="list-disc pl-6 mb-4">
-                <li className="mb-2">Accumulation Phase: During this phase, you contribute money to the annuity, and your investment grows tax-deferred, meaning you don't pay taxes on any earnings until you start receiving payments.</li>
-                <li className="mb-2">Distribution Phase: This is when the insurance company begins paying you back. You can choose to receive a lump sum or regular payments (e.g., monthly or annually), which are taxed as ordinary income.</li>
-              </ul>
-              
-              <p className="mb-4">
-                Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
-              </p>
-              
-              <p className="mb-2">Here's the process:</p>
               <ul className="list-disc pl-6 mb-4">
                 <li className="mb-2">Accumulation Phase: During this phase, you contribute money to the annuity, and your investment grows tax-deferred, meaning you don't pay taxes on any earnings until you start receiving payments.</li>
                 <li className="mb-2">Distribution Phase: This is when the insurance company begins paying you back. You can choose to receive a lump sum or regular payments (e.g., monthly or annually), which are taxed as ordinary income.</li>
@@ -88,9 +81,6 @@ const Annuities = () => {
           </CardContent>
         </Card>
       </div>
-      
-      {/* Navbar */}
-      <NavBarDemo />
       
       {/* Footer */}
       <StackedCircularFooter />
