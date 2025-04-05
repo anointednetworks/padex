@@ -2,15 +2,11 @@
 import React, { useState } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
-import { GlossaryDocumentProcessor } from '@/components/GlossaryDocumentProcessor';
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEOHead } from "@/components/SEOHead";
 
 const Glossary = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [showDocProcessor, setShowDocProcessor] = useState(false);
   
   const glossaryItems = [
     { term: 'Digital Experience', definition: 'The overall experience a user has when interacting with digital products or services, encompassing usability, accessibility, and design elements.' },
@@ -34,52 +30,38 @@ const Glossary = () => {
       
       <div className="flex-grow px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="glossary">
-            <div className="flex justify-between items-center mb-6">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900">Glossary</h1>
-              <TabsList>
-                <TabsTrigger value="glossary">View Glossary</TabsTrigger>
-                <TabsTrigger value="admin">Admin Tool</TabsTrigger>
-              </TabsList>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-6">Glossary</h1>
+          
+          <p className="text-xl text-gray-600 mb-8">
+            Find definitions and explanations for key terms used throughout our services.
+          </p>
+          
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-left">
+            <div className="mb-6">
+              <Input 
+                type="text" 
+                placeholder="Search glossary terms..." 
+                className="w-full p-3"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
             </div>
             
-            <TabsContent value="glossary">
-              <p className="text-xl text-gray-600 mb-8">
-                Find definitions and explanations for key terms used throughout our services.
-              </p>
-              
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-left">
-                <div className="mb-6">
-                  <Input 
-                    type="text" 
-                    placeholder="Search glossary terms..." 
-                    className="w-full p-3"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
+            <div className="space-y-6">
+              {filteredItems.length > 0 ? (
+                filteredItems.map((item) => (
+                  <div key={item.term} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 className="text-xl font-semibold text-gray-800">{item.term}</h3>
+                    <p className="text-gray-600 mt-1">{item.definition}</p>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center py-10">
+                  <p className="text-gray-500">No matching terms found. Try a different search.</p>
                 </div>
-                
-                <div className="space-y-6">
-                  {filteredItems.length > 0 ? (
-                    filteredItems.map((item) => (
-                      <div key={item.term} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                        <h3 className="text-xl font-semibold text-gray-800">{item.term}</h3>
-                        <p className="text-gray-600 mt-1">{item.definition}</p>
-                      </div>
-                    ))
-                  ) : (
-                    <div className="text-center py-10">
-                      <p className="text-gray-500">No matching terms found. Try a different search.</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="admin">
-              <GlossaryDocumentProcessor />
-            </TabsContent>
-          </Tabs>
+              )}
+            </div>
+          </div>
         </div>
       </div>
       
