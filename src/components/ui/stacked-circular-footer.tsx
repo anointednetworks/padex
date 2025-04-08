@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -82,10 +83,16 @@ function StackedCircularFooter() {
                 <Instagram className="h-4 w-4" />
                 <span className="sr-only">Instagram</span>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
-                <Linkedin className="h-4 w-4" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
+              <a 
+                href="https://www.linkedin.com/in/paddywilliams/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                  <Linkedin className="h-4 w-4" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-muted-foreground">
               © 2025 Padex Benefit Advisors. All rights reserved.
