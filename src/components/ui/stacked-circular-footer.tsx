@@ -60,7 +60,7 @@ function StackedCircularFooter() {
             {/* Contact Information */}
             <div className="text-sm text-gray-600 space-y-1 text-center md:text-left">
               <p className="font-medium">Padex Benefit Advisors, LLC</p>
-              <p>Ste 110 #614</p>
+              <p>3060 Mercer University Dr</p>
               <p>3060 Mercer University Dr</p>
               <p>Atlanta, GA 30341</p>
               <p>Office: (470) 464-8950</p>
