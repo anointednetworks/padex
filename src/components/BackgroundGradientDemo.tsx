@@ -13,7 +13,7 @@ export function BackgroundGradientDemo() {
       <Link to="/annuities" onClick={handleNavigation} className="block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[22px]">
         <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900 h-full">
           <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <Image src="/lovable-uploads/0476e7fb-5957-450d-9bde-68f71737f53b.png" alt="Annuities" className="object-cover w-full h-full" width={400} height={200} />
+            <Image src="/lovable-uploads/0476e7fb-5957-450d-9bde-68f71737f53b.png" alt="Annuities" className="object-contain w-full h-full" width={400} height={200} />
           </div>
           <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">
             Annuities
@@ -31,7 +31,7 @@ export function BackgroundGradientDemo() {
       <Link to="/life-health-insurance" onClick={handleNavigation} className="block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[22px]">
         <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900 h-full">
           <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <Image src="/lovable-uploads/60ad3502-93e4-40ed-a4e1-625e10f6d2c5.png" alt="Life and Health Insurance" className="object-cover w-full h-full" width={400} height={200} />
+            <Image src="/lovable-uploads/60ad3502-93e4-40ed-a4e1-625e10f6d2c5.png" alt="Life and Health Insurance" className="object-contain w-full h-full" width={400} height={200} />
           </div>
           <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Life & Health Insurance</p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
@@ -47,7 +47,7 @@ export function BackgroundGradientDemo() {
       <Link to="/medicare-solutions" onClick={handleNavigation} className="block transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[22px]">
         <BackgroundGradient className="rounded-[22px] p-4 sm:p-6 bg-white dark:bg-zinc-900 h-full">
           <div className="h-[200px] w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <Image src="/lovable-uploads/934875e5-ab27-4deb-aacd-5cbdf5af0fb4.png" alt="Medicare Solutions" className="object-cover w-full h-full" width={400} height={200} />
+            <Image src="/lovable-uploads/934875e5-ab27-4deb-aacd-5cbdf5af0fb4.png" alt="Medicare Solutions" className="object-contain w-full h-full" width={400} height={200} />
           </div>
           <p className="text-base sm:text-lg text-black mt-4 mb-2 dark:text-neutral-200">Medicare</p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">

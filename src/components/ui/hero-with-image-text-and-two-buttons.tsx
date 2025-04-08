@@ -30,11 +30,12 @@ function Hero() {
               </Link>
             </div>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-xl">
+          <div className="rounded-xl overflow-hidden shadow-xl h-[300px]">
             <Image 
               src="/lovable-uploads/dc1fc61b-a39e-4f22-a2ec-efa927562736.png" 
               alt="Insurance advisor consulting with senior couple" 
-              className="w-full h-auto object-cover aspect-video" 
+              className="w-full h-full" 
+              objectFit="contain"
             />
           </div>
         </div>
