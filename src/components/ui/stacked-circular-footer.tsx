@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -14,6 +13,7 @@ declare global {
     jQuery: any;
   }
 }
+
 function StackedCircularFooter() {
   // Add effect to load Mailchimp script after component mounts
   useEffect(() => {
@@ -79,10 +79,16 @@ function StackedCircularFooter() {
                 <Twitter className="h-4 w-4" />
                 <span className="sr-only">Twitter</span>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
-                <Instagram className="h-4 w-4" />
-                <span className="sr-only">Instagram</span>
-              </Button>
+              <a 
+                href="https://www.instagram.com/padexforlife?igsh=ejFxOG9ud3dhYThu&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                  <Instagram className="h-4 w-4" />
+                  <span className="sr-only">Instagram</span>
+                </Button>
+              </a>
               <a 
                 href="https://www.linkedin.com/in/paddywilliams/" 
                 target="_blank" 
