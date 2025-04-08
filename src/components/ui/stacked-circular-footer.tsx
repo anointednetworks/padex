@@ -81,10 +81,16 @@ function StackedCircularFooter() {
                   <span className="sr-only">Facebook</span>
                 </Button>
               </a>
-              <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
-                <Twitter className="h-4 w-4" />
-                <span className="sr-only">Twitter</span>
-              </Button>
+              <a 
+                href="https://www.x.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="icon" className="rounded-full h-9 w-9">
+                  <Twitter className="h-4 w-4" />
+                  <span className="sr-only">Twitter</span>
+                </Button>
+              </a>
               <a 
                 href="https://www.instagram.com/padexforlife?igsh=ejFxOG9ud3dhYThu&utm_source=qr" 
                 target="_blank" 
