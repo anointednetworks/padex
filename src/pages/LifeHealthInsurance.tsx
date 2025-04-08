@@ -6,9 +6,15 @@ import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 import { HealthInsuranceSection } from "@/components/resource/HealthInsuranceSection";
 import { LifeInsuranceSection } from "@/components/resource/LifeInsuranceSection";
 import { Image } from "@/components/ui/image";
+import { SEOHead } from "@/components/SEOHead";
 
 const LifeHealthInsurance = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+      <SEOHead 
+        title="Life & Health Insurance"
+        description="Explore comprehensive Life and Health Insurance options and find out about insurance benefits you can use while living."
+      />
+      
       {/* Hero Section */}
       <div className="w-full h-96">
         <ServiceHero title="Life & Health Insurance" subheading="Find out about insurance you don't have to die to use" />
@@ -18,7 +24,7 @@ const LifeHealthInsurance = () => {
       <div className="w-full flex justify-center py-8">
         <div className="w-full max-w-4xl h-[400px] bg-white rounded-xl overflow-hidden shadow-md">
           <Image 
-            src="/lovable-uploads/e008f8ef-1187-430f-8145-2e0a303d9a44.png"
+            src="/lovable-uploads/dc1fc61b-a39e-4f22-a2ec-efa927562736.png"
             alt="Life and Health Insurance" 
             className="w-full h-full" 
             objectFit="contain"
