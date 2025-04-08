@@ -24,7 +24,7 @@ const LifeHealthInsurance = () => {
       <div className="w-full flex justify-center py-8">
         <div className="w-full max-w-4xl h-[400px] bg-white rounded-xl overflow-hidden shadow-md">
           <Image 
-            src="/lovable-uploads/a17ad995-1411-41dd-a4c2-0bd5b82a1ba7.png"
+            src="/lovable-uploads/b8c4fbac-a0ff-4cd7-ae53-36d3e815d75e.png"
             alt="Life Insurance Comparison Chart showing Term Life vs Whole Life" 
             className="w-full h-full" 
             objectFit="contain"
