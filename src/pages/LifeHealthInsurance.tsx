@@ -18,7 +18,7 @@ const LifeHealthInsurance = () => {
       <div className="w-full flex justify-center py-8">
         <div className="w-full max-w-4xl h-[400px] bg-white rounded-xl overflow-hidden shadow-md">
           <Image 
-            src="/lovable-uploads/60ad3502-93e4-40ed-a4e1-625e10f6d2c5.png"
+            src="/lovable-uploads/e008f8ef-1187-430f-8145-2e0a303d9a44.png"
             alt="Life and Health Insurance" 
             className="w-full h-full" 
             objectFit="contain"
