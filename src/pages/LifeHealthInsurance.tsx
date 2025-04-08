@@ -5,7 +5,6 @@ import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 import { HealthInsuranceSection } from "@/components/resource/HealthInsuranceSection";
 import { LifeInsuranceSection } from "@/components/resource/LifeInsuranceSection";
-import { Image } from "@/components/ui/image";
 import { SEOHead } from "@/components/SEOHead";
 
 const LifeHealthInsurance = () => {
@@ -18,18 +17,6 @@ const LifeHealthInsurance = () => {
       {/* Hero Section */}
       <div className="w-full h-96">
         <ServiceHero title="Life & Health Insurance" subheading="Find out about insurance you don't have to die to use" />
-      </div>
-      
-      {/* Featured Image Section */}
-      <div className="w-full flex justify-center py-8">
-        <div className="w-full max-w-4xl h-[400px] bg-white rounded-xl overflow-hidden shadow-md">
-          <Image 
-            src="/lovable-uploads/b8c4fbac-a0ff-4cd7-ae53-36d3e815d75e.png"
-            alt="Life Insurance Comparison Chart showing Term Life vs Whole Life" 
-            className="w-full h-full" 
-            objectFit="contain"
-          />
-        </div>
       </div>
       
       {/* New Hero Component Section */}
