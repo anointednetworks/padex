@@ -17,7 +17,7 @@ const Index = () => {
           <div className="flex justify-center mt-12">
             
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow w-full max-w-3xl mx-auto">
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Your Health Is Your Greatest Wealth</h2>
+              
               <p className="text-gray-600 text-left mb-4">Navigating today's economic landscape comes with challenges, but it also brings opportunities for those who recognize long-term trends.</p>
               
               <p className="text-gray-600 text-left mb-4">Whether you're planning for retirement or seeking clarity on investment strategies that will benefit you immediately and long-term, we are here to help you address your most important financial questions.</p>
