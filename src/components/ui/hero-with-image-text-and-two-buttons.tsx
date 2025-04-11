@@ -1,7 +1,6 @@
 
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Image } from "@/components/ui/image";
 
@@ -15,9 +14,7 @@ function Hero() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
           <div className="space-y-6">
-            <Badge variant="outline" className="px-3 py-1 border-blue-200 bg-blue-50 text-blue-700 rounded-full">
-              Medicare Expertise
-            </Badge>
+            {/* Removed the Badge component */}
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
               Understanding Medicare and Your Coverage Options
             </h2>
