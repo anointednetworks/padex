@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
@@ -7,6 +7,11 @@ import ContactHeader from "@/components/contact/ContactHeader";
 import ContactForm from "@/components/contact/ContactForm";
 
 const Contact = () => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-blue-50">
       <NavBarDemo />
