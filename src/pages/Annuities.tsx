@@ -1,10 +1,11 @@
-
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { Link } from "react-router-dom";
+
 const Annuities = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Annuities" description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals." canonicalUrl="https://illuminated-links.com/annuities" />
@@ -21,7 +22,6 @@ const Annuities = () => {
       <div className="container mx-auto px-4 py-12 mt-4">
         <Card className="bg-white border border-gray-100 hover:shadow-md transition-shadow rounded-xl overflow-visible max-w-2xl mx-auto">
           <CardContent className="p-8 md:p-10">
-            {/* New content section */}
             <article className="prose prose-gray max-w-none">
               <h2 className="text-2xl font-bold mb-4">Annuity</h2>
               
@@ -43,7 +43,6 @@ const Annuities = () => {
                 Annuities are particularly valuable in retirement because they can replace the regular paycheck you no longer receive, offering peace of mind by reducing the risk of outliving your savings. However, they often come with fees, and withdrawing money before age 59½ may incur penalties, so they require careful planning.
               </p>
 
-              {/* New section on Types of Annuities */}
               <h2 className="text-2xl font-bold mb-4 mt-8">Types of Annuities</h2>
               <p className="mb-4">
                 There are three primary types of annuities—fixed, variable, and indexed—each with distinct features, risks, and benefits. Here's a detailed look at each:
@@ -100,7 +99,6 @@ const Annuities = () => {
               
               <p className="mb-4"><strong>Best For:</strong> Individuals who want some market exposure but with downside protection.</p>
               
-              {/* New section on Choosing the Right Annuity */}
               <h2 className="text-2xl font-bold mb-4 mt-8">Choosing the Right Annuity</h2>
               <p className="mb-4">
                 The best type of annuity for you depends on your financial situation and retirement goals:
@@ -126,9 +124,9 @@ const Annuities = () => {
                   <div className="w-full sm:w-2/3">
                     <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
                     <p className="text-gray-700 dark:text-gray-300 mb-4">Let me help you navigate the complex world of annuities and find the solution that's right for your retirement needs.</p>
-                    <a href="/contact" className="bg-primary text-white px-6 py-3 rounded-full inline-block hover:bg-opacity-90 transition-colors">
+                    <Link to="/contact" className="bg-primary text-white px-6 py-3 rounded-full inline-block hover:bg-opacity-90 transition-colors">
                       Schedule a Consultation
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </BackgroundGradient>
