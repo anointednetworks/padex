@@ -1,6 +1,4 @@
 
-"use client";
-
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -19,7 +17,7 @@ export function ServiceHero({
   subheading = "Expert guidance for your financial well-being",
   showReadMoreButton = false,
   onReadMoreClick,
-  height = "24rem", // Default height of 96 (h-96) in rem
+  height = "28rem", // Increased from 24rem to 28rem (h-112)
 }: ServiceHeroProps) {
   return (
     <AuroraBackground height={height}>
