@@ -117,17 +117,6 @@ function StackedCircularFooter() {
           <div className="w-full max-w-md mx-auto md:ml-auto md:mr-0">
             <div id="mc_embed_shell" className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
               <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
-              <style type="text/css">
-                {`
-                  #mc_embed_signup {
-                    background: #fff;
-                    clear: left;
-                    font: 14px Helvetica, Arial, sans-serif;
-                    width: 100%;
-                    max-width: 600px;
-                  }
-                `}
-              </style>
               <div id="mc_embed_signup">
                 <form 
                   action="https://padexadvisors.us9.list-manage.com/subscribe/post?u=b54b1535913223bdcf93bf4f1&amp;id=fe2d486614&amp;f_id=002fe1e3f0" 
@@ -138,7 +127,7 @@ function StackedCircularFooter() {
                   target="_blank"
                 >
                   <div id="mc_embed_signup_scroll">
-                    <h2 className="text-lg font-medium mb-2">Subscribe</h2>
+                    <h2 className="text-lg font-medium mb-2">Stay up to date...</h2>
                     <div className="indicates-required text-xs mb-2">
                       <span className="asterisk text-red-500">*</span> indicates required
                     </div>
@@ -175,7 +164,7 @@ function StackedCircularFooter() {
                           id="mc-embedded-subscribe" 
                           className="w-full mt-2"
                         >
-                          Stay up to date...Subscribe!
+                          Subscribe
                         </Button>
                       </div>
                     </div>
