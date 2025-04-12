@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -7,8 +8,8 @@ import { Label } from "@/components/ui/label";
 // Add type definitions for Mailchimp globals
 declare global {
   interface Window {
-    fnames: string[];
-    ftypes: string[];
+    fnames: string[] | any;
+    ftypes: string[] | any;
     $mcj: any;
     jQuery: any;
   }
@@ -34,10 +35,14 @@ function StackedCircularFooter() {
           window.ftypes[0] = 'email';
           window.fnames[1] = 'FNAME';
           window.ftypes[1] = 'text';
+          window.fnames[2] = 'LNAME';
+          window.ftypes[2] = 'text';
           window.fnames[3] = 'ADDRESS';
           window.ftypes[3] = 'address';
           window.fnames[4] = 'PHONE';
           window.ftypes[4] = 'phone';
+          window.fnames[5] = 'BIRTHDAY';
+          window.ftypes[5] = 'birthday';
           window.fnames[6] = 'COMPANY';
           window.ftypes[6] = 'text';
         })(window.jQuery);
@@ -119,45 +124,90 @@ function StackedCircularFooter() {
           
           {/* Mailchimp Form */}
           <div className="w-full max-w-md mx-auto md:ml-auto md:mr-0">
-            <div id="mc_embed_signup" className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <form action="https://brookhaven-hathaway.us11.list-manage.com/subscribe/post?u=c9566827692b2fb74f389836c&amp;id=dabf4caebb&amp;f_id=000f72e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
-                <div id="mc_embed_signup_scroll">
-                  <h2 className="text-lg font-medium mb-2">Stay Updated...Subscribe!</h2>
-                  <div className="indicates-required text-xs mb-2"><span className="asterisk text-red-500">*</span> indicates required</div>
-                  
-                  <div className="mc-field-group mb-4">
-                    <Label htmlFor="mce-EMAIL" className="block text-sm mb-1">
-                      Email Address <span className="asterisk text-red-500">*</span>
-                    </Label>
-                    <Input type="email" name="EMAIL" className="required email w-full" id="mce-EMAIL" required />
-                  </div>
-                  
-                  <div id="mce-responses" className="clear foot">
-                    <div className="response" id="mce-error-response" style={{
-                    display: 'none'
-                  }}></div>
-                    <div className="response" id="mce-success-response" style={{
-                    display: 'none'
-                  }}></div>
-                  </div>
-                  
-                  <div aria-hidden="true" style={{
-                  position: 'absolute',
-                  left: '-5000px'
-                }}>
-                    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-                    <input type="text" name="b_c9566827692b2fb74f389836c_dabf4caebb" tabIndex={-1} value="" readOnly />
-                  </div>
-                  
-                  <div className="optionalParent">
-                    <div className="clear foot">
-                      <Button type="submit" name="subscribe" id="mc-embedded-subscribe" className="w-full mt-2" value="Subscribe">
-                        Subscribe
-                      </Button>
+            <div id="mc_embed_shell" className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+              <style type="text/css">
+                {`
+                  #mc_embed_signup {
+                    background: #fff;
+                    clear: left;
+                    font: 14px Helvetica, Arial, sans-serif;
+                    width: 100%;
+                    max-width: 600px;
+                  }
+                `}
+              </style>
+              <div id="mc_embed_signup">
+                <form 
+                  action="https://padexadvisors.us9.list-manage.com/subscribe/post?u=b54b1535913223bdcf93bf4f1&amp;id=fe2d486614&amp;f_id=002fe1e3f0" 
+                  method="post" 
+                  id="mc-embedded-subscribe-form" 
+                  name="mc-embedded-subscribe-form" 
+                  className="validate" 
+                  target="_blank"
+                >
+                  <div id="mc_embed_signup_scroll">
+                    <h2 className="text-lg font-medium mb-2">Subscribe</h2>
+                    <div className="indicates-required text-xs mb-2">
+                      <span className="asterisk text-red-500">*</span> indicates required
+                    </div>
+                    <div className="mc-field-group mb-4">
+                      <Label htmlFor="mce-EMAIL" className="block text-sm mb-1">
+                        Email Address <span className="asterisk text-red-500">*</span>
+                      </Label>
+                      <Input 
+                        type="email" 
+                        name="EMAIL" 
+                        className="required email w-full" 
+                        id="mce-EMAIL" 
+                        required
+                      />
+                    </div>
+                    <div id="mce-responses" className="clear foot">
+                      <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
+                      <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
+                    </div>
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                      {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                      <input 
+                        type="text" 
+                        name="b_b54b1535913223bdcf93bf4f1_fe2d486614" 
+                        tabIndex={-1} 
+                        value="" 
+                        readOnly 
+                      />
+                    </div>
+                    <div className="optionalParent">
+                      <div className="clear foot">
+                        <Button 
+                          type="submit" 
+                          name="subscribe" 
+                          id="mc-embedded-subscribe" 
+                          className="w-full mt-2" 
+                          value="Subscribe"
+                        >
+                          Subscribe
+                        </Button>
+                        <p className="text-center text-xs mt-2">
+                          <a 
+                            href="http://eepurl.com/jcoAgY" 
+                            title="Mailchimp - email marketing made easy and fun" 
+                            className="inline-block"
+                          >
+                            <span className="inline-block bg-transparent rounded">
+                              <img 
+                                className="w-[220px] h-[40px] flex p-[2px 0]" 
+                                src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" 
+                                alt="Intuit Mailchimp"
+                              />
+                            </span>
+                          </a>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
