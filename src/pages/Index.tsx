@@ -1,7 +1,9 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { AuroraBackgroundDemo } from "@/components/AuroraBackgroundDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
+
 const Index = () => {
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Aurora Background Demo Section */}
@@ -10,7 +12,7 @@ const Index = () => {
       </div>
       
       {/* Hero Section */}
-      <div id="welcome-section" className="flex items-center justify-center py-20">
+      <div id="welcome-section" className="flex items-center justify-center py-20 pt-32">
         <div className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 tracking-tight text-gray-900">Your Health Is Your Greatest Wealth</h1>
           
@@ -46,3 +48,4 @@ const Index = () => {
     </div>;
 };
 export default Index;
+
