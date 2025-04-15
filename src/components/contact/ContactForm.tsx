@@ -67,7 +67,6 @@ const ContactForm = () => {
                 name="FNAME" 
                 className="w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
                 id="mce-FNAME" 
-                value="" 
               />
             </div>
             
@@ -81,7 +80,6 @@ const ContactForm = () => {
                 className="required email w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
                 id="mce-EMAIL" 
                 required 
-                value="" 
               />
             </div>
             
@@ -94,7 +92,6 @@ const ContactForm = () => {
                 className="w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
                 id="mce-MMERGE7" 
                 rows={3}
-                value="" 
               />
             </div>
             
@@ -109,7 +106,6 @@ const ContactForm = () => {
                 type="text" 
                 name="b_b54b1535913223bdcf93bf4f1_fe2d486614" 
                 tabIndex={-1} 
-                value="" 
                 readOnly 
               />
             </div>
