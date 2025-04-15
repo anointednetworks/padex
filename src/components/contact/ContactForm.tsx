@@ -1,193 +1,134 @@
 
-import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/lib/supabase";
+import React, { useEffect } from 'react';
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  useEffect(() => {
+    // Load the Mailchimp validation script
+    const script = document.createElement('script');
+    script.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  // Form validation function
-  const validateForm = () => {
-    let valid = true;
-    const newErrors = {
-      name: '',
-      email: '',
-      message: ''
-    };
-
-    // Name validation
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-      valid = false;
-    }
-
-    // Email validation
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-      valid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-      valid = false;
-    }
-
-    // Message validation
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-      valid = false;
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
-      valid = false;
-    }
-
-    setErrors(newErrors);
-    return valid;
-  };
-
-  // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  // Form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      console.log('Submitting contact form:', formData);
-      
-      // Insert the form data into Supabase
-      const { data, error } = await supabase
-        .from('contacts')
-        .insert([{
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          created_at: new Date().toISOString()
-        }]);
-      
-      console.log('Contact form submission response:', { data, error });
-      
-      if (error) {
-        throw error;
+    script.onload = () => {
+      if (window.jQuery) {
+        (function ($) {
+          window.fnames = window.fnames || [];
+          window.ftypes = window.ftypes || [];
+          window.fnames[1] = 'FNAME';
+          window.ftypes[1] = 'text';
+          window.fnames[0] = 'EMAIL';
+          window.ftypes[0] = 'email';
+          window.fnames[7] = 'MMERGE7';
+          window.ftypes[7] = 'text';
+          window.fnames[2] = 'LNAME';
+          window.ftypes[2] = 'text';
+          window.fnames[3] = 'ADDRESS';
+          window.ftypes[3] = 'address';
+          window.fnames[4] = 'PHONE';
+          window.ftypes[4] = 'phone';
+          window.fnames[5] = 'BIRTHDAY';
+          window.ftypes[5] = 'birthday';
+          window.fnames[6] = 'COMPANY';
+          window.ftypes[6] = 'text';
+        })(window.jQuery);
+        window.$mcj = window.jQuery.noConflict(true);
       }
-      
-      // Success!
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting contact form:', error);
-      toast({
-        title: "Something went wrong",
-        description: "Error: " + (error.message || 'Unknown error'),
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
+    
+    return () => {
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-gradient-to-b from-white to-blue-100 p-6 sm:p-8 rounded-2xl shadow-sm border border-blue-100 relative">
-      <form className="space-y-5" onSubmit={handleSubmit}>
-        <div className="space-y-2">
-          <Label htmlFor="name" className="text-base font-medium">Your Name</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
-            <Input 
-              id="name"
-              name="name"
-              type="text" 
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name" 
-              className={`w-full p-3 border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.name ? 'border-red-500' : ''}`}
-            />
-          </div>
-          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="email" className="text-base font-medium">Your Email</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
-            <Input 
-              id="email"
-              name="email"
-              type="email" 
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Email" 
-              className={`w-full p-3 border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.email ? 'border-red-500' : ''}`}
-            />
-          </div>
-          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-        </div>
-        
-        <div className="space-y-2">
-          <Label htmlFor="message" className="text-base font-medium">Your Message</Label>
-          <div className="transition-all duration-300 hover:shadow-md rounded-lg overflow-hidden">
-            <textarea 
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message" 
-              className={`w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all z-10 relative bg-white ${errors.message ? 'border-red-500' : ''}`}
-              rows={3}
-            />
-          </div>
-          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-        </div>
-        
-        <div className="relative rounded-lg overflow-hidden">
-          <Button 
-            type="submit" 
-            className="w-full bg-gradient-to-r from-blue-400 to-blue-500 text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] z-10 relative"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Sending...
+      <div id="mc_embed_signup">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+        <form 
+          action="https://padexadvisors.us9.list-manage.com/subscribe/post?u=b54b1535913223bdcf93bf4f1&amp;id=fe2d486614&amp;f_id=002de1e3f0" 
+          method="post" 
+          id="mc-embedded-subscribe-form" 
+          name="mc-embedded-subscribe-form" 
+          className="validate" 
+          target="_blank"
+        >
+          <div id="mc_embed_signup_scroll">
+            <h2 className="text-xl font-semibold mb-4">We would love to hear from you! Please reach out to schedule a session or if you have any questions.</h2>
+            <div className="indicates-required mb-3"><span className="asterisk text-red-500">*</span> indicates required</div>
+            
+            <div className="mc-field-group mb-4">
+              <label htmlFor="mce-FNAME" className="block text-sm font-medium mb-1">
+                Your Name
+              </label>
+              <input 
+                type="text" 
+                name="FNAME" 
+                className="w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
+                id="mce-FNAME" 
+                value="" 
+              />
+            </div>
+            
+            <div className="mc-field-group mb-4">
+              <label htmlFor="mce-EMAIL" className="block text-sm font-medium mb-1">
+                Email Address <span className="asterisk text-red-500">*</span>
+              </label>
+              <input 
+                type="email" 
+                name="EMAIL" 
+                className="required email w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
+                id="mce-EMAIL" 
+                required 
+                value="" 
+              />
+            </div>
+            
+            <div className="mc-field-group mb-4">
+              <label htmlFor="mce-MMERGE7" className="block text-sm font-medium mb-1">
+                Your Message
+              </label>
+              <textarea 
+                name="MMERGE7" 
+                className="w-full p-3 border border-blue-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 hover:border-blue-200 transition-all" 
+                id="mce-MMERGE7" 
+                rows={3}
+                value="" 
+              />
+            </div>
+            
+            <div id="mce-responses" className="clear foot">
+              <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
+              <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
+            </div>
+            
+            <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+              {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+              <input 
+                type="text" 
+                name="b_b54b1535913223bdcf93bf4f1_fe2d486614" 
+                tabIndex={-1} 
+                value="" 
+                readOnly 
+              />
+            </div>
+            
+            <div className="optionalParent">
+              <div className="clear foot">
+                <button 
+                  type="submit" 
+                  name="subscribe" 
+                  id="mc-embedded-subscribe" 
+                  className="w-full bg-gradient-to-r from-blue-400 to-blue-500 text-white p-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02]"
+                >
+                  Submit
+                </button>
               </div>
-            ) : "Send Message"}
-          </Button>
-        </div>
-      </form>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

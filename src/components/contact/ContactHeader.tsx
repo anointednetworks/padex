@@ -8,7 +8,7 @@ const ContactHeader = () => {
         Contact Us
       </h1>
       <p className="text-lg text-gray-600 mt-4">
-        We would love to hear from you! Please reach out with any questions or feedback.
+        We would love to hear from you! Please reach out with any questions or to schedule a session.
       </p>
     </div>
   );

@@ -36,7 +36,7 @@ const Projects = () => {
         showReadMoreButton={true} 
       />
       
-      <div className="container mx-auto px-4 py-8 pt-32">
+      <div className="container mx-auto px-4 py-8 pt-40">
         <div className="max-w-4xl mx-auto" ref={resourcesContainerRef}>
           <ResourcesTab />
         </div>
@@ -48,4 +48,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
