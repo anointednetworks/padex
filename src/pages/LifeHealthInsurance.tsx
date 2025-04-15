@@ -6,8 +6,16 @@ import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 import { HealthInsuranceSection } from "@/components/resource/HealthInsuranceSection";
 import { LifeInsuranceSection } from "@/components/resource/LifeInsuranceSection";
 import { SEOHead } from "@/components/SEOHead";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
 
 const LifeHealthInsurance = () => {
+  // Add a function to handle scrolling to top when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead 
         title="Life & Health Insurance"
@@ -30,7 +38,13 @@ const LifeHealthInsurance = () => {
           
           <div className="mt-8 text-center">
             <p className="text-lg font-medium text-blue-600">Do you want to know how to benefit from life insurance while living?</p>
-            <p className="mt-2 text-gray-600">Contact us today for a personalized consultation.</p>
+            <p className="mt-2 text-gray-600 mb-6">Contact us today for a personalized consultation.</p>
+            
+            <Link to="/contact" onClick={handleNavigation}>
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

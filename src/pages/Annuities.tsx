@@ -1,12 +1,19 @@
+
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
 
 const Annuities = () => {
+  // Add a function to handle scrolling to top when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <SEOHead title="Annuities" description="Secure your financial future with our annuity solutions. Learn how annuities can provide income for life and help meet your retirement goals." canonicalUrl="https://illuminated-links.com/annuities" />
       
@@ -113,24 +120,15 @@ const Annuities = () => {
               <p className="mb-4">
                 Annuities can be a powerful tool to secure retirement income, but they're not one-size-fits-all. Fees, tax implications, and your personal risk tolerance should all factor into your decision. Consulting a financial advisor can help you determine if an annuity—and which type—fits your retirement plan.
               </p>
+              
+              <div className="mt-8 text-center">
+                <Link to="/contact" onClick={handleNavigation}>
+                  <Button className="bg-blue-600 hover:bg-blue-700">
+                    Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </article>
-            
-            <div className="mt-10">
-              <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
-                  <div className="w-full sm:w-1/3">
-                    <img src="/lovable-uploads/dc1fc61b-a39e-4f22-a2ec-efa927562736.png" alt="Customer Service Agent" className="w-full h-auto rounded-lg object-cover" />
-                  </div>
-                  <div className="w-full sm:w-2/3">
-                    <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">Let me help you navigate the complex world of annuities and find the solution that's right for your retirement needs.</p>
-                    <Link to="/contact" className="bg-primary text-white px-6 py-3 rounded-full inline-block hover:bg-opacity-90 transition-colors">
-                      Schedule a Consultation
-                    </Link>
-                  </div>
-                </div>
-              </BackgroundGradient>
-            </div>
           </CardContent>
         </Card>
       </div>

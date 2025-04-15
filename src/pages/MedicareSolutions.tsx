@@ -3,8 +3,16 @@ import { NavBarDemo } from "@/components/NavBarDemo";
 import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
 
 const MedicareSolutions = () => {
+  // Add a function to handle scrolling to top when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Navbar */}
       <NavBarDemo />
@@ -28,7 +36,15 @@ const MedicareSolutions = () => {
             <p className="text-gray-600 text-left mb-4">We provide personalized guidance on all aspects of Medicare to ensure you have the right coverage while maximizing your benefits and minimizing your costs.</p>
             
             <h3 className="text-xl font-semibold mb-2 mt-6 text-gray-800">Medicare Advantage</h3>
-            <p className="text-gray-600 text-left mb-2">Medicare Advantage Plans are health plan options that are approved by Medicare but run by private companies. They are part of the Medicare Program, and sometimes called &quot;Part C.&quot; When you join a Medicare Advantage Plan, you are still in Medicare.</p>
+            <p className="text-gray-600 text-left mb-6">Medicare Advantage Plans are health plan options that are approved by Medicare but run by private companies. They are part of the Medicare Program, and sometimes called &quot;Part C.&quot; When you join a Medicare Advantage Plan, you are still in Medicare.</p>
+            
+            <div className="text-center mt-8">
+              <Link to="/contact" onClick={handleNavigation}>
+                <Button className="bg-blue-600 hover:bg-blue-700">
+                  Schedule a Consultation <MoveRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
