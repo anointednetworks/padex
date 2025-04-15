@@ -31,7 +31,7 @@ const Projects = () => {
       
       <ServiceHero 
         title="Resources" 
-        subheading="Expert guidance for your financial well-being" 
+        subheading="Guidance for your health and financial well-being" 
         onReadMoreClick={scrollToAnnuities} 
         showReadMoreButton={true} 
       />
