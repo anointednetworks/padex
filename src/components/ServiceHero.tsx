@@ -9,15 +9,15 @@ interface ServiceHeroProps {
   subheading?: string;
   showReadMoreButton?: boolean;
   onReadMoreClick?: () => void;
-  height?: string; // Added height prop
+  height?: string;
 }
 
 export function ServiceHero({ 
   title, 
-  subheading = "Expert guidance for your financial well-being",
+  subheading = "Guidance for your health and financial well-being",
   showReadMoreButton = false,
   onReadMoreClick,
-  height = "28rem", // Increased from 24rem to 28rem (h-112)
+  height = "28rem",
 }: ServiceHeroProps) {
   return (
     <AuroraBackground height={height}>
